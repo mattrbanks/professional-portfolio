@@ -370,7 +370,7 @@ p {
   
   .moving-image {
   background-image: url(https://github.com/mattrbanks/SampleGit/blob/master/cloud.png?raw=true);
-  background-size: auto;
+  background-size: cover;
   width: 100%;
   animation: animate 250s linear infinite;/*was 250s or 60s*/
   /*animation-timing-function: ease-out;*/
@@ -378,7 +378,7 @@ p {
 
 @keyframes animate {
   0% {
-    background-position: 1000px;
+    background-position: 0px;
   }
   100% {
     background-position: 5440px;
