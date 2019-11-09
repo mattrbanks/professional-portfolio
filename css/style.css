@@ -369,11 +369,11 @@ p {
   }
   
   .moving-image {
-  background-image: url(https://github.com/mattrbanks/SampleGit/blob/master/cloud.png?raw=true);
-  background-size: auto;
-  width: 10%;
-  animation: animate 250s linear infinite;/*was 250s or 60s*/
-  /*animation-timing-function: ease-out;*/
+    background-image: url(https://github.com/mattrbanks/SampleGit/blob/master/cloud.png?raw=true);
+    background-size: auto;
+    width: 100%;
+    animation: animate 250s linear infinite;/*was 250s or 60s*/
+    /*animation-timing-function: ease-out;*/
 }
 
 @keyframes animate {
