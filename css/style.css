@@ -378,7 +378,7 @@ p {
 
 @keyframes animate {
   0% {
-    background-position: 0px;
+    background-position: 1000px;
   }
   100% {
     background-position: 5440px;
