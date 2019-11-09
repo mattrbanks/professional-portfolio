@@ -374,16 +374,16 @@ p {
     width: 100%;
     animation: animate 250s linear infinite;/*was 250s or 60s*/
     /*animation-timing-function: ease-out;*/
-}
+  }
 
-@keyframes animate {
-  0% {
-    background-position: 1000px;
+  @keyframes animate {
+    0% {
+      background-position: 1000px;
+    }
+    100% {
+      background-position: 5440px;
+    }
   }
-  100% {
-    background-position: 5440px;
-  }
- }
   
   .contact-me-class {
     background-position: center bottom;/*moves svg border down*/
@@ -393,27 +393,27 @@ p {
   /*font awesome icons are made from text so they won't respond to box-shadow. They need text-shadow instead. A button is a box.*/
   transform: scale(1);
   text-shadow: 2px 2px red;
-}
+  }
 
-.js-icon-float-shadow-2 {
-  transform: scale(1);
-  text-shadow: 2px 2px orange;
-}
+  .js-icon-float-shadow-2 {
+    transform: scale(1);
+    text-shadow: 2px 2px orange;
+  }
 
-.js-icon-float-shadow-3 {
-  transform: scale(1);
-  text-shadow: 2px 2px yellow;
-}
+  .js-icon-float-shadow-3 {
+    transform: scale(1);
+    text-shadow: 2px 2px yellow;
+  }
 
-.js-icon-float-shadow-4 {
-  transform: scale(1);
-  text-shadow: 2px 2px green;
-}
+  .js-icon-float-shadow-4 {
+    transform: scale(1);
+    text-shadow: 2px 2px green;
+  }
   
   #profile-link {
-  margin: 70px 10px 10px 10px;;
-}
-}
+  margin: 70px 10px 10px 10px;
+    }
+  }
 
 /*@media screen and (max-width: 600px) {
   html {
