@@ -182,7 +182,7 @@ window.addEventListener("click", function(event) {
   }
 });
 
-/*effect as you mouse over a project*/
+/*effect as you mouse over a project (currently not using this)*/
 
 /*document.querySelectorAll(".zoom-pic").forEach(item => {
   item.addEventListener("mouseenter", event => {
