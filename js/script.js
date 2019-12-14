@@ -182,11 +182,7 @@ window.addEventListener("click", function(event) {
   }
 });
 
-<<<<<<< HEAD
-/*effect as you mouse over a project*/
-=======
 /*effect as you mouse over a project (currently not using this)*/
->>>>>>> gh-pages
 
 /*document.querySelectorAll(".zoom-pic").forEach(item => {
   item.addEventListener("mouseenter", event => {
