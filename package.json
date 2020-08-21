@@ -1,0 +1,49 @@
+{
+  "name": "mattrbanks.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop -p 8001",
+    "format": "prettier --write src/**/*.{js,jsx}",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mattrbanks/mattrbanks.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mattrbanks/mattrbanks.github.io/issues"
+  },
+  "homepage": "https://github.com/mattrbanks/mattrbanks.github.io#readme",
+  "dependencies": {
+    "@material-ui/core": "^4.9.8",
+    "@material-ui/styles": "^4.9.6",
+    "bootstrap": "^4.4.1",
+    "gatsby": "^2.23.11",
+    "gatsby-image": "^2.3.1",
+    "gatsby-plugin-manifest": "^2.3.3",
+    "gatsby-plugin-material-ui": "^2.1.6",
+    "gatsby-plugin-react-helmet": "^3.2.1",
+    "gatsby-plugin-sharp": "^2.5.3",
+    "gatsby-plugin-styled-components": "^3.2.1",
+    "gatsby-source-filesystem": "^2.2.2",
+    "gatsby-transformer-sharp": "^2.4.3",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.1",
+    "react-bootstrap": "^1.0.0",
+    "react-dom": "^16.13.1",
+    "react-helmet": "^5.2.1",
+    "react-icons": "^3.11.0",
+    "sharp": "^0.25.2",
+    "styled-components": "^5.0.1"
+  },
+  "devDependencies": {
+    "prettier": "^1.19.1"
+  }
+}
