@@ -10,10 +10,10 @@ import CardContent from "@material-ui/core/CardContent"
 import CardMedia from "@material-ui/core/CardMedia"
 import Button from "@material-ui/core/Button"
 import Typography from "@material-ui/core/Typography"
-//import ImageReusable from "../components/imageReusable"
-import MattsRetroGames from "../images/MattsRetroGames.png"
+import ImageReusable from "../components/imageReusable"
+//import MattsRetroGames from "../images/MattsRetroGames.png"
 import EagleElementarySchool from "../images/EagleElementarySchool.png"
-import { Link } from "gatsby"
+//import { Link } from "gatsby"
 import {
   FaLinkedin,
   FaGithubSquare,
@@ -27,7 +27,16 @@ const useStyles = makeStyles({
     height: 460,
   },
   media: {
-    height: 200,
+    height: 400,
+    transition: "transform 1s",
+    transform: "perspective(100px) translateZ(0px)",
+    //transform: "translate(0px, -18px)",
+  },
+  mediaTransform: {
+    height: 400,
+    transition: "transform 1s",
+    transform: "perspective(100px) translateZ(5px)",
+    //transform: "translate(0px, -18px)",
   },
   welcomeSectionStyles: {
     height: "65vh",
@@ -106,6 +115,18 @@ const useStyles = makeStyles({
     transform: "perspective(100px) translateZ(0px)",
     filter: "drop-shadow(2px 2px 0 rgb(0,128,0))",
   },
+  projectClickText: {
+    padding: "45%",
+    position: "absolute",
+    color: "transparent",
+    zIndex: "10",
+  },
+  projectClickTextHover: {
+    padding: "45%",
+    position: "absolute",
+    color: "#000",
+    zIndex: "10",
+  },
 })
 
 const Home = () => {
@@ -114,6 +135,16 @@ const Home = () => {
   const [iconTwoHover, setIconTwoHover] = React.useState(false)
   const [iconThreeHover, setIconThreeHover] = React.useState(false)
   const [iconFourHover, setIconFourHover] = React.useState(false)
+  const [projectOneHover, setProjectOneHover] = React.useState(false)
+  const [projectTwoHover, setProjectTwoHover] = React.useState(false)
+  const [
+    projectOneClickTextHover,
+    setProjectOneClickTextHover,
+  ] = React.useState(false)
+  const [
+    projectTwoClickTextHover,
+    setProjectTwoClickTextHover,
+  ] = React.useState(false)
 
   //styles
   const iconContactStyle = classes.iconContact
@@ -121,6 +152,12 @@ const Home = () => {
   const iconTwoStyle = classes.iconTwo
   const iconThreeStyle = classes.iconThree
   const iconFourStyle = classes.iconFour
+  const mediaStyle = classes.media
+  const mediaTransformStyle = classes.mediaTransform
+  const projectClickTextStyle = classes.projectClickText
+  const projectClickTextHoverStyle = classes.projectClickTextHover
+
+  let ImageVar = <Image />
   return (
     <Layout>
       <SEO title="Home" />
@@ -154,10 +191,19 @@ const Home = () => {
         </div>
       </section>
       <section id="projects" className={classes.projectSectionStyles}>
-        {/* <Image /> */}
-        <h2 style={{ textAlign: "center", marginTop: "1.5rem" }}>
-          Here is what I've been up to.
-        </h2>
+        <div
+          style={{
+            textAlign: "center",
+            paddingTop: "4rem",
+            paddingBottom: "2rem",
+            color: "white",
+            backgroundImage:
+              "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
+          }}
+        >
+          <h2>Here is what I've been up to.</h2>
+          <p>(click one of my projects for more options.)</p>
+        </div>
         <div
           style={{
             display: "flex",
@@ -168,14 +214,39 @@ const Home = () => {
           <div style={{ marginRight: "3rem" }}>
             <Card className={classes.root}>
               <CardActionArea>
-                <Link to="https://eagle-elementary-school.netlify.app/">
+                <a href="https://eagle-elementary-school.netlify.app/">
                   <CardMedia
-                    className={classes.media}
+                    className={
+                      projectOneHover ? mediaTransformStyle : mediaStyle
+                    }
                     style={{ maxWidth: "100%", margin: "0 0 0 0" }}
-                    image={EagleElementarySchool}
+                    //image={EagleElementarySchool}
                     title="Eagle Elementary School"
-                  />
-                </Link>
+                    onMouseEnter={() => {
+                      setProjectOneHover(true)
+                      setProjectOneClickTextHover(true)
+                    }}
+                    onMouseLeave={() => {
+                      setProjectOneHover(false)
+                      setProjectOneClickTextHover(false)
+                    }}
+                  >
+                    <h2
+                      className={
+                        projectOneClickTextHover
+                          ? projectClickTextHoverStyle
+                          : projectClickTextStyle
+                      }
+                    >
+                      click
+                    </h2>
+                    <ImageReusable
+                      style={{ position: "relative" }}
+                      alt="picture of school site project"
+                      filename="EagleElementarySchool.PNG"
+                    />
+                  </CardMedia>
+                </a>
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="h2">
                     Eagle Elementary School
@@ -196,16 +267,16 @@ const Home = () => {
               </CardActionArea>
               <div style={{ display: "flex" }}>
                 <CardActions>
-                  <Link to="https://github.com/mattrbanks/school-site-chat-survey-portfolio-project">
+                  <a href="https://github.com/mattrbanks/school-site-chat-survey-portfolio-project">
                     <Button size="small" color="primary">
                       Code
                     </Button>
-                  </Link>
-                  <Link to="https://eagle-elementary-school.netlify.app/">
+                  </a>
+                  <a href="https://eagle-elementary-school.netlify.app/">
                     <Button size="small" color="primary">
                       Site
                     </Button>
-                  </Link>
+                  </a>
                 </CardActions>
                 <div
                   style={{
@@ -236,13 +307,48 @@ const Home = () => {
           <div>
             <Card className={classes.root}>
               <CardActionArea>
-                <Link to="https://matts-retro-games.netlify.app/">
+                <a href="https://matts-retro-games.netlify.app/">
                   <CardMedia
-                    className={classes.media}
-                    image={MattsRetroGames}
+                    className={
+                      projectTwoHover ? mediaTransformStyle : mediaStyle
+                    }
+                    style={{
+                      maxWidth: "100%",
+                      margin: "0 0 0 0",
+                      //position: "relative",
+                    }}
+                    //component={Image}
                     title="Matt's Retro Games"
-                  />
-                </Link>
+                    onMouseEnter={() => {
+                      setProjectTwoHover(true)
+                      setProjectTwoClickTextHover(true)
+                    }}
+                    onMouseLeave={() => {
+                      setProjectTwoHover(false)
+                      setProjectTwoClickTextHover(false)
+                    }}
+                  >
+                    <h2
+                      className={
+                        projectTwoClickTextHover
+                          ? projectClickTextHoverStyle
+                          : projectClickTextStyle
+                      }
+                    >
+                      click
+                    </h2>
+                    <Image
+                      style={{ position: "relative" }}
+                      alt="picture of game store site project"
+                    />
+                    {/* <div style={{ maxWidth: "100%", margin: "0 0 0 0" }}>
+                      <Image
+                      //src={MattsRetroGames}
+                      //style={{ maxWidth: "50%", margin: "0 0 0 0" }}
+                      />
+                    </div> */}
+                  </CardMedia>
+                </a>
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="h2">
                     Matt's Retro Games
@@ -259,16 +365,16 @@ const Home = () => {
                 </CardContent>
               </CardActionArea>
               <CardActions>
-                <Link to="https://github.com/mattrbanks/retro-game-store-portfolio-project">
+                <a href="https://github.com/mattrbanks/retro-game-store-portfolio-project">
                   <Button size="small" color="primary">
                     Code
                   </Button>
-                </Link>
-                <Link to="https://matts-retro-games.netlify.app/">
+                </a>
+                <a href="https://matts-retro-games.netlify.app/">
                   <Button size="small" color="primary">
                     Site
                   </Button>
-                </Link>
+                </a>
               </CardActions>
             </Card>
           </div>
@@ -281,9 +387,10 @@ const Home = () => {
         </div>
         <div className={classes.iconsStyle}>
           <div>
-            <Link
-              to="https://github.com/mattrbanks"
+            <a
+              href="https://github.com/mattrbanks"
               target="_blank"
+              rel="noopener noreferrer"
               //style={{ margin: "50px 50px 50px 50px" }}
               className={iconOneHover ? iconOneStyle : iconContactStyle}
             >
@@ -292,12 +399,13 @@ const Home = () => {
                 onMouseEnter={() => setIconOneHover(true)}
                 onMouseLeave={() => setIconOneHover(false)}
               />
-            </Link>
+            </a>
           </div>
           <div>
-            <Link
-              to="https://www.linkedin.com/in/matthewr-banks"
+            <a
+              href="https://www.linkedin.com/in/matthewr-banks"
               target="_blank"
+              rel="noopener noreferrer"
               className={iconTwoHover ? iconTwoStyle : iconContactStyle}
             >
               <FaLinkedin
@@ -305,12 +413,13 @@ const Home = () => {
                 onMouseEnter={() => setIconTwoHover(true)}
                 onMouseLeave={() => setIconTwoHover(false)}
               />
-            </Link>
+            </a>
           </div>
           <div>
-            <Link
-              to="mailto:banks.matt81@gmail.com"
+            <a
+              href="mailto:banks.matt81@gmail.com"
               target="_blank"
+              rel="noopener noreferrer"
               className={iconThreeHover ? iconThreeStyle : iconContactStyle}
             >
               <FaEnvelopeOpenText
@@ -318,12 +427,13 @@ const Home = () => {
                 onMouseEnter={() => setIconThreeHover(true)}
                 onMouseLeave={() => setIconThreeHover(false)}
               />
-            </Link>
+            </a>
           </div>
           <div>
-            <Link
-              to="mailto:banks.matt81@gmail.com"
+            <a
+              href="mailto:banks.matt81@gmail.com"
               target="_blank"
+              rel="noopener noreferrer"
               className={iconFourHover ? iconFourStyle : iconContactStyle}
             >
               <FaFile
@@ -331,7 +441,7 @@ const Home = () => {
                 onMouseEnter={() => setIconFourHover(true)}
                 onMouseLeave={() => setIconFourHover(false)}
               />
-            </Link>
+            </a>
           </div>
         </div>
       </section>
