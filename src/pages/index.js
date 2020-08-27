@@ -11,9 +11,6 @@ import CardMedia from "@material-ui/core/CardMedia"
 import Button from "@material-ui/core/Button"
 import Typography from "@material-ui/core/Typography"
 import ImageReusable from "../components/imageReusable"
-//import MattsRetroGames from "../images/MattsRetroGames.png"
-import EagleElementarySchool from "../images/EagleElementarySchool.png"
-//import { Link } from "gatsby"
 import styled from "styled-components"
 import {
   FaLinkedin,
@@ -253,7 +250,7 @@ const Home = () => {
                       <ImageReusable
                         style={{ position: "relative" }}
                         alt="picture of school site project"
-                        filename="EagleElementarySchool.PNG"
+                        filename="EagleElementarySchool.png"
                       />
                     </CardMedia>
                   )}
@@ -339,7 +336,12 @@ const Home = () => {
                 </div>
               </Card>
             </div>
-            <div className={"mobile-screen-margin"}>
+            <div
+              className={"mobile-screen-margin"}
+              onMouseLeave={() => {
+                setClickSecondProject(false)
+              }}
+            >
               <Card className={classes.root}>
                 <CardActionArea
                   className={clickSecondProject ? coverDiv1Styles : ""}
