@@ -250,7 +250,7 @@ const Home = () => {
                       <ImageReusable
                         style={{ position: "relative" }}
                         alt="picture of school site project"
-                        filename="EagleElementarySchool.png"
+                        filename="EagleElementarySchool.PNG"
                       />
                     </CardMedia>
                   )}
