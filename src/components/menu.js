@@ -34,6 +34,9 @@ const useStyles = makeStyles(theme => ({
     fontSize: "1.25rem",
     position: "relative",
     zIndex: "10",
+    width: "100%",
+    height: "16rem",
+    overflowX: "hidden",
   },
   mobileMenuStylesL: {
     backgroundImage:
@@ -44,10 +47,40 @@ const useStyles = makeStyles(theme => ({
     fontSize: "1.25rem",
     position: "relative",
     zIndex: "10",
+    width: "100%",
+    height: "16rem",
+    overflowX: "hidden",
   },
   mobileMenuIcon: {
+    position: "relative",
     display: "inline-block",
     cursor: "pointer",
+  },
+  mobileNavClose: {
+    position: "absolute",
+    right: "0",
+    top: "0",
+    display: "inline-block",
+    cursor: "pointer",
+    transform: "translateX(100%)",
+    transition: "0.5s ease-in",
+    backgroundColor: "transparent",
+    color: "black",
+    opacity: "0",
+    //overflowX: "hidden",
+  },
+  mobileNavOpen: {
+    position: "absolute",
+    right: "0",
+    top: "0",
+    display: "inline-block",
+    cursor: "pointer",
+    transform: "translateX(0%)",
+    transition: "0.5s ease-out",
+    backgroundColor: "transparent",
+    color: "black",
+    opacity: "1",
+    //overflowX: "hidden",
   },
   barTop: {
     width: "35px",
@@ -102,36 +135,36 @@ const Menu = () => {
   const classes = useStyles()
   const theme = useTheme()
   const [open, setOpen] = React.useState(false)
-  const anchorRef = React.useRef(null)
+  //const anchorRef = React.useRef(null)
 
   const handleToggle = () => {
-    setOpen(prevOpen => !prevOpen)
+    setOpen(!open)
   }
 
-  const handleClose = event => {
-    if (anchorRef.current && anchorRef.current.contains(event.target)) {
-      return
-    }
+  // const handleClose = event => {
+  //   if (anchorRef.current && anchorRef.current.contains(event.target)) {
+  //     return
+  //   }
 
-    setOpen(false)
-  }
+  //   setOpen(false)
+  // }
 
-  function handleListKeyDown(event) {
-    if (event.key === "Tab") {
-      event.preventDefault()
-      setOpen(false)
-    }
-  }
+  // function handleListKeyDown(event) {
+  //   if (event.key === "Tab") {
+  //     event.preventDefault()
+  //     setOpen(false)
+  //   }
+  // }
 
   //return focus to the button when we transitioned from !open -> open
-  const prevOpen = React.useRef(open)
-  React.useEffect(() => {
-    if (prevOpen.current === true && open === false) {
-      anchorRef.current.focus()
-    }
+  // const prevOpen = React.useRef(open)
+  // React.useEffect(() => {
+  //   if (prevOpen.current === true && open === false) {
+  //     anchorRef.current.focus()
+  //   }
 
-    prevOpen.current = open
-  }, [open])
+  //   prevOpen.current = open
+  // }, [open])
 
   const mobileMenuP = useMediaQuery(
     `${theme.breakpoints.between("0", "500")} and (orientation: portrait)`
@@ -146,6 +179,8 @@ const Menu = () => {
   const mobileMenuStylesCSSl = classes.mobileMenuStylesL
   const noMobileMenuStylesCSS = classes.noMobileMenuStyles
   const noBigScreenMenuStylesCSS = classes.noBigScreenMenuStyles
+  const mobileNavCloseStyles = classes.mobileNavClose
+  const mobileNavOpenStyles = classes.mobileNavOpen
 
   const barTopCSS = classes.barTop
   const barMiddleCSS = classes.barMiddle
@@ -208,9 +243,9 @@ const Menu = () => {
         }
       >
         <Button
-          ref={anchorRef}
-          aria-controls={open ? "menu-list-grow" : undefined}
-          aria-haspopup="true"
+          // ref={anchorRef}
+          // aria-controls={open ? "menu-list-grow" : undefined}
+          // aria-haspopup="true"
           onClick={handleToggle}
         >
           <div className={classes.mobileMenuIcon}>
@@ -223,7 +258,60 @@ const Menu = () => {
             ></div>
           </div>
         </Button>
-        <Popper
+        <MenuList
+          className={open ? mobileNavOpenStyles : mobileNavCloseStyles}
+          // autoFocusItem={open}
+          // id="menu-list-grow"
+          // onKeyDown={handleListKeyDown}
+        >
+          <div style={{ display: "block", margin: "1rem" }}>
+            <div>
+              <MenuItem>
+                <Link
+                  onClick={handleToggle}
+                  style={{ color: "#fff" }}
+                  to="#welcome"
+                >
+                  About
+                </Link>
+              </MenuItem>
+            </div>
+            <div>
+              <MenuItem>
+                <Link
+                  onClick={handleToggle}
+                  style={{ color: "#fff" }}
+                  to="#projects"
+                >
+                  Projects
+                </Link>
+              </MenuItem>
+            </div>
+            <div>
+              <MenuItem>
+                <Link
+                  onClick={handleToggle}
+                  style={{ color: "#fff" }}
+                  to="#contact"
+                >
+                  Contact
+                </Link>
+              </MenuItem>
+            </div>
+            <div>
+              <MenuItem>
+                <Link
+                  onClick={handleToggle}
+                  style={{ color: "#fff" }}
+                  to="/resume"
+                >
+                  Resume
+                </Link>
+              </MenuItem>
+            </div>
+          </div>
+        </MenuList>
+        {/* <Popper
           open={open}
           anchorEl={anchorRef.current}
           role={undefined}
@@ -267,7 +355,7 @@ const Menu = () => {
               </Paper>
             </Grow>
           )}
-        </Popper>
+        </Popper> */}
       </div>
     </React.Fragment>
   )

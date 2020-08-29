@@ -20,7 +20,10 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
+      <Header
+        //style={{ zIndex: "10" }}
+        siteTitle={data.site.siteMetadata.title}
+      />
       <Menu />
       <div
         style={

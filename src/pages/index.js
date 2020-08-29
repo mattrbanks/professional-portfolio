@@ -3,6 +3,7 @@ import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
 import { makeStyles } from "@material-ui/core/styles"
+import { useTheme, useMediaQuery } from "@material-ui/core"
 import Card from "@material-ui/core/Card"
 import CardActionArea from "@material-ui/core/CardActionArea"
 import CardActions from "@material-ui/core/CardActions"
@@ -18,26 +19,27 @@ import {
   FaFile,
   FaEnvelopeOpenText,
 } from "react-icons/fa"
+import ButtonToTop from "../components/buttonToTop"
 
 const useStyles = makeStyles({
-  root: {
-    maxWidth: "27.5rem",
-    height: "31rem",
-  },
-  media: {
-    height: "27.5rem",
-    transition: "transform 1s",
-    transform: "perspective(100px) translateZ(0px)",
-    //transform: "translate(0px, -18px)",
-  },
-  mediaTransform: {
-    height: "27.5rem",
-    transition: "transform 1s",
-    transform: "perspective(100px) translateZ(0.5px)",
-    //transform: "translate(0px, -18px)",
-  },
+  // root: {
+  //   maxWidth: "27.5rem",
+  //   height: "31rem",
+  // },
+  // media: {
+  //   height: "27.5rem",
+  //   transition: "transform 1s",
+  //   transform: "perspective(100px) translateZ(0px)",
+  //   //transform: "translate(0px, -18px)",
+  // },
+  // mediaTransform: {
+  //   height: "27.5rem",
+  //   transition: "transform 1s",
+  //   transform: "perspective(100px) translateZ(0.5px)",
+  //   //transform: "translate(0px, -18px)",
+  // },
   welcomeSectionStyles: {
-    height: "65vh",
+    //height: "65vh",
     display: "block",
     textAlign: "center",
     margin: "1rem",
@@ -138,6 +140,7 @@ const useStyles = makeStyles({
 
 const Home = () => {
   const classes = useStyles()
+  const theme = useTheme()
   const [iconOneHover, setIconOneHover] = React.useState(false)
   const [iconTwoHover, setIconTwoHover] = React.useState(false)
   const [iconThreeHover, setIconThreeHover] = React.useState(false)
@@ -161,13 +164,26 @@ const Home = () => {
   const iconTwoStyle = classes.iconTwo
   const iconThreeStyle = classes.iconThree
   const iconFourStyle = classes.iconFour
-  const mediaStyle = classes.media
-  const mediaTransformStyle = classes.mediaTransform
+  //const mediaStyle = classes.media
+  //const mediaTransformStyle = classes.mediaTransform
   // const projectClickTextStyle = classes.projectClickText
   // const projectClickTextHoverStyle = classes.projectClickTextHover
   const coverDiv1Styles = classes.coverDiv1
   const coverDiv2Styles = classes.coverDiv2
   const coverDiv3Styles = classes.coverDiv3
+
+  // const mobileTechnologiesList = useMediaQuery(
+  //   `${theme.breakpoints.between("0", "690")}  and (orientation: landscape)`
+  // )
+  // const mobileTechnologiesList = useMediaQuery(
+  //   `${theme.breakpoints.between("0", "690")}  and (orientation: portrait)`
+  // )
+  const mobileTechnologiesList = useMediaQuery(
+    `${theme.breakpoints.between("0", "690")}`
+  )
+  // const mobileTechnologiesListSmall = useMediaQuery(
+  //   `${theme.breakpoints.between("0", "545")}  and (orientation: portrait)`
+  // )
 
   return (
     <Layout>
@@ -224,14 +240,16 @@ const Home = () => {
                 setClickProject(false)
               }}
             >
-              <Card className={classes.root}>
+              <Card className={"project-card-styles"}>
                 <CardActionArea className={clickProject ? coverDiv1Styles : ""}>
                   {clickProject ? (
                     ""
                   ) : (
                     <CardMedia
                       className={
-                        projectOneHover ? mediaTransformStyle : mediaStyle
+                        projectOneHover
+                          ? "project-media-transform-styles"
+                          : "project-media-styles"
                       }
                       style={{ maxWidth: "100%", margin: "0 0 0 0" }}
                       title="Eagle Elementary School"
@@ -284,30 +302,95 @@ const Home = () => {
                       style={{
                         display: "block",
                         flexDirection: "row",
-
                         listStyle: "none",
-                        marginTop: "1rem",
+                        margin: "0.5rem 1.5rem 0 1.5rem",
                       }}
                     >
-                      <div style={{ display: "flex", fontSize: "0.75rem" }}>
-                        <div style={{ marginRight: "1rem" }}>React</div>
-                        <div style={{ marginRight: "1rem" }}>Javascript</div>
-                        <div style={{ marginRight: "1rem" }}>Mongodb</div>
-                        <div style={{ marginRight: "1rem" }}>Contentful</div>
-                        <div>Material ui</div>
-                      </div>
-                      <div style={{ display: "flex", fontSize: "0.75rem" }}>
-                        <div style={{ marginRight: "1rem" }}>
-                          Styled components
-                        </div>
-                        <div style={{ marginRight: "1rem" }}>Socket.io</div>
-                        <div style={{ marginRight: "1rem" }}>GraphQL</div>
-                        <div style={{ marginRight: "1rem" }}>Express</div>
-                        <div style={{ marginRight: "1rem" }}>Node</div>
-                      </div>
-                      <div style={{ display: "flex", fontSize: "0.75rem" }}>
-                        <div style={{ marginRight: "1rem" }}>Gatsby</div>
-                      </div>
+                      {mobileTechnologiesList ? (
+                        <React.Fragment>
+                          <div
+                            style={{
+                              display: "flex",
+                              justifyContent: "center",
+                              fontSize: "0.6rem",
+                              margin: "0 1.5rem 0 1.5rem",
+                            }}
+                          >
+                            <div
+                              style={{
+                                marginLeft: "0.5rem",
+                                marginRight: "0.5rem",
+                              }}
+                            >
+                              React
+                            </div>
+                            <div style={{ marginRight: "0.5rem" }}>
+                              Javascript
+                            </div>
+                            <div style={{ marginRight: "0.5rem" }}>Mongodb</div>
+                            <div style={{ marginRight: "0.5rem" }}>
+                              Contentful
+                            </div>
+                          </div>
+                          <div
+                            style={{
+                              display: "flex",
+                              justifyContent: "center",
+                              fontSize: "0.6rem",
+                              margin: "0 1rem 0 1rem",
+                            }}
+                          >
+                            <div style={{ marginRight: "0.5rem" }}>
+                              Material ui
+                            </div>
+                            <div style={{ marginRight: "0.5rem" }}>
+                              Styled components
+                            </div>
+                            <div style={{ marginRight: "0.5rem" }}>
+                              Socket.io
+                            </div>
+                          </div>
+                          <div
+                            style={{
+                              display: "flex",
+                              justifyContent: "center",
+                              fontSize: "0.6rem",
+                              margin: "0 1rem 0 1rem",
+                            }}
+                          >
+                            <div style={{ marginRight: "0.5rem" }}>GraphQL</div>
+                            <div style={{ marginRight: "0.5rem" }}>Express</div>
+                            <div style={{ marginRight: "0.5rem" }}>Node</div>
+                            <div style={{ marginRight: "0.5rem" }}>Gatsby</div>
+                          </div>
+                        </React.Fragment>
+                      ) : (
+                        <React.Fragment>
+                          <div style={{ display: "flex", fontSize: "0.75rem" }}>
+                            <div style={{ marginRight: "1rem" }}>React</div>
+                            <div style={{ marginRight: "1rem" }}>
+                              Javascript
+                            </div>
+                            <div style={{ marginRight: "1rem" }}>Mongodb</div>
+                            <div style={{ marginRight: "1rem" }}>
+                              Contentful
+                            </div>
+                            <div>Material ui</div>
+                          </div>
+                          <div style={{ display: "flex", fontSize: "0.75rem" }}>
+                            <div style={{ marginRight: "1rem" }}>
+                              Styled components
+                            </div>
+                            <div style={{ marginRight: "1rem" }}>Socket.io</div>
+                            <div style={{ marginRight: "1rem" }}>GraphQL</div>
+                            <div style={{ marginRight: "1rem" }}>Express</div>
+                            <div style={{ marginRight: "1rem" }}>Node</div>
+                          </div>
+                          <div style={{ display: "flex", fontSize: "0.75rem" }}>
+                            <div style={{ marginRight: "1rem" }}>Gatsby</div>
+                          </div>
+                        </React.Fragment>
+                      )}
                     </div>
                   </CardContent>
                 </CardActionArea>
@@ -342,7 +425,7 @@ const Home = () => {
                 setClickSecondProject(false)
               }}
             >
-              <Card className={classes.root}>
+              <Card className={"project-card-styles"}>
                 <CardActionArea
                   className={clickSecondProject ? coverDiv1Styles : ""}
                 >
@@ -351,7 +434,9 @@ const Home = () => {
                   ) : (
                     <CardMedia
                       className={
-                        projectTwoHover ? mediaTransformStyle : mediaStyle
+                        projectTwoHover
+                          ? "project-media-transform-styles"
+                          : "project-media-styles"
                       }
                       style={{
                         maxWidth: "100%",
@@ -390,34 +475,94 @@ const Home = () => {
                       color="textPrimary"
                       component="p"
                     >
-                      Lizards are a widespread group of squamate reptiles, with
-                      over 6,000 species, ranging across all continents except
-                      Antarctica
+                      I had a lot of fun with this project because these are
+                      many of my favorite retro games. This is like a tribute to
+                      games that I am nostalgic for but in the form of a retro
+                      game store. I used a real price guide to price each game
+                      so they should be very accurately priced in my store. This
+                      store template has all the hallmarks of an e-commerce
+                      website and it utilizes a sandbox PayPal that can be
+                      activated in the future to handle real transactions. I
+                      won't be parting with my collection though.
                     </Typography>
                     <div
                       style={{
                         display: "block",
                         flexDirection: "row",
-
                         listStyle: "none",
-                        marginTop: "1rem",
+                        margin: "0.5rem 1.5rem 0 1.5rem",
                       }}
                     >
-                      <div style={{ display: "flex", fontSize: "0.75rem" }}>
-                        <div style={{ marginRight: "1rem" }}>React</div>
-                        <div style={{ marginRight: "1rem" }}>Javascript</div>
-                        <div style={{ marginRight: "1rem" }}>Bootstrap</div>
-                        <div style={{ marginRight: "1rem" }}>
-                          Styled components
-                        </div>
-                        <div>PayPal</div>
-                      </div>
-                      <div style={{ display: "flex", fontSize: "0.75rem" }}>
-                        <div style={{ marginRight: "1rem" }}>
-                          Styled components
-                        </div>
-                        <div style={{ marginRight: "1rem" }}>React router</div>
-                      </div>
+                      {mobileTechnologiesList ? (
+                        <React.Fragment>
+                          <div
+                            style={{
+                              display: "flex",
+                              justifyContent: "center",
+                              fontSize: "0.6rem",
+                              margin: "0 1.5rem 0 1.5rem",
+                            }}
+                          >
+                            <div
+                              style={{
+                                marginLeft: "1rem",
+                                marginRight: "0.5rem",
+                              }}
+                            >
+                              React
+                            </div>
+                            <div style={{ marginRight: "0.5rem" }}>
+                              Javascript
+                            </div>
+                            <div style={{ marginRight: "0.5rem" }}>
+                              Bootstrap
+                            </div>
+                            <div style={{ marginRight: "1rem" }}>PayPal</div>
+                          </div>
+                          <div
+                            style={{
+                              display: "flex",
+                              justifyContent: "center",
+                              fontSize: "0.6rem",
+                              margin: "0 1rem 0 1rem",
+                            }}
+                          >
+                            <div
+                              style={{
+                                marginLeft: "0.5rem",
+                                marginRight: "0.5rem",
+                              }}
+                            >
+                              Styled components
+                            </div>
+                            <div style={{ marginRight: "0.5rem" }}>
+                              React router
+                            </div>
+                          </div>
+                        </React.Fragment>
+                      ) : (
+                        <React.Fragment>
+                          <div style={{ display: "flex", fontSize: "0.75rem" }}>
+                            <div style={{ marginRight: "1rem" }}>React</div>
+                            <div style={{ marginRight: "1rem" }}>
+                              Javascript
+                            </div>
+                            <div style={{ marginRight: "1rem" }}>Bootstrap</div>
+                            <div style={{ marginRight: "1rem" }}>
+                              Styled components
+                            </div>
+                            <div>PayPal</div>
+                          </div>
+                          <div style={{ display: "flex", fontSize: "0.75rem" }}>
+                            <div style={{ marginRight: "1rem" }}>
+                              Styled components
+                            </div>
+                            <div style={{ marginRight: "1rem" }}>
+                              React router
+                            </div>
+                          </div>
+                        </React.Fragment>
+                      )}
                     </div>
                   </CardContent>
                 </CardActionArea>
@@ -512,6 +657,7 @@ const Home = () => {
             </a>
           </div>
         </div>
+        <ButtonToTop />
       </section>
     </Layout>
   )
@@ -529,6 +675,7 @@ let DesktopOnly = styled.div`
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      margin: 5rem 1rem 0 1rem;
     }
     @media (max-width: 1230px) and (orientation: landscape) {
       display: flex;
@@ -553,5 +700,47 @@ let DesktopOnly = styled.div`
   .project-section-styles {
     //height: 150vh;
     border-top: 0.0625rem solid grey;
+  }
+  .project-card-styles {
+    max-width: 27.5rem;
+    height: 31rem;
+    @media (max-width: 690px) and (orientation: portrait) {
+      max-width: 20rem;
+      height: 23.5rem;
+    }
+    @media (max-width: 660px) and (orientation: landscape) {
+      max-width: 20rem;
+      height: 23.5rem;
+    }
+  }
+  .project-media-styles {
+    height: 27.5rem;
+    transition: transform 1s;
+    transform: perspective(100px) translateZ(0px);
+    @media (max-width: 690px) and (orientation: portrait) {
+      height: 20rem;
+      transition: transform 1s;
+      transform: perspective(100px) translateZ(0px);
+    }
+    @media (max-width: 660px) and (orientation: landscape) {
+      height: 20rem;
+      transition: transform 1s;
+      transform: perspective(100px) translateZ(0px);
+    }
+  }
+  .project-media-transform-styles {
+    height: 27.5rem;
+    transition: transform 1s;
+    transform: perspective(100px) translateZ(0.5px);
+    @media (max-width: 690px) and (orientation: portrait) {
+      height: 20rem;
+      transition: transform 1s;
+      transform: perspective(100px) translateZ(0.5px);
+    }
+    @media (max-width: 660px) and (orientation: landscape) {
+      height: 20rem;
+      transition: transform 1s;
+      transform: perspective(100px) translateZ(0.5px);
+    }
   }
 `
