@@ -39,7 +39,7 @@ const useStyles = makeStyles({
   //   //transform: "translate(0px, -18px)",
   // },
   welcomeSectionStyles: {
-    //height: "65vh",
+    height: "65vh",
     display: "block",
     textAlign: "center",
     margin: "1rem",
@@ -49,7 +49,7 @@ const useStyles = makeStyles({
   //   borderTop: "0.0625rem solid grey",
   // },
   contactSectionStyles: {
-    borderTop: "0.0625rem solid grey",
+    //borderTop: "0.0625rem solid grey",
     marginTop: "5rem",
     height: "100vh",
     display: "flex",
@@ -203,6 +203,44 @@ const Home = () => {
         ></div>
       </nav>
       <section id="welcome" className={classes.welcomeSectionStyles}>
+        <div
+          style={{
+            width: `100%`,
+            display: "flex",
+            justifyContent: "center",
+          }}
+        >
+          <div
+            style={{
+              width: `100%`,
+              maxWidth: `15rem`,
+              height: "15rem",
+              //position: "relative",
+              margin: `2rem 0 2rem 0`,
+              background: "rgba(0, 0, 0, 0.07)",
+              //backgroundSize: "cover",
+              //backgroundImage: url("../images/PortfolioPicture.jpg"),
+              borderRadius: "50% 50% 50% 50%",
+              overflow: "hidden",
+              paddingTop: "1rem",
+            }}
+          >
+            <ImageReusable
+              style={
+                {
+                  // width: "100%",
+                  // height: "100%",
+                  // position: "absolute",
+                  // top: 0,
+                  // left: 0,
+                }
+              }
+              alt="picture of school site project"
+              filename="PortfolioPicture.jpg"
+            />
+          </div>
+        </div>
+
         <div>
           <h1>&lang;Greetings&rang;</h1>
         </div>
@@ -594,7 +632,11 @@ const Home = () => {
           </div>
         </section>
       </DesktopOnly>
-      <section id="contact" className={classes.contactSectionStyles}>
+      <section
+        id="contact"
+        className={classes.contactSectionStyles}
+        style={{ position: "relative" }}
+      >
         <div className={classes.contactSecText}>
           <h2>I look forward to working with you!</h2>
           <p id="finalWords">&lang;Let's create solutions together&rang;</p>
@@ -658,6 +700,67 @@ const Home = () => {
           </div>
         </div>
         <ButtonToTop />
+        <div
+          style={{
+            // background:
+            //   "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
+            background:
+              "linear-gradient(-45deg, transparent 49%, #415498 5%, #323286 36%, #151b7a 100%)",
+            width: `100%`,
+            maxWidth: `85%`,
+            height: "26%",
+            //margin: `1.7rem 0 0 0`,
+            position: "absolute",
+            top: "0",
+            left: "0",
+            borderRadius: "0 0 50% 0",
+          }}
+        ></div>
+        <div
+          style={{
+            // backgroundImage:
+            //   "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
+            background:
+              "linear-gradient(45deg, transparent 49%, #151b7a 5%, #323286 36%, #415498 100%)",
+            width: `100%`,
+            maxWidth: `85%`,
+            height: "26%",
+            //margin: `1.7rem 0 0 0`,
+            position: "absolute",
+            top: "0",
+            right: "0",
+          }}
+        ></div>
+        <div
+          style={{
+            // background:
+            //   "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
+            background:
+              "linear-gradient(-135deg, transparent 49%, #415498 5%, #323286 36%, #151b7a 100%)",
+            width: `100%`,
+            maxWidth: `85%`,
+            height: "26%",
+            //margin: `1.7rem 0 0 0`,
+            position: "absolute",
+            bottom: "0",
+            left: "0",
+          }}
+        ></div>
+        <div
+          style={{
+            // backgroundImage:
+            //   "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
+            background:
+              "linear-gradient(135deg, transparent 49%, #151b7a 5%, #323286 36%, #415498 100%)",
+            width: `100%`,
+            maxWidth: `85%`,
+            height: "26%",
+            //margin: `1.7rem 0 0 0`,
+            position: "absolute",
+            bottom: "0",
+            right: "0",
+          }}
+        ></div>
       </section>
     </Layout>
   )
