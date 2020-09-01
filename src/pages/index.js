@@ -2,6 +2,7 @@ import React from "react"
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
+import { Link } from "gatsby"
 import { makeStyles } from "@material-ui/core/styles"
 import { useTheme, useMediaQuery } from "@material-ui/core"
 import Card from "@material-ui/core/Card"
@@ -18,38 +19,20 @@ import {
   FaGithubSquare,
   FaFile,
   FaEnvelopeOpenText,
+  FaExclamationTriangle,
+  FaSearch,
+  FaRegLightbulb,
 } from "react-icons/fa"
-import ButtonToTop from "../components/buttonToTop"
+//import ButtonToTop from "../components/buttonToTop"
 
 const useStyles = makeStyles({
-  // root: {
-  //   maxWidth: "27.5rem",
-  //   height: "31rem",
-  // },
-  // media: {
-  //   height: "27.5rem",
-  //   transition: "transform 1s",
-  //   transform: "perspective(100px) translateZ(0px)",
-  //   //transform: "translate(0px, -18px)",
-  // },
-  // mediaTransform: {
-  //   height: "27.5rem",
-  //   transition: "transform 1s",
-  //   transform: "perspective(100px) translateZ(0.5px)",
-  //   //transform: "translate(0px, -18px)",
-  // },
   welcomeSectionStyles: {
-    height: "65vh",
     display: "block",
     textAlign: "center",
     margin: "1rem",
   },
-  // projectSectionStyles: {
-  //   height: "150vh",
-  //   borderTop: "0.0625rem solid grey",
-  // },
+
   contactSectionStyles: {
-    //borderTop: "0.0625rem solid grey",
     marginTop: "5rem",
     height: "100vh",
     display: "flex",
@@ -70,21 +53,17 @@ const useStyles = makeStyles({
     flexDirection: "row",
   },
   iconContact: {
-    /*transition connected to .js-icon-float-shadow*/
     display: "flex",
     color: "#000",
-    /*icon color*/
     transition: "transform 1s",
     transform: "perspective(100px) translateZ(-5px)",
     margin: "2rem",
-    //padding: "2rem",
   },
   iconOne: {
     display: "flex",
     color: "#000",
     margin: "2rem",
     transition: "transform 1s",
-    /*font awesome icons are made from text so they won't respond to box-shadow. They need text-shadow instead. A button is a box.*/
     transform: "perspective(100px) translateZ(0px)",
     filter: "drop-shadow(2px 2px 0 rgb(255,0,0))",
   },
@@ -93,7 +72,6 @@ const useStyles = makeStyles({
     color: "#000",
     margin: "2rem",
     transition: "transform 1s",
-    /*font awesome icons are made from text so they won't respond to box-shadow. They need text-shadow instead. A button is a box.*/
     transform: "perspective(100px) translateZ(0px)",
     filter: "drop-shadow(2px 2px 0 rgb(255,165,0))",
   },
@@ -102,7 +80,6 @@ const useStyles = makeStyles({
     color: "#000",
     margin: "2rem",
     transition: "transform 1s",
-    /*font awesome icons are made from text so they won't respond to box-shadow. They need text-shadow instead. A button is a box.*/
     transform: "perspective(100px) translateZ(0px)",
     filter: "drop-shadow(2px 2px 0 rgb(255,255,0))",
   },
@@ -111,7 +88,6 @@ const useStyles = makeStyles({
     color: "#000",
     margin: "2rem",
     transition: "transform 1s",
-    /*font awesome icons are made from text so they won't respond to box-shadow. They need text-shadow instead. A button is a box.*/
     transform: "perspective(100px) translateZ(0px)",
     filter: "drop-shadow(2px 2px 0 rgb(0,128,0))",
   },
@@ -164,30 +140,17 @@ const Home = () => {
   const iconTwoStyle = classes.iconTwo
   const iconThreeStyle = classes.iconThree
   const iconFourStyle = classes.iconFour
-  //const mediaStyle = classes.media
-  //const mediaTransformStyle = classes.mediaTransform
-  // const projectClickTextStyle = classes.projectClickText
-  // const projectClickTextHoverStyle = classes.projectClickTextHover
   const coverDiv1Styles = classes.coverDiv1
   const coverDiv2Styles = classes.coverDiv2
   const coverDiv3Styles = classes.coverDiv3
 
-  // const mobileTechnologiesList = useMediaQuery(
-  //   `${theme.breakpoints.between("0", "690")}  and (orientation: landscape)`
-  // )
-  // const mobileTechnologiesList = useMediaQuery(
-  //   `${theme.breakpoints.between("0", "690")}  and (orientation: portrait)`
-  // )
   const mobileTechnologiesList = useMediaQuery(
     `${theme.breakpoints.between("0", "690")}`
   )
-  // const mobileTechnologiesListSmall = useMediaQuery(
-  //   `${theme.breakpoints.between("0", "545")}  and (orientation: portrait)`
-  // )
 
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO title="Portfolio" />
       <nav
         style={{
           backgroundImage:
@@ -215,26 +178,16 @@ const Home = () => {
               width: `100%`,
               maxWidth: `15rem`,
               height: "15rem",
-              //position: "relative",
+
               margin: `2rem 0 2rem 0`,
               background: "rgba(0, 0, 0, 0.07)",
-              //backgroundSize: "cover",
-              //backgroundImage: url("../images/PortfolioPicture.jpg"),
+
               borderRadius: "50% 50% 50% 50%",
               overflow: "hidden",
               paddingTop: "1rem",
             }}
           >
             <ImageReusable
-              style={
-                {
-                  // width: "100%",
-                  // height: "100%",
-                  // position: "absolute",
-                  // top: 0,
-                  // left: 0,
-                }
-              }
               alt="picture of school site project"
               filename="PortfolioPicture.jpg"
             />
@@ -248,11 +201,77 @@ const Home = () => {
           <p>
             I am a software engineer who is dedicated to creating modern user{" "}
             <br />
-            friendly interfaces. I like figuring out how things work. <br /> I
+            -friendly interfaces. I like figuring out how things work. <br /> I
             really enjoy learning and I am always looking
             <br />
             to improve my skills.
           </p>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-around",
+              marginBottom: "2rem",
+              marginTop: "3rem",
+            }}
+          >
+            <Card
+              style={{
+                backgroundImage:
+                  "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
+                display: "flex",
+                justifyContent: "center",
+                flexDirection: "column",
+                width: "15.625rem",
+                padding: "5% 0 5% 0",
+                color: "#fff",
+              }}
+            >
+              <span style={{ marginBottom: "1rem", fontSize: "1rem" }}>
+                Problem
+              </span>
+              <div>
+                <FaExclamationTriangle style={{ fontSize: "3rem" }} />
+              </div>
+            </Card>
+            <Card
+              style={{
+                backgroundImage:
+                  "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
+                display: "flex",
+                justifyContent: "center",
+                flexDirection: "column",
+                width: "15.625rem",
+                padding: "5% 0 5% 0",
+                color: "#fff",
+              }}
+            >
+              <span style={{ marginBottom: "1rem", fontSize: "1rem" }}>
+                Research + planning
+              </span>
+              <div>
+                <FaSearch style={{ fontSize: "3rem" }} />
+              </div>
+            </Card>
+            <Card
+              style={{
+                backgroundImage:
+                  "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
+                display: "flex",
+                justifyContent: "center",
+                flexDirection: "column",
+                width: "15.625rem",
+                padding: "5% 0 5% 0",
+                color: "#fff",
+              }}
+            >
+              <span style={{ marginBottom: "1rem", fontSize: "1rem" }}>
+                Solution
+              </span>
+              <div>
+                <FaRegLightbulb style={{ fontSize: "3rem" }} />
+              </div>
+            </Card>
+          </div>
         </div>
       </section>
       <DesktopOnly>
@@ -593,9 +612,6 @@ const Home = () => {
                           </div>
                           <div style={{ display: "flex", fontSize: "0.75rem" }}>
                             <div style={{ marginRight: "1rem" }}>
-                              Styled components
-                            </div>
-                            <div style={{ marginRight: "1rem" }}>
                               React router
                             </div>
                           </div>
@@ -670,6 +686,7 @@ const Home = () => {
               />
             </a>
           </div>
+
           <div>
             <a
               href="mailto:banks.matt81@gmail.com"
@@ -685,10 +702,8 @@ const Home = () => {
             </a>
           </div>
           <div>
-            <a
-              href="mailto:banks.matt81@gmail.com"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              to="/resume"
               className={iconFourHover ? iconFourStyle : iconContactStyle}
             >
               <FaFile
@@ -696,66 +711,30 @@ const Home = () => {
                 onMouseEnter={() => setIconFourHover(true)}
                 onMouseLeave={() => setIconFourHover(false)}
               />
-            </a>
+            </Link>
           </div>
         </div>
-        <ButtonToTop />
+        {/* <ButtonToTop /> */}
         <div
           style={{
-            // background:
-            //   "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
             background:
               "linear-gradient(-45deg, transparent 49%, #415498 5%, #323286 36%, #151b7a 100%)",
             width: `100%`,
             maxWidth: `85%`,
-            height: "26%",
-            //margin: `1.7rem 0 0 0`,
+            height: "15%",
             position: "absolute",
             top: "0",
             left: "0",
-            borderRadius: "0 0 50% 0",
           }}
         ></div>
+
         <div
           style={{
-            // backgroundImage:
-            //   "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
-            background:
-              "linear-gradient(45deg, transparent 49%, #151b7a 5%, #323286 36%, #415498 100%)",
-            width: `100%`,
-            maxWidth: `85%`,
-            height: "26%",
-            //margin: `1.7rem 0 0 0`,
-            position: "absolute",
-            top: "0",
-            right: "0",
-          }}
-        ></div>
-        <div
-          style={{
-            // background:
-            //   "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
-            background:
-              "linear-gradient(-135deg, transparent 49%, #415498 5%, #323286 36%, #151b7a 100%)",
-            width: `100%`,
-            maxWidth: `85%`,
-            height: "26%",
-            //margin: `1.7rem 0 0 0`,
-            position: "absolute",
-            bottom: "0",
-            left: "0",
-          }}
-        ></div>
-        <div
-          style={{
-            // backgroundImage:
-            //   "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
             background:
               "linear-gradient(135deg, transparent 49%, #151b7a 5%, #323286 36%, #415498 100%)",
             width: `100%`,
             maxWidth: `85%`,
-            height: "26%",
-            //margin: `1.7rem 0 0 0`,
+            height: "15%",
             position: "absolute",
             bottom: "0",
             right: "0",

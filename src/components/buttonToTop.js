@@ -1,8 +1,24 @@
 import React from "react"
 import styled from "styled-components"
-import { FaArrowUp } from "react-icons/fa"
+import { FaAngleUp } from "react-icons/fa"
 
 const ButtonToTop = () => {
+  // const topButton = document.getElementById("top-button")
+  // window.onscroll = function() {
+  //   scrollAppearFunction()
+  // }
+
+  // function scrollAppearFunction() {
+  //   if (
+  //     document.body.scrollTop > 600 ||
+  //     document.documentElement.scrollTop > 600
+  //   ) {
+  //     topButton.style.display = "block"
+  //   } else {
+  //     topButton.style.display = "none"
+  //   }
+  // }
+
   const scrollSmooth = () => {
     window.scrollTo({
       top: 0,
@@ -13,7 +29,7 @@ const ButtonToTop = () => {
   return (
     <div>
       <ButtonToTopWrapper onClick={scrollSmooth}>
-        <FaArrowUp className="arrow-up" />
+        <FaAngleUp id="top-button" />
       </ButtonToTopWrapper>
     </div>
   )
@@ -22,8 +38,9 @@ const ButtonToTop = () => {
 export default ButtonToTop
 
 const ButtonToTopWrapper = styled.a`
-  .arrow-up {
-    background: #232528;
+  #top-button {
+    //display: none;
+    background: #415498;
     width: 3rem;
     height: 3rem;
     border-radius: 50%;
@@ -41,9 +58,11 @@ const ButtonToTopWrapper = styled.a`
   font-size: 3rem;
   color: #f3f3f3;
   opacity: 0.5;
+
   @media screen and (max-width: 1024px) {
-    .arrow-up {
-      background: #232528;
+    #top-button {
+      display: none;
+      background: #415498;
       width: 2rem;
       height: 2rem;
       border-radius: 50%;
@@ -63,8 +82,9 @@ const ButtonToTopWrapper = styled.a`
     opacity: 0.5;
   }
   @media screen and (max-width: 835px) {
-    .arrow-up {
-      background: #232528;
+    #top-button {
+      display: none;
+      background: #415498;
       width: 2rem;
       height: 2rem;
       border-radius: 50%;
@@ -84,8 +104,9 @@ const ButtonToTopWrapper = styled.a`
     opacity: 0.5;
   }
   @media screen and (max-width: 768px) {
-    .arrow-up {
-      background: #232528;
+    #top-button {
+      display: none;
+      background: #415498;
       width: 2rem;
       height: 2rem;
       border-radius: 50%;

@@ -1,7 +1,6 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-//import Image from "../components/image"
 
 const Header = ({ siteTitle }) => (
   <header
@@ -18,9 +17,7 @@ const Header = ({ siteTitle }) => (
         maxWidth: `140px`,
         margin: `1.7rem 0 0 0`,
       }}
-    >
-      {/* <Image /> */}
-    </div>
+    ></div>
     <div
       style={{
         margin: `0`,
@@ -33,9 +30,6 @@ const Header = ({ siteTitle }) => (
           to="/"
           style={{
             color: `white`,
-            // backgroundImage: "linear-gradient(left, #E0F8F7, #585858, #fff)",
-            // WebkitBackgroundClip: "text",
-            // backgroundClip: "text",
             textDecoration: `none`,
           }}
         >

@@ -1,14 +1,10 @@
 import React from "react"
 import { Link } from "gatsby"
 import Button from "@material-ui/core/Button"
-import ClickAwayListener from "@material-ui/core/ClickAwayListener"
-import Grow from "@material-ui/core/Grow"
-import Paper from "@material-ui/core/Paper"
-import Popper from "@material-ui/core/Popper"
 import MenuItem from "@material-ui/core/MenuItem"
 import MenuList from "@material-ui/core/MenuList"
 import { makeStyles } from "@material-ui/core/styles"
-import { useTheme, useMediaQuery } from "@material-ui/core"
+import styled from "styled-components"
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -67,7 +63,6 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: "transparent",
     color: "black",
     opacity: "0",
-    //overflowX: "hidden",
   },
   mobileNavOpen: {
     position: "absolute",
@@ -80,7 +75,6 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: "transparent",
     color: "black",
     opacity: "1",
-    //overflowX: "hidden",
   },
   barTop: {
     width: "35px",
@@ -90,13 +84,6 @@ const useStyles = makeStyles(theme => ({
     transition: "0.4s",
     transform: "rotate(45deg) translate(-15.5px, 25px)",
   },
-  //   barMiddle: {
-  //     width: "35px",
-  //     height: "5px",
-  //     backgroundColor: "#000",
-  //     margin: "6px 0",
-  //     transition: "0.4s",
-  //   },
   barBottom: {
     width: "40px",
     height: "5px",
@@ -113,14 +100,6 @@ const useStyles = makeStyles(theme => ({
     transition: "0.4s",
     transform: "rotate(-45deg) translate(-25.3px, -18px)",
   },
-  //   changeBarMiddle: {
-  //     width: "35px",
-  //     height: "5px",
-  //     backgroundColor: "#000",
-  //     margin: "6px 0",
-  //     transition: "0.4s",
-  //     opacity: "0",
-  //   },
   changeBarBottom: {
     width: "40px",
     height: "5px",
@@ -133,52 +112,13 @@ const useStyles = makeStyles(theme => ({
 
 const Menu = () => {
   const classes = useStyles()
-  const theme = useTheme()
   const [open, setOpen] = React.useState(false)
-  //const anchorRef = React.useRef(null)
 
   const handleToggle = () => {
     setOpen(!open)
   }
 
-  // const handleClose = event => {
-  //   if (anchorRef.current && anchorRef.current.contains(event.target)) {
-  //     return
-  //   }
-
-  //   setOpen(false)
-  // }
-
-  // function handleListKeyDown(event) {
-  //   if (event.key === "Tab") {
-  //     event.preventDefault()
-  //     setOpen(false)
-  //   }
-  // }
-
-  //return focus to the button when we transitioned from !open -> open
-  // const prevOpen = React.useRef(open)
-  // React.useEffect(() => {
-  //   if (prevOpen.current === true && open === false) {
-  //     anchorRef.current.focus()
-  //   }
-
-  //   prevOpen.current = open
-  // }, [open])
-
-  const mobileMenuP = useMediaQuery(
-    `${theme.breakpoints.between("0", "500")} and (orientation: portrait)`
-  )
-
-  const mobileMenuL = useMediaQuery(
-    `${theme.breakpoints.between("0", "900")} and (orientation: landscape)`
-  )
-
   const root = classes.root
-  const mobileMenuStylesCSSp = classes.mobileMenuStylesP
-  const mobileMenuStylesCSSl = classes.mobileMenuStylesL
-  const noMobileMenuStylesCSS = classes.noMobileMenuStyles
-  const noBigScreenMenuStylesCSS = classes.noBigScreenMenuStyles
   const mobileNavCloseStyles = classes.mobileNavClose
   const mobileNavOpenStyles = classes.mobileNavOpen
 
@@ -191,173 +131,169 @@ const Menu = () => {
 
   return (
     <React.Fragment>
-      <div
-        className={
-          mobileMenuP
-            ? noBigScreenMenuStylesCSS
-            : mobileMenuL
-            ? noBigScreenMenuStylesCSS
-            : root
-        }
-      >
-        <ul
-          style={{
-            listStyle: "none",
-            display: "flex",
-            justifyContent: "space-evenly",
-            fontSize: "1.25rem",
-          }}
-        >
-          <li>
-            <Link style={{ color: "white" }} to="#welcome">
-              About Me
-            </Link>
-          </li>
-          <li>
-            <Link style={{ color: "white" }} to="#projects">
-              My Projects
-            </Link>
-          </li>
-          <li>
-            <Link style={{ color: "white" }} to="#contact">
-              Contact
-            </Link>
-          </li>
-          <li>
-            <Link style={{ color: "white" }} to="/resume">
-              Resume
-            </Link>
-          </li>
-          {/* <li>
-            <Link to="/survey">Survey</Link>
-          </li> */}
-        </ul>
-      </div>
-      <div
-        className={
-          mobileMenuP
-            ? mobileMenuStylesCSSp
-            : mobileMenuL
-            ? mobileMenuStylesCSSl
-            : noMobileMenuStylesCSS
-        }
-      >
-        <Button
-          // ref={anchorRef}
-          // aria-controls={open ? "menu-list-grow" : undefined}
-          // aria-haspopup="true"
-          onClick={handleToggle}
-        >
-          <div className={classes.mobileMenuIcon}>
-            <div className={open === false ? barTopCSS : changeBarTopCSS}></div>
-            <div
-              className={open === false ? barMiddleCSS : changeBarMiddleCSS}
-            ></div>
-            <div
-              className={open === false ? barBottomCSS : changeBarBottomCSS}
-            ></div>
-          </div>
-        </Button>
-        <MenuList
-          className={open ? mobileNavOpenStyles : mobileNavCloseStyles}
-          // autoFocusItem={open}
-          // id="menu-list-grow"
-          // onKeyDown={handleListKeyDown}
-        >
-          <div style={{ display: "block", margin: "1rem" }}>
-            <div>
-              <MenuItem>
-                <Link
-                  onClick={handleToggle}
-                  style={{ color: "#fff" }}
-                  to="#welcome"
-                >
-                  About
-                </Link>
-              </MenuItem>
+      <DesktopOnly>
+        <div className={root}>
+          <ul
+            style={{
+              listStyle: "none",
+              display: "flex",
+              justifyContent: "space-evenly",
+              fontSize: "1.25rem",
+            }}
+          >
+            <li>
+              <Link to="#welcome">About Me</Link>
+            </li>
+            <li>
+              <Link to="#projects">My Projects</Link>
+            </li>
+            <li>
+              <Link to="#contact">Contact</Link>
+            </li>
+            <li>
+              <Link to="/resume">Resume</Link>
+            </li>
+          </ul>
+        </div>
+      </DesktopOnly>
+      <MobileOnly>
+        <div className={"mobile-menu-styles-p mobile-menu-styles-l"}>
+          <Button disableRipple={true} onClick={handleToggle}>
+            <div className={classes.mobileMenuIcon}>
+              <div
+                className={open === false ? barTopCSS : changeBarTopCSS}
+              ></div>
+              <div
+                className={open === false ? barMiddleCSS : changeBarMiddleCSS}
+              ></div>
+              <div
+                className={open === false ? barBottomCSS : changeBarBottomCSS}
+              ></div>
             </div>
-            <div>
-              <MenuItem>
-                <Link
-                  onClick={handleToggle}
-                  style={{ color: "#fff" }}
-                  to="#projects"
-                >
-                  Projects
-                </Link>
-              </MenuItem>
-            </div>
-            <div>
-              <MenuItem>
-                <Link
-                  onClick={handleToggle}
-                  style={{ color: "#fff" }}
-                  to="#contact"
-                >
-                  Contact
-                </Link>
-              </MenuItem>
-            </div>
-            <div>
-              <MenuItem>
-                <Link
-                  onClick={handleToggle}
-                  style={{ color: "#fff" }}
-                  to="/resume"
-                >
-                  Resume
-                </Link>
-              </MenuItem>
-            </div>
-          </div>
-        </MenuList>
-        {/* <Popper
-          open={open}
-          anchorEl={anchorRef.current}
-          role={undefined}
-          transition
-          disablePortal
-        >
-          {({ TransitionProps, placement }) => (
-            <Grow
-              {...TransitionProps}
-              style={{
-                transformOrigin:
-                  placement === "bottom" ? "center top" : "center bottom",
-              }}
-            >
-              <Paper className={classes.paper}>
-                <ClickAwayListener onClickAway={handleClose}>
-                  <MenuList
-                    autoFocusItem={open}
-                    id="menu-list-grow"
-                    onKeyDown={handleListKeyDown}
+          </Button>
+          <MenuList
+            className={open ? mobileNavOpenStyles : mobileNavCloseStyles}
+            autoFocusItem={true}
+          >
+            <div style={{ display: "block", margin: "1rem" }}>
+              <div>
+                <MenuItem>
+                  <Link
+                    onClick={handleToggle}
+                    style={{ color: "#fff" }}
+                    to="#welcome"
                   >
-                    <div style={{ display: "block", margin: "1rem" }}>
-                      <div>
-                        <MenuItem onClick={handleClose}>
-                          <Link to="/">Home</Link>
-                        </MenuItem>
-                      </div>
-                      <div>
-                        <MenuItem onClick={handleClose}>
-                          <Link to="/about">About</Link>
-                        </MenuItem>
-                      </div>
-                      <div>
-                        <MenuItem onClick={handleClose}>
-                          <Link to="/contact">Contact</Link>
-                        </MenuItem>
-                      </div>
-                    </div>
-                  </MenuList>
-                </ClickAwayListener>
-              </Paper>
-            </Grow>
-          )}
-        </Popper> */}
-      </div>
+                    About
+                  </Link>
+                </MenuItem>
+              </div>
+              <div>
+                <MenuItem>
+                  <Link
+                    onClick={handleToggle}
+                    style={{ color: "#fff" }}
+                    to="#projects"
+                  >
+                    Projects
+                  </Link>
+                </MenuItem>
+              </div>
+              <div>
+                <MenuItem>
+                  <Link
+                    onClick={handleToggle}
+                    style={{ color: "#fff" }}
+                    to="#contact"
+                  >
+                    Contact
+                  </Link>
+                </MenuItem>
+              </div>
+              <div>
+                <MenuItem>
+                  <Link
+                    onClick={handleToggle}
+                    style={{ color: "#fff" }}
+                    to="/resume"
+                  >
+                    Resume
+                  </Link>
+                </MenuItem>
+              </div>
+            </div>
+          </MenuList>
+        </div>
+      </MobileOnly>
     </React.Fragment>
   )
 }
 export default Menu
+
+let DesktopOnly = styled.div`
+  a {
+    text-decoration: none;
+    background-image: linear-gradient(#fff, #fff);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size 0.3s;
+    color: #fff;
+  }
+
+  a:hover,
+  a:focus {
+    background-size: 100% 2px;
+  }
+  @media (max-width: 500px) and (orientation: portrait) {
+    display: none;
+  }
+  @media (max-width: 900px) and (orientation: landscape) {
+    display: none;
+  }
+`
+let MobileOnly = styled.div`
+  @media (min-width: 500px) and (orientation: portrait) {
+    display: none;
+  }
+  @media (min-width: 900px) and (orientation: landscape) {
+    display: none;
+  }
+  @media (max-width: 500px) and (orientation: portrait) {
+    .mobile-menu-styles-p {
+      background-image: linear-gradient(
+        90deg,
+        #151b7a 5%,
+        #323286 36%,
+        #415498 100%
+      );
+      padding: 0.5rem;
+      display: flex;
+      justify-content: space-evenly;
+      font-size: 1.25rem;
+      position: relative;
+      z-index: 10;
+      width: 100%;
+      height: 16rem;
+      overflow-x: hidden;
+    }
+  }
+  @media (max-width: 900px) and (orientation: landscape) {
+    .mobile-menu-styles-l {
+      background-image: linear-gradient(
+        90deg,
+        #151b7a 5%,
+        #323286 36%,
+        #415498 100%
+      );
+      padding: 0.5rem;
+      display: flex;
+      justify-content: space-evenly;
+      font-size: 1.25rem;
+      position: relative;
+      z-index: 10;
+      width: 100%;
+      height: 16rem;
+      overflow-x: hidden;
+    }
+  }
+`
