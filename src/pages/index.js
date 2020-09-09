@@ -19,11 +19,7 @@ import {
   FaGithubSquare,
   FaFile,
   FaEnvelopeOpenText,
-  FaExclamationTriangle,
-  FaSearch,
-  FaRegLightbulb,
 } from "react-icons/fa"
-//import ButtonToTop from "../components/buttonToTop"
 
 const useStyles = makeStyles({
   welcomeSectionStyles: {
@@ -91,27 +87,6 @@ const useStyles = makeStyles({
     transform: "perspective(100px) translateZ(0px)",
     filter: "drop-shadow(2px 2px 0 rgb(0,128,0))",
   },
-  projectClickText: {
-    padding: "45%",
-    position: "absolute",
-    color: "transparent",
-    zIndex: "10",
-  },
-  projectClickTextHover: {
-    padding: "45%",
-    position: "absolute",
-    color: "#000",
-    zIndex: "10",
-  },
-  coverDiv1: {
-    height: "90%",
-  },
-  coverDiv2: {
-    height: "10%",
-  },
-  coverDiv3: {
-    height: "100%",
-  },
 })
 
 const Home = () => {
@@ -123,16 +98,6 @@ const Home = () => {
   const [iconFourHover, setIconFourHover] = React.useState(false)
   const [projectOneHover, setProjectOneHover] = React.useState(false)
   const [projectTwoHover, setProjectTwoHover] = React.useState(false)
-  const [
-    projectOneClickTextHover,
-    setProjectOneClickTextHover,
-  ] = React.useState(false)
-  const [
-    projectTwoClickTextHover,
-    setProjectTwoClickTextHover,
-  ] = React.useState(false)
-  const [clickProject, setClickProject] = React.useState(false)
-  const [clickSecondProject, setClickSecondProject] = React.useState(false)
 
   //styles
   const iconContactStyle = classes.iconContact
@@ -140,9 +105,6 @@ const Home = () => {
   const iconTwoStyle = classes.iconTwo
   const iconThreeStyle = classes.iconThree
   const iconFourStyle = classes.iconFour
-  const coverDiv1Styles = classes.coverDiv1
-  const coverDiv2Styles = classes.coverDiv2
-  const coverDiv3Styles = classes.coverDiv3
 
   const mobileTechnologiesList = useMediaQuery(
     `${theme.breakpoints.between("0", "690")}`
@@ -178,10 +140,8 @@ const Home = () => {
               width: `100%`,
               maxWidth: `15rem`,
               height: "15rem",
-
               margin: `2rem 0 2rem 0`,
               background: "rgba(0, 0, 0, 0.07)",
-
               borderRadius: "50% 50% 50% 50%",
               overflow: "hidden",
               paddingTop: "1rem",
@@ -193,149 +153,407 @@ const Home = () => {
             />
           </div>
         </div>
-
         <div>
           <h1>&lang;Greetings&rang;</h1>
         </div>
         <div style={{ fontSize: "1.5rem" }}>
           <p>
-            I am a software engineer who is dedicated to creating modern user{" "}
-            <br />
-            -friendly interfaces. I like figuring out how things work. <br /> I
-            really enjoy learning and I am always looking
+            I am a software engineer who is dedicated to creating modern
+            user-friendly interfaces.
+            <br /> I like figuring out how things work and finding solutions to
+            problems. <br /> I really enjoy learning and I am always looking
             <br />
             to improve my skills.
           </p>
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "space-around",
-              marginBottom: "2rem",
-              marginTop: "3rem",
-            }}
-          >
-            <Card
-              style={{
-                backgroundImage:
-                  "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
-                display: "flex",
-                justifyContent: "center",
-                flexDirection: "column",
-                width: "15.625rem",
-                padding: "5% 0 5% 0",
-                color: "#fff",
-              }}
-            >
-              <span style={{ marginBottom: "1rem", fontSize: "1rem" }}>
-                Problem
-              </span>
-              <div>
-                <FaExclamationTriangle style={{ fontSize: "3rem" }} />
-              </div>
-            </Card>
-            <Card
-              style={{
-                backgroundImage:
-                  "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
-                display: "flex",
-                justifyContent: "center",
-                flexDirection: "column",
-                width: "15.625rem",
-                padding: "5% 0 5% 0",
-                color: "#fff",
-              }}
-            >
-              <span style={{ marginBottom: "1rem", fontSize: "1rem" }}>
-                Research + planning
-              </span>
-              <div>
-                <FaSearch style={{ fontSize: "3rem" }} />
-              </div>
-            </Card>
-            <Card
-              style={{
-                backgroundImage:
-                  "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
-                display: "flex",
-                justifyContent: "center",
-                flexDirection: "column",
-                width: "15.625rem",
-                padding: "5% 0 5% 0",
-                color: "#fff",
-              }}
-            >
-              <span style={{ marginBottom: "1rem", fontSize: "1rem" }}>
-                Solution
-              </span>
-              <div>
-                <FaRegLightbulb style={{ fontSize: "3rem" }} />
-              </div>
-            </Card>
+          <div>
+            <h2>Technologies I have worked with so far:</h2>
           </div>
+          <React.Fragment>
+            <div
+              style={{
+                display: "block",
+                fontSize: "1rem",
+                margin: "0 1.5rem 0.5rem 1.5rem",
+              }}
+            >
+              <a
+                href="https://reactjs.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  margin: "0 0.5rem 0 0.5rem",
+                }}
+              >
+                <button
+                  style={{
+                    backgroundImage:
+                      "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
+                    cursor: "pointer",
+                    color: "#fff",
+                    marginBottom: "0.5rem",
+                  }}
+                >
+                  React
+                </button>
+              </a>
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  marginRight: "0.5rem",
+                }}
+              >
+                <button
+                  style={{
+                    backgroundImage:
+                      "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
+                    cursor: "pointer",
+                    color: "#fff",
+                    marginBottom: "0.5rem",
+                  }}
+                >
+                  Javascript
+                </button>
+              </a>
+              <a
+                href="https://www.mongodb.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  marginRight: "0.5rem",
+                }}
+              >
+                <button
+                  style={{
+                    backgroundImage:
+                      "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
+                    cursor: "pointer",
+                    color: "#fff",
+                    marginBottom: "0.5rem",
+                  }}
+                >
+                  Mongodb
+                </button>
+              </a>
+              <a
+                href="https://www.contentful.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  marginRight: "0.5rem",
+                }}
+              >
+                <button
+                  style={{
+                    backgroundImage:
+                      "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
+                    cursor: "pointer",
+                    color: "#fff",
+                    marginBottom: "0.5rem",
+                  }}
+                >
+                  Contentful
+                </button>
+              </a>
+              <a
+                href="https://material-ui.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  marginRight: "0.5rem",
+                }}
+              >
+                <button
+                  style={{
+                    backgroundImage:
+                      "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
+                    cursor: "pointer",
+                    color: "#fff",
+                    marginBottom: "0.5rem",
+                  }}
+                >
+                  Material-ui
+                </button>
+              </a>
+              <a
+                href="https://styled-components.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  marginRight: "0.5rem",
+                }}
+              >
+                <button
+                  style={{
+                    backgroundImage:
+                      "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
+                    cursor: "pointer",
+                    color: "#fff",
+                    marginBottom: "0.5rem",
+                  }}
+                >
+                  Styled-components
+                </button>
+              </a>
+              <a
+                href="https://socket.io/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  marginRight: "0.5rem",
+                }}
+              >
+                <button
+                  style={{
+                    backgroundImage:
+                      "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
+                    cursor: "pointer",
+                    color: "#fff",
+                    marginBottom: "0.5rem",
+                  }}
+                >
+                  Socket.io
+                </button>
+              </a>
+            </div>
+            <div
+              style={{
+                display: "block",
+                fontSize: "1rem",
+                margin: "0 1.5rem 1rem 1.5rem",
+              }}
+            >
+              <a
+                href="https://expressjs.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  marginRight: "0.5rem",
+                }}
+              >
+                <button
+                  style={{
+                    backgroundImage:
+                      "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
+                    cursor: "pointer",
+                    color: "#fff",
+                    marginBottom: "0.5rem",
+                  }}
+                >
+                  Express
+                </button>
+              </a>
+              <a
+                href="https://nodejs.org/en/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  marginRight: "0.5rem",
+                }}
+              >
+                <button
+                  style={{
+                    backgroundImage:
+                      "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
+                    cursor: "pointer",
+                    color: "#fff",
+                    marginBottom: "0.5rem",
+                  }}
+                >
+                  Node
+                </button>
+              </a>
+              <a
+                href="https://www.gatsbyjs.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  marginRight: "0.5rem",
+                }}
+              >
+                <button
+                  style={{
+                    backgroundImage:
+                      "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
+                    cursor: "pointer",
+                    color: "#fff",
+                    marginBottom: "0.5rem",
+                  }}
+                >
+                  Gatsby
+                </button>
+              </a>
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/HTML"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  marginRight: "0.5rem",
+                }}
+              >
+                <button
+                  style={{
+                    backgroundImage:
+                      "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
+                    cursor: "pointer",
+                    color: "#fff",
+                    marginBottom: "0.5rem",
+                  }}
+                >
+                  HTML
+                </button>
+              </a>
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/CSS"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  marginRight: "0.5rem",
+                }}
+              >
+                <button
+                  style={{
+                    backgroundImage:
+                      "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
+                    cursor: "pointer",
+                    color: "#fff",
+                    marginBottom: "0.5rem",
+                  }}
+                >
+                  CSS
+                </button>
+              </a>
+              <a
+                href="https://getbootstrap.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  marginRight: "0.5rem",
+                }}
+              >
+                <button
+                  style={{
+                    backgroundImage:
+                      "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
+                    cursor: "pointer",
+                    color: "#fff",
+                    marginBottom: "0.5rem",
+                  }}
+                >
+                  Bootstrap
+                </button>
+              </a>
+              <a
+                href="https://developer.paypal.com/home/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  marginRight: "0.5rem",
+                }}
+              >
+                <button
+                  style={{
+                    backgroundImage:
+                      "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
+                    cursor: "pointer",
+                    color: "#fff",
+                    marginBottom: "0.5rem",
+                  }}
+                >
+                  PayPal
+                </button>
+              </a>
+              <a
+                href="https://reactrouter.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  marginRight: "0.5rem",
+                }}
+              >
+                <button
+                  style={{
+                    backgroundImage:
+                      "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
+                    cursor: "pointer",
+                    color: "#fff",
+                    marginBottom: "0.5rem",
+                  }}
+                >
+                  React router
+                </button>
+              </a>
+              <a
+                href="https://graphql.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  marginRight: "0.5rem",
+                }}
+              >
+                <button
+                  style={{
+                    backgroundImage:
+                      "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
+                    cursor: "pointer",
+                    color: "#fff",
+                    marginBottom: "0.5rem",
+                  }}
+                >
+                  GraphQL
+                </button>
+              </a>
+            </div>
+          </React.Fragment>
         </div>
       </section>
-      <DesktopOnly>
+      <MainStyles>
         <section id="projects" className={"project-section-styles"}>
           <div
             style={{
               textAlign: "center",
               paddingTop: "4rem",
               paddingBottom: "2rem",
-              color: "white",
+              color: "#fff",
               backgroundImage:
                 "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
             }}
           >
-            <h2>Here is what I've been up to.</h2>
-            <p>(click one of my projects for more options.)</p>
+            <div style={{ margin: "1rem" }}>
+              <h2>Here is what I've been up to.</h2>
+              <h4>
+                (Click below each project description to see the github code or
+                try the site out.)
+              </h4>
+            </div>
           </div>
-
           <div className={"wide-screen-projects"}>
-            <div
-              className={"wide-screen-margin"}
-              onMouseLeave={() => {
-                setClickProject(false)
-              }}
-            >
+            <div className={"wide-screen-margin"}>
               <Card className={"project-card-styles"}>
-                <CardActionArea className={clickProject ? coverDiv1Styles : ""}>
-                  {clickProject ? (
-                    ""
-                  ) : (
-                    <CardMedia
-                      className={
-                        projectOneHover
-                          ? "project-media-transform-styles"
-                          : "project-media-styles"
-                      }
-                      style={{ maxWidth: "100%", margin: "0 0 0 0" }}
-                      title="Eagle Elementary School"
-                      onMouseEnter={() => {
-                        setProjectOneHover(true)
-                        setProjectOneClickTextHover(true)
-                      }}
-                      onMouseLeave={() => {
-                        setProjectOneHover(false)
-                        setProjectOneClickTextHover(false)
-                      }}
-                      onClick={() => {
-                        setClickProject(true)
-                      }}
-                    >
-                      <ImageReusable
-                        style={{ position: "relative" }}
-                        alt="picture of school site project"
-                        filename="EagleElementarySchool.PNG"
-                      />
-                    </CardMedia>
-                  )}
-
-                  <CardContent
-                    onClick={() => {
-                      setClickProject(false)
+                <CardActionArea>
+                  <CardMedia
+                    className={
+                      projectOneHover
+                        ? "project-media-transform-styles"
+                        : "project-media-styles"
+                    }
+                    style={{ maxWidth: "100%", margin: "0 0 0 0" }}
+                    title="Eagle Elementary School"
+                    onMouseEnter={() => {
+                      setProjectOneHover(true)
                     }}
-                    className={clickProject ? coverDiv3Styles : ""}
+                    onMouseLeave={() => {
+                      setProjectOneHover(false)
+                    }}
                   >
+                    <ImageReusable
+                      style={{ position: "relative" }}
+                      alt="picture of school site project"
+                      filename="EagleElementarySchool.PNG"
+                    />
+                  </CardMedia>
+                  <CardContent>
                     <Typography gutterBottom variant="h5" component="h2">
                       Eagle Elementary School
                     </Typography>
@@ -358,7 +576,7 @@ const Home = () => {
                     <div
                       style={{
                         display: "block",
-                        flexDirection: "row",
+
                         listStyle: "none",
                         margin: "0.5rem 1.5rem 0 1.5rem",
                       }}
@@ -451,79 +669,77 @@ const Home = () => {
                     </div>
                   </CardContent>
                 </CardActionArea>
-                <div
-                  className={clickProject ? coverDiv2Styles : ""}
-                  style={{ display: "flex", justifyContent: "center" }}
-                  onMouseEnter={() => {
-                    setClickProject(true)
-                  }}
-                  onClick={() => {
-                    setClickProject(true)
-                  }}
-                >
+                <div style={{ display: "flex", justifyContent: "center" }}>
                   <CardActions>
-                    <a href="https://github.com/mattrbanks/school-site-chat-survey-portfolio-project">
-                      <Button size="small" color="primary">
-                        Code
+                    <a
+                      href="https://github.com/mattrbanks/school-site-chat-survey-portfolio-project"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{ color: "#fff" }}
+                    >
+                      <Button
+                        style={{
+                          backgroundImage:
+                            "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
+                          border: "1px solid #000",
+                          fontSize: "1.05rem",
+                        }}
+                        size="large"
+                        color="inherit"
+                      >
+                        See my code
                       </Button>
                     </a>
-                    <a href="https://eagle-elementary-school.netlify.app/">
-                      <Button size="small" color="primary">
-                        Site
+                    <a
+                      href="https://eagle-elementary-school.netlify.app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{ color: "#fff" }}
+                    >
+                      <Button
+                        style={{
+                          backgroundImage:
+                            "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
+                          border: "1px solid #000",
+                          fontSize: "1.05rem",
+                        }}
+                        size="large"
+                        color="inherit"
+                      >
+                        Try the site
                       </Button>
                     </a>
                   </CardActions>
                 </div>
               </Card>
             </div>
-            <div
-              className={"mobile-screen-margin"}
-              onMouseLeave={() => {
-                setClickSecondProject(false)
-              }}
-            >
+            <div className={"mobile-screen-margin"}>
               <Card className={"project-card-styles"}>
-                <CardActionArea
-                  className={clickSecondProject ? coverDiv1Styles : ""}
-                >
-                  {clickSecondProject ? (
-                    ""
-                  ) : (
-                    <CardMedia
-                      className={
-                        projectTwoHover
-                          ? "project-media-transform-styles"
-                          : "project-media-styles"
-                      }
-                      style={{
-                        maxWidth: "100%",
-                        margin: "0 0 0 0",
-                      }}
-                      title="Matt's Retro Games"
-                      onMouseEnter={() => {
-                        setProjectTwoHover(true)
-                        setProjectTwoClickTextHover(true)
-                      }}
-                      onMouseLeave={() => {
-                        setProjectTwoHover(false)
-                        setProjectTwoClickTextHover(false)
-                      }}
-                      onClick={() => {
-                        setClickSecondProject(true)
-                      }}
-                    >
-                      <Image
-                        style={{ position: "relative" }}
-                        alt="picture of game store site project"
-                      />
-                    </CardMedia>
-                  )}
-                  <CardContent
-                    onClick={() => {
-                      setClickSecondProject(false)
+                <CardActionArea>
+                  <CardMedia
+                    className={
+                      projectTwoHover
+                        ? "project-media-transform-styles"
+                        : "project-media-styles"
+                    }
+                    style={{
+                      maxWidth: "100%",
+                      margin: "0 0 0 0",
                     }}
-                    className={clickSecondProject ? coverDiv3Styles : ""}
+                    title="Matt's Retro Games"
+                    onMouseEnter={() => {
+                      setProjectTwoHover(true)
+                    }}
+                    onMouseLeave={() => {
+                      setProjectTwoHover(false)
+                    }}
                   >
+                    <Image
+                      style={{ position: "relative" }}
+                      alt="picture of game store site project"
+                    />
+                  </CardMedia>
+                  <CardContent style={{ marginBottom: "2.5rem" }}>
                     <Typography gutterBottom variant="h5" component="h2">
                       Matt's Retro Games
                     </Typography>
@@ -545,7 +761,7 @@ const Home = () => {
                     <div
                       style={{
                         display: "block",
-                        flexDirection: "row",
+
                         listStyle: "none",
                         margin: "0.5rem 1.5rem 0 1.5rem",
                       }}
@@ -620,25 +836,44 @@ const Home = () => {
                     </div>
                   </CardContent>
                 </CardActionArea>
-                <div
-                  className={clickSecondProject ? coverDiv2Styles : ""}
-                  style={{ display: "flex", justifyContent: "center" }}
-                  onMouseEnter={() => {
-                    setClickSecondProject(true)
-                  }}
-                  onClick={() => {
-                    setClickSecondProject(true)
-                  }}
-                >
+                <div style={{ display: "flex", justifyContent: "center" }}>
                   <CardActions>
-                    <a href="https://github.com/mattrbanks/retro-game-store-portfolio-project">
-                      <Button size="small" color="primary">
-                        Code
+                    <a
+                      href="https://github.com/mattrbanks/retro-game-store-portfolio-project"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{ color: "#fff" }}
+                    >
+                      <Button
+                        style={{
+                          backgroundImage:
+                            "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
+                          border: "1px solid #000",
+                          fontSize: "1.05rem",
+                        }}
+                        size="large"
+                        color="inherit"
+                      >
+                        See my code
                       </Button>
                     </a>
-                    <a href="https://matts-retro-games.netlify.app/">
-                      <Button size="small" color="primary">
-                        Site
+                    <a
+                      href="https://matts-retro-games.netlify.app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{ color: "#fff" }}
+                    >
+                      <Button
+                        style={{
+                          backgroundImage:
+                            "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
+                          border: "1px solid #000",
+                          fontSize: "1.05rem",
+                        }}
+                        size="large"
+                        color="inherit"
+                      >
+                        Try the site
                       </Button>
                     </a>
                   </CardActions>
@@ -647,7 +882,7 @@ const Home = () => {
             </div>
           </div>
         </section>
-      </DesktopOnly>
+      </MainStyles>
       <section
         id="contact"
         className={classes.contactSectionStyles}
@@ -686,7 +921,6 @@ const Home = () => {
               />
             </a>
           </div>
-
           <div>
             <a
               href="mailto:banks.matt81@gmail.com"
@@ -714,7 +948,6 @@ const Home = () => {
             </Link>
           </div>
         </div>
-        {/* <ButtonToTop /> */}
         <div
           style={{
             background:
@@ -727,7 +960,6 @@ const Home = () => {
             left: "0",
           }}
         ></div>
-
         <div
           style={{
             background:
@@ -747,12 +979,12 @@ const Home = () => {
 
 export default Home
 
-let DesktopOnly = styled.div`
+let MainStyles = styled.div`
   .wide-screen-projects {
     display: flex;
     justify-content: space-around;
     margin: 5rem 4rem 0 4rem;
-    @media (max-width: 875px) and (orientation: portrait) {
+    @media (max-width: 1200px) and (orientation: portrait) {
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -768,7 +1000,7 @@ let DesktopOnly = styled.div`
   }
   .wide-screen-margin {
     margin-right: 3rem;
-    @media (max-width: 875px) and (orientation: portrait) {
+    @media (max-width: 1200px) and (orientation: portrait) {
       margin: 1rem;
     }
     @media (max-width: 1230px) and (orientation: landscape) {
@@ -785,14 +1017,14 @@ let DesktopOnly = styled.div`
   }
   .project-card-styles {
     max-width: 27.5rem;
-    height: 31rem;
+    height: 50.5rem;
     @media (max-width: 690px) and (orientation: portrait) {
       max-width: 20rem;
-      height: 23.5rem;
+      height: 47rem;
     }
     @media (max-width: 660px) and (orientation: landscape) {
       max-width: 20rem;
-      height: 23.5rem;
+      height: 47rem;
     }
   }
   .project-media-styles {

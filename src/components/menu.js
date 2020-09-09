@@ -5,76 +5,18 @@ import MenuItem from "@material-ui/core/MenuItem"
 import MenuList from "@material-ui/core/MenuList"
 import { makeStyles } from "@material-ui/core/styles"
 import styled from "styled-components"
+import "./layout.css"
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles({
   root: {
     backgroundImage:
       "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
     paddingTop: "1rem",
   },
-  paper: {
-    marginRight: theme.spacing(2),
-  },
-  noBigScreenMenuStyles: {
-    display: "none",
-  },
-  noMobileMenuStyles: {
-    display: "none",
-  },
-  mobileMenuStylesP: {
-    backgroundImage:
-      "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
-    padding: "0.5rem",
-    display: "flex",
-    justifyContent: "space-evenly",
-    fontSize: "1.25rem",
-    position: "relative",
-    zIndex: "10",
-    width: "100%",
-    height: "16rem",
-    overflowX: "hidden",
-  },
-  mobileMenuStylesL: {
-    backgroundImage:
-      "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
-    padding: "0.5rem",
-    display: "flex",
-    justifyContent: "space-evenly",
-    fontSize: "1.25rem",
-    position: "relative",
-    zIndex: "10",
-    width: "100%",
-    height: "16rem",
-    overflowX: "hidden",
-  },
   mobileMenuIcon: {
     position: "relative",
     display: "inline-block",
     cursor: "pointer",
-  },
-  mobileNavClose: {
-    position: "absolute",
-    right: "0",
-    top: "0",
-    display: "inline-block",
-    cursor: "pointer",
-    transform: "translateX(100%)",
-    transition: "0.5s ease-in",
-    backgroundColor: "transparent",
-    color: "black",
-    opacity: "0",
-  },
-  mobileNavOpen: {
-    position: "absolute",
-    right: "0",
-    top: "0",
-    display: "inline-block",
-    cursor: "pointer",
-    transform: "translateX(0%)",
-    transition: "0.5s ease-out",
-    backgroundColor: "transparent",
-    color: "black",
-    opacity: "1",
   },
   barTop: {
     width: "35px",
@@ -108,7 +50,7 @@ const useStyles = makeStyles(theme => ({
     transition: "0.4s",
     transform: "rotate(45deg) translate(-10px, -1px)",
   },
-}))
+})
 
 const Menu = () => {
   const classes = useStyles()
@@ -119,8 +61,6 @@ const Menu = () => {
   }
 
   const root = classes.root
-  const mobileNavCloseStyles = classes.mobileNavClose
-  const mobileNavOpenStyles = classes.mobileNavOpen
 
   const barTopCSS = classes.barTop
   const barMiddleCSS = classes.barMiddle
@@ -156,74 +96,80 @@ const Menu = () => {
           </ul>
         </div>
       </DesktopOnly>
-      <MobileOnly>
-        <div className={"mobile-menu-styles-p mobile-menu-styles-l"}>
-          <Button disableRipple={true} onClick={handleToggle}>
-            <div className={classes.mobileMenuIcon}>
-              <div
-                className={open === false ? barTopCSS : changeBarTopCSS}
-              ></div>
-              <div
-                className={open === false ? barMiddleCSS : changeBarMiddleCSS}
-              ></div>
-              <div
-                className={open === false ? barBottomCSS : changeBarBottomCSS}
-              ></div>
+
+      <div
+        className={"show-mobile-nav mobile-menu-styles-p mobile-menu-styles-l"}
+        style={{ position: "relative" }}
+      >
+        <Button
+          style={{ position: "absolute", top: "40%" }}
+          disableRipple={true}
+          onClick={handleToggle}
+        >
+          <div className={classes.mobileMenuIcon}>
+            <div className={open === false ? barTopCSS : changeBarTopCSS}></div>
+            <div
+              className={open === false ? barMiddleCSS : changeBarMiddleCSS}
+            ></div>
+            <div
+              className={open === false ? barBottomCSS : changeBarBottomCSS}
+            ></div>
+          </div>
+        </Button>
+        <MenuList
+          className={
+            open ? "mobile-nav-open-styles" : "mobile-nav-close-styles"
+          }
+          autoFocusItem={true}
+        >
+          <div style={{ display: "block", margin: "1rem" }}>
+            <div>
+              <MenuItem>
+                <Link
+                  onClick={handleToggle}
+                  style={{ color: "#fff" }}
+                  to="#welcome"
+                >
+                  About
+                </Link>
+              </MenuItem>
             </div>
-          </Button>
-          <MenuList
-            className={open ? mobileNavOpenStyles : mobileNavCloseStyles}
-            autoFocusItem={true}
-          >
-            <div style={{ display: "block", margin: "1rem" }}>
-              <div>
-                <MenuItem>
-                  <Link
-                    onClick={handleToggle}
-                    style={{ color: "#fff" }}
-                    to="#welcome"
-                  >
-                    About
-                  </Link>
-                </MenuItem>
-              </div>
-              <div>
-                <MenuItem>
-                  <Link
-                    onClick={handleToggle}
-                    style={{ color: "#fff" }}
-                    to="#projects"
-                  >
-                    Projects
-                  </Link>
-                </MenuItem>
-              </div>
-              <div>
-                <MenuItem>
-                  <Link
-                    onClick={handleToggle}
-                    style={{ color: "#fff" }}
-                    to="#contact"
-                  >
-                    Contact
-                  </Link>
-                </MenuItem>
-              </div>
-              <div>
-                <MenuItem>
-                  <Link
-                    onClick={handleToggle}
-                    style={{ color: "#fff" }}
-                    to="/resume"
-                  >
-                    Resume
-                  </Link>
-                </MenuItem>
-              </div>
+            <div>
+              <MenuItem>
+                <Link
+                  onClick={handleToggle}
+                  style={{ color: "#fff" }}
+                  to="#projects"
+                >
+                  Projects
+                </Link>
+              </MenuItem>
             </div>
-          </MenuList>
-        </div>
-      </MobileOnly>
+            <div>
+              <MenuItem>
+                <Link
+                  onClick={handleToggle}
+                  style={{ color: "#fff" }}
+                  to="#contact"
+                >
+                  Contact
+                </Link>
+              </MenuItem>
+            </div>
+            <div>
+              <MenuItem>
+                <Link
+                  onClick={handleToggle}
+                  style={{ color: "#fff" }}
+                  to="/resume"
+                >
+                  Resume
+                </Link>
+              </MenuItem>
+            </div>
+          </div>
+        </MenuList>
+      </div>
     </React.Fragment>
   )
 }
@@ -249,51 +195,5 @@ let DesktopOnly = styled.div`
   }
   @media (max-width: 900px) and (orientation: landscape) {
     display: none;
-  }
-`
-let MobileOnly = styled.div`
-  @media (min-width: 500px) and (orientation: portrait) {
-    display: none;
-  }
-  @media (min-width: 900px) and (orientation: landscape) {
-    display: none;
-  }
-  @media (max-width: 500px) and (orientation: portrait) {
-    .mobile-menu-styles-p {
-      background-image: linear-gradient(
-        90deg,
-        #151b7a 5%,
-        #323286 36%,
-        #415498 100%
-      );
-      padding: 0.5rem;
-      display: flex;
-      justify-content: space-evenly;
-      font-size: 1.25rem;
-      position: relative;
-      z-index: 10;
-      width: 100%;
-      height: 16rem;
-      overflow-x: hidden;
-    }
-  }
-  @media (max-width: 900px) and (orientation: landscape) {
-    .mobile-menu-styles-l {
-      background-image: linear-gradient(
-        90deg,
-        #151b7a 5%,
-        #323286 36%,
-        #415498 100%
-      );
-      padding: 0.5rem;
-      display: flex;
-      justify-content: space-evenly;
-      font-size: 1.25rem;
-      position: relative;
-      z-index: 10;
-      width: 100%;
-      height: 16rem;
-      overflow-x: hidden;
-    }
   }
 `
