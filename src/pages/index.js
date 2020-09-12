@@ -14,12 +14,7 @@ import Button from "@material-ui/core/Button"
 import Typography from "@material-ui/core/Typography"
 import ImageReusable from "../components/imageReusable"
 import styled from "styled-components"
-import {
-  FaLinkedin,
-  FaGithubSquare,
-  FaFile,
-  FaEnvelopeOpenText,
-} from "react-icons/fa"
+import { FaLinkedin, FaGithubSquare, FaFile } from "react-icons/fa"
 
 const useStyles = makeStyles({
   welcomeSectionStyles: {
@@ -71,21 +66,21 @@ const useStyles = makeStyles({
     transform: "perspective(100px) translateZ(0px)",
     filter: "drop-shadow(2px 2px 0 rgb(255,165,0))",
   },
-  iconThree: {
-    display: "flex",
-    color: "#000",
-    margin: "2rem",
-    transition: "transform 1s",
-    transform: "perspective(100px) translateZ(0px)",
-    filter: "drop-shadow(2px 2px 0 rgb(255,255,0))",
-  },
+  // iconThree: {
+  //   display: "flex",
+  //   color: "#000",
+  //   margin: "2rem",
+  //   transition: "transform 1s",
+  //   transform: "perspective(100px) translateZ(0px)",
+  //   filter: "drop-shadow(2px 2px 0 rgb(255,255,0))",
+  // },
   iconFour: {
     display: "flex",
     color: "#000",
     margin: "2rem",
     transition: "transform 1s",
     transform: "perspective(100px) translateZ(0px)",
-    filter: "drop-shadow(2px 2px 0 rgb(0,128,0))",
+    filter: "drop-shadow(2px 2px 0 rgb(255,255,0))",
   },
 })
 
@@ -918,20 +913,6 @@ const Home = () => {
                 style={{ fontSize: "70px" }}
                 onMouseEnter={() => setIconTwoHover(true)}
                 onMouseLeave={() => setIconTwoHover(false)}
-              />
-            </a>
-          </div>
-          <div>
-            <a
-              href="mailto:banks.matt81@gmail.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={iconThreeHover ? iconThreeStyle : iconContactStyle}
-            >
-              <FaEnvelopeOpenText
-                style={{ fontSize: "65px" }}
-                onMouseEnter={() => setIconThreeHover(true)}
-                onMouseLeave={() => setIconThreeHover(false)}
               />
             </a>
           </div>
