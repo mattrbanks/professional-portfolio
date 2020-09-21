@@ -120,7 +120,7 @@ const Resume = () => {
           </div>
           <h2>Work Experience</h2>
           <h4>
-            Self Taught Web Developer <br />
+            Web Developer - Self Taught <br />
             January 2019 – Present
             <br />
             <ul style={{ marginTop: "1rem" }}>
@@ -129,10 +129,7 @@ const Resume = () => {
                 Build web applications for my professional portfolio and make
                 templates for potential freelance work
               </li>
-              <li>
-                Use my research skills to consume all the great resources on the
-                internet and then learn by doing
-              </li>
+              <li>Use my research skills to learn and apply</li>
             </ul>
           </h4>
           <h4>

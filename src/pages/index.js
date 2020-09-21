@@ -66,14 +66,6 @@ const useStyles = makeStyles({
     transform: "perspective(100px) translateZ(0px)",
     filter: "drop-shadow(2px 2px 0 rgb(255,165,0))",
   },
-  // iconThree: {
-  //   display: "flex",
-  //   color: "#000",
-  //   margin: "2rem",
-  //   transition: "transform 1s",
-  //   transform: "perspective(100px) translateZ(0px)",
-  //   filter: "drop-shadow(2px 2px 0 rgb(255,255,0))",
-  // },
   iconFour: {
     display: "flex",
     color: "#000",
@@ -89,7 +81,6 @@ const Home = () => {
   const theme = useTheme()
   const [iconOneHover, setIconOneHover] = React.useState(false)
   const [iconTwoHover, setIconTwoHover] = React.useState(false)
-  const [iconThreeHover, setIconThreeHover] = React.useState(false)
   const [iconFourHover, setIconFourHover] = React.useState(false)
   const [projectOneHover, setProjectOneHover] = React.useState(false)
   const [projectTwoHover, setProjectTwoHover] = React.useState(false)
@@ -98,7 +89,6 @@ const Home = () => {
   const iconContactStyle = classes.iconContact
   const iconOneStyle = classes.iconOne
   const iconTwoStyle = classes.iconTwo
-  const iconThreeStyle = classes.iconThree
   const iconFourStyle = classes.iconFour
 
   const mobileTechnologiesList = useMediaQuery(
@@ -125,26 +115,25 @@ const Home = () => {
       <section id="welcome" className={classes.welcomeSectionStyles}>
         <div
           style={{
-            width: `100%`,
+            width: "100%",
             display: "flex",
             justifyContent: "center",
           }}
         >
           <div
             style={{
-              width: `100%`,
-              maxWidth: `15rem`,
+              width: "100%",
+              maxWidth: "15rem",
               height: "15rem",
-              margin: `2rem 0 2rem 0`,
+              margin: "2rem 0 2rem 0",
               background: "rgba(0, 0, 0, 0.07)",
               borderRadius: "50% 50% 50% 50%",
               overflow: "hidden",
-              paddingTop: "1rem",
             }}
           >
             <ImageReusable
               alt="picture of school site project"
-              filename="PortfolioPicture.jpg"
+              filename="profile-picture-new-classic.jpg"
             />
           </div>
         </div>
