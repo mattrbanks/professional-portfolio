@@ -133,7 +133,7 @@ const Home = () => {
           >
             <ImageReusable
               alt="picture of school site project"
-              filename="profile-picture-new-classic.jpg"
+              filename="PortfolioPicture.jpg"
             />
           </div>
         </div>
