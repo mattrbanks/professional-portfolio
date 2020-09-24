@@ -546,16 +546,25 @@ const Home = () => {
                       color="textPrimary"
                       component="p"
                     >
-                      This is a template elementary school site I created which
-                      targets progressive school environments becoming more
-                      socially distanced. It has a real-time chat for parents
-                      and teachers with private messaging and push
-                      notifications. The events page is connected to a content
-                      management system for school faculty to easily use without
-                      the help of a programmer. The survey is connected to a
-                      mongodb atlas database that collects responses from
-                      parents. The curriculum section is based on real
-                      curriculum standards.
+                      <span style={{ fontWeight: "bold" }}>Features: </span>{" "}
+                      Real Time Chat App, Blog connected to CMS, Survey
+                      connected to database, Based on real school curriculum
+                    </Typography>
+                    <Typography
+                      variant="caption"
+                      color="textPrimary"
+                      component="p"
+                    >
+                      <span style={{ fontWeight: "bold" }}>About: </span>This is
+                      a template elementary school site I created which targets
+                      progressive school environments becoming more socially
+                      distanced. It has a real-time chat for parents and
+                      teachers with private messaging and push notifications.
+                      The events page is connected to a content management
+                      system for school faculty to easily use without the help
+                      of a programmer. The survey is connected to a mongodb
+                      atlas database that collects responses from parents. The
+                      curriculum section is based on real curriculum standards.
                     </Typography>
                     <div
                       style={{
@@ -723,7 +732,7 @@ const Home = () => {
                       alt="picture of game store site project"
                     />
                   </CardMedia>
-                  <CardContent style={{ marginBottom: "2.5rem" }}>
+                  <CardContent className={"project-two-card-content"}>
                     <Typography gutterBottom variant="h5" component="h2">
                       Matt's Retro Games
                     </Typography>
@@ -732,15 +741,25 @@ const Home = () => {
                       color="textPrimary"
                       component="p"
                     >
-                      I had a lot of fun with this project because these are
-                      many of my favorite retro games. This is like a tribute to
-                      games that I am nostalgic for but in the form of a retro
-                      game store. I used a real price guide to price each game
-                      so they should be very accurately priced in my store. This
-                      store template has all the hallmarks of an e-commerce
-                      website and it utilizes a sandbox PayPal that can be
-                      activated in the future to handle real transactions. I
-                      won't be parting with my collection though.
+                      <span style={{ fontWeight: "bold" }}>Features: </span>{" "}
+                      PayPal, Search bar, Game product pages, Detail page for
+                      each product, Cart checkout with tax (USA)
+                    </Typography>
+                    <Typography
+                      variant="caption"
+                      color="textPrimary"
+                      component="p"
+                    >
+                      <span style={{ fontWeight: "bold" }}>About: </span>I had a
+                      lot of fun with this project because these are many of my
+                      favorite retro games. This is like a tribute to games that
+                      I am nostalgic for but in the form of a retro game store.
+                      I used a real price guide to price each game so they
+                      should be very accurately priced in my store. This store
+                      template has all the hallmarks of an e-commerce website
+                      and it utilizes a sandbox PayPal that can be activated in
+                      the future to handle real transactions. I won't be parting
+                      with my collection though.
                     </Typography>
                     <div
                       style={{
@@ -987,14 +1006,14 @@ let MainStyles = styled.div`
   }
   .project-card-styles {
     max-width: 27.5rem;
-    height: 50.5rem;
+    height: 53rem;
     @media (max-width: 690px) and (orientation: portrait) {
       max-width: 20rem;
-      height: 47rem;
+      height: 50.5rem;
     }
     @media (max-width: 660px) and (orientation: landscape) {
       max-width: 20rem;
-      height: 47rem;
+      height: 51.5rem;
     }
   }
   .project-media-styles {
@@ -1010,6 +1029,15 @@ let MainStyles = styled.div`
       height: 20rem;
       transition: transform 1s;
       transform: perspective(100px) translateZ(0px);
+    }
+  }
+  .project-two-card-content {
+    margin-bottom: 2.5rem;
+    @media (max-width: 480px) and (orientation: portrait) {
+      margin-bottom: 1.5rem;
+    }
+    @media (max-width: 673px) and (orientation: landscape) {
+      margin-bottom: 3.5rem;
     }
   }
   .project-media-transform-styles {

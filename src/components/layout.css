@@ -701,3 +701,13 @@ footer {
     overflow-x: hidden;
   }
 }
+
+.desktop-resume {
+  display: flex;
+}
+
+@media (max-width: 800px) {
+  .mobile-resume {
+    display: block;
+  }
+}
