@@ -2,6 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import SEO from "../components/seo"
 import "../components/layout.css"
+import downloadFile from "../../resume/resume-matthew-r-banks.pdf"
 
 const Resume = () => {
   return (
@@ -61,6 +62,15 @@ const Resume = () => {
               style={{ color: "#0000FF", textDecoration: "none" }}
             >
               github.com/mattrbanks
+            </a>
+          </p>
+          <p>
+            <a
+              href={downloadFile}
+              download
+              style={{ color: "#0000FF", textDecoration: "none" }}
+            >
+              &rarr; Download Resume PDF &larr;
             </a>
           </p>
         </div>
