@@ -23,56 +23,110 @@ const Resume = () => {
         >
           <h1>Matthew Banks</h1>
           <h2>Web Developer</h2>
-          <p>(203) 706-2262</p>
-          <p>
-            <a
-              href="https://mattbanksdev.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ color: "#0000FF", textDecoration: "none" }}
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "space-around",
+            }}
+          >
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                justifyContent: "center",
+              }}
             >
-              mattbanksdev.com
-            </a>
-          </p>{" "}
-          <p>
-            <a
-              href="mailto:banks.matt81@gmail.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ color: "#0000FF", textDecoration: "none" }}
+              <p>
+                <a
+                  href="https://mattbanksdev.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    color: "#0000FF",
+                    textDecoration: "none",
+                    marginRight: "0.5rem",
+                  }}
+                >
+                  mattbanksdev.com
+                </a>
+              </p>{" "}
+              |
+              <p>
+                <a
+                  href="mailto:banks.matt81@gmail.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    color: "#0000FF",
+                    textDecoration: "none",
+                    marginLeft: "0.5rem",
+                  }}
+                >
+                  banks.matt81@gmail.com
+                </a>
+              </p>{" "}
+            </div>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                justifyContent: "center",
+              }}
             >
-              banks.matt81@gmail.com
-            </a>
-          </p>{" "}
-          <p>
-            <a
-              href="https://www.linkedin.com/in/matthewr-banks"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ color: "#0000FF", textDecoration: "none" }}
-            >
-              linkedin.com/in/matthewr-banks
-            </a>
-          </p>
-          <p>
-            <a
-              href="https://github.com/mattrbanks"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ color: "#0000FF", textDecoration: "none" }}
-            >
-              github.com/mattrbanks
-            </a>
-          </p>
-          <p>
-            <a
-              href={downloadFile}
-              download
-              style={{ color: "#0000FF", textDecoration: "none" }}
-            >
-              &rarr; Download Resume PDF &larr;
-            </a>
-          </p>
+              <p>
+                <a
+                  href="https://www.linkedin.com/in/matthewr-banks"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    color: "#0000FF",
+                    textDecoration: "none",
+                    marginRight: "0.5rem",
+                  }}
+                >
+                  linkedin.com/in/matthewr-banks
+                </a>
+              </p>
+              |
+              <p>
+                <a
+                  href="https://github.com/mattrbanks"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    color: "#0000FF",
+                    textDecoration: "none",
+                    marginLeft: "0.5rem",
+                  }}
+                >
+                  github.com/mattrbanks
+                </a>
+              </p>
+            </div>
+          </div>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "center",
+            }}
+          >
+            <p style={{ marginRight: "0.5rem" }}>(203) 706-2262</p>|
+            <p>
+              <a
+                href={downloadFile}
+                download
+                style={{
+                  color: "#0000FF",
+                  textDecoration: "none",
+                  marginLeft: "0.5rem",
+                }}
+              >
+                &rarr; Download Resume PDF &larr;
+              </a>
+            </p>
+          </div>
         </div>
         <div style={{ display: "block" }}>
           <div className={"desktop-resume mobile-resume"}>
@@ -161,6 +215,47 @@ const Resume = () => {
                     textDecoration: "none",
                   }}
                   href="https://matts-retro-games.netlify.app/"
+                >
+                  Site
+                </a>
+              </div>
+              <h2>Professional Portfolio</h2>
+              <p>
+                <span style={{ fontWeight: "bold" }}>Features:</span> Welcome
+                section with a current skills/technologies list, A projects
+                section to view code and try the sites, Resume page with pdf
+                download, Contact section with github and other useful info
+              </p>
+              <p>
+                <span style={{ fontWeight: "bold" }}>About:</span> This is my
+                personal portfolio website. This is where all my latest projects
+                live and it serves as a central hub for people to get in touch
+                with me for web development work. It has a nav menu that will
+                jump to different sections of the portfolio and there is also an
+                html resume page that is has a convenient resume pdf download
+                link. This resume has many links that are useful for recruiters
+                to quickly see my work and contact me.
+              </p>
+              <p>
+                <span style={{ fontWeight: "bold" }}>
+                  Technologies used to build it:
+                </span>{" "}
+                React, Javascript, Gatsby, Styled components, Material ui
+              </p>
+              <div style={{ margin: "1rem" }}>
+                <a
+                  style={{ color: "#0000FF", textDecoration: "none" }}
+                  href="https://github.com/mattrbanks/professional-portfolio"
+                >
+                  Code
+                </a>
+                <a
+                  style={{
+                    marginLeft: "1rem",
+                    color: "#0000FF",
+                    textDecoration: "none",
+                  }}
+                  href="https://mattbanksdev.com/"
                 >
                   Site
                 </a>

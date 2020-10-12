@@ -84,6 +84,8 @@ const Home = () => {
   const [iconFourHover, setIconFourHover] = React.useState(false)
   const [projectOneHover, setProjectOneHover] = React.useState(false)
   const [projectTwoHover, setProjectTwoHover] = React.useState(false)
+  const [projectThreeHover, setProjectThreeHover] = React.useState(false)
+  const [projectFourHover, setProjectFourHover] = React.useState(false)
 
   //styles
   const iconContactStyle = classes.iconContact
@@ -513,7 +515,7 @@ const Home = () => {
             </div>
           </div>
           <div className={"wide-screen-projects"}>
-            <div className={"wide-screen-margin"}>
+            <div className={"wide-screen-margin-left"}>
               <Card className={"project-card-styles"}>
                 <CardActionArea>
                   <CardMedia
@@ -537,7 +539,7 @@ const Home = () => {
                       filename="EagleElementarySchool.PNG"
                     />
                   </CardMedia>
-                  <CardContent>
+                  <CardContent className={"project-one-card-content"}>
                     <Typography gutterBottom variant="h5" component="h2">
                       Eagle Elementary School
                     </Typography>
@@ -706,7 +708,7 @@ const Home = () => {
                 </div>
               </Card>
             </div>
-            <div className={"mobile-screen-margin"}>
+            <div className={"wide-screen-margin-right"}>
               <Card className={"project-card-styles"}>
                 <CardActionArea>
                   <CardMedia
@@ -764,7 +766,6 @@ const Home = () => {
                     <div
                       style={{
                         display: "block",
-
                         listStyle: "none",
                         margin: "0.5rem 1.5rem 0 1.5rem",
                       }}
@@ -884,6 +885,358 @@ const Home = () => {
               </Card>
             </div>
           </div>
+          <div className={"wide-screen-projects-lower"}>
+            <div className={"wide-screen-margin-left"}>
+              <Card className={"project-card-styles"}>
+                <CardActionArea>
+                  <CardMedia
+                    className={
+                      projectThreeHover
+                        ? "project-media-transform-styles"
+                        : "project-media-styles"
+                    }
+                    style={{
+                      maxWidth: "100%",
+                      margin: "0 0 0 0",
+                    }}
+                    title="Matt's Retro Games"
+                    onMouseEnter={() => {
+                      setProjectThreeHover(true)
+                    }}
+                    onMouseLeave={() => {
+                      setProjectThreeHover(false)
+                    }}
+                  >
+                    <ImageReusable
+                      style={{ position: "relative" }}
+                      alt="picture of school site project"
+                      filename="ProfessionalPortfolioSiteCropped.png"
+                    />
+                  </CardMedia>
+                  <CardContent className={"project-three-card-content"}>
+                    <Typography gutterBottom variant="h5" component="h2">
+                      Professional Portfolio
+                    </Typography>
+                    <Typography
+                      variant="caption"
+                      color="textPrimary"
+                      component="p"
+                    >
+                      <span style={{ fontWeight: "bold" }}>Features: </span>{" "}
+                      Welcome section with a current skills/technologies list, A
+                      projects section to view code and try the sites, Resume
+                      page with pdf download, Contact section with github and
+                      other useful info
+                    </Typography>
+                    <Typography
+                      variant="caption"
+                      color="textPrimary"
+                      component="p"
+                    >
+                      <span style={{ fontWeight: "bold" }}>About: </span>This is
+                      my personal portfolio website. This is where all my latest
+                      projects live and it serves as a central hub for people to
+                      get in touch with me for web development work. It has a
+                      nav menu that will jump to different sections of the
+                      portfolio and there is also an html resume page that is
+                      has a convenient resume pdf download link. This resume has
+                      many links that are useful for recruiters to quickly see
+                      my work and contact me.
+                    </Typography>
+                    <div
+                      style={{
+                        display: "block",
+                        listStyle: "none",
+                        margin: "0.5rem 1.5rem 0 1.5rem",
+                      }}
+                    >
+                      {mobileTechnologiesList ? (
+                        <React.Fragment>
+                          <div
+                            style={{
+                              display: "block",
+                              listStyle: "none",
+                              margin: "0.5rem 1.5rem 0 1.5rem",
+                            }}
+                          >
+                            <div
+                              style={{
+                                display: "flex",
+                                justifyContent: "center",
+                                fontSize: "0.6rem",
+                                margin: "0 1.5rem 0 1.5rem",
+                              }}
+                            >
+                              <div
+                                style={{
+                                  marginLeft: "1rem",
+                                  marginRight: "0.5rem",
+                                }}
+                              >
+                                React
+                              </div>
+                              <div style={{ marginRight: "0.5rem" }}>
+                                Javascript
+                              </div>
+                              <div style={{ marginRight: "1rem" }}>Gatsby</div>
+                            </div>
+                            <div
+                              style={{
+                                display: "flex",
+                                justifyContent: "center",
+                                fontSize: "0.6rem",
+                                margin: "0 1rem 0 1rem",
+                              }}
+                            >
+                              <div
+                                style={{
+                                  marginLeft: "0.5rem",
+                                  marginRight: "0.5rem",
+                                }}
+                              >
+                                Styled components
+                              </div>
+                              <div style={{ marginRight: "0.5rem" }}>
+                                Material ui
+                              </div>
+                            </div>
+                          </div>
+                        </React.Fragment>
+                      ) : (
+                        <React.Fragment>
+                          <div style={{ display: "flex", fontSize: "0.75rem" }}>
+                            <div style={{ marginRight: "1rem" }}>React</div>
+                            <div style={{ marginRight: "1rem" }}>
+                              Javascript
+                            </div>
+                            <div style={{ marginRight: "1rem" }}>Gatsby</div>
+                            <div style={{ marginRight: "1rem" }}>
+                              Styled components
+                            </div>
+                            <div>Material ui</div>
+                          </div>
+                        </React.Fragment>
+                      )}
+                    </div>
+                  </CardContent>
+                </CardActionArea>
+                <div style={{ display: "flex", justifyContent: "center" }}>
+                  <CardActions>
+                    <a
+                      href="https://github.com/mattrbanks/professional-portfolio"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{ color: "#fff" }}
+                    >
+                      <Button
+                        style={{
+                          backgroundImage:
+                            "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
+                          border: "1px solid #000",
+                          fontSize: "1.05rem",
+                        }}
+                        size="large"
+                        color="inherit"
+                      >
+                        See my code
+                      </Button>
+                    </a>
+                    <div>
+                      <Button
+                        disabled
+                        style={{
+                          border: "1px solid #000",
+                          color: "#000",
+                          fontSize: "1.05rem",
+                        }}
+                        size="large"
+                        color="inherit"
+                      >
+                        On Site Now
+                      </Button>
+                    </div>
+                  </CardActions>
+                </div>
+              </Card>
+            </div>
+            <div className={"wide-screen-margin-right"}>
+              <Card className={"project-card-styles"}>
+                <CardActionArea>
+                  <CardMedia
+                    className={
+                      projectFourHover
+                        ? "project-media-transform-styles"
+                        : "project-media-styles"
+                    }
+                    style={{
+                      maxWidth: "100%",
+                      margin: "0 0 0 0",
+                    }}
+                    title="Matt's Retro Games"
+                    onMouseEnter={() => {
+                      setProjectFourHover(true)
+                    }}
+                    onMouseLeave={() => {
+                      setProjectFourHover(false)
+                    }}
+                  >
+                    <ImageReusable
+                      style={{ position: "relative" }}
+                      alt="picture of school site project"
+                      filename="coming-soon-new.jpg"
+                    />
+                  </CardMedia>
+                  <CardContent className={"project-four-card-content"}>
+                    <Typography gutterBottom variant="h5" component="h2">
+                      Face Conference
+                    </Typography>
+                    <Typography
+                      variant="caption"
+                      color="textPrimary"
+                      component="p"
+                    >
+                      <span style={{ fontWeight: "bold" }}>
+                        Planned Features:{" "}
+                      </span>{" "}
+                      Name login to display the name on video, dashboard with
+                      options to create a new room or join an existing room,
+                      button to exit the chat and go back to the dashboard
+                    </Typography>
+                    <Typography
+                      variant="caption"
+                      color="textPrimary"
+                      component="p"
+                    >
+                      <span style={{ fontWeight: "bold" }}>About: </span>This is
+                      my latest project. It is a video chat website that
+                      utilizes WebRTC technology. The world is changing fast and
+                      video meetings are becoming more common. Face Conference
+                      is a place where you and your friends can talk, face to
+                      face, and catch up online. I wanted to experiment with
+                      WebRTC and this is a little project for me to familiarize
+                      myself with the technology.
+                    </Typography>
+                    <div
+                      style={{
+                        display: "block",
+                        listStyle: "none",
+                        margin: "0.5rem 1.5rem 0 1.5rem",
+                      }}
+                    >
+                      {mobileTechnologiesList ? (
+                        <React.Fragment>
+                          <div
+                            style={{
+                              display: "block",
+                              listStyle: "none",
+                              margin: "0.5rem 1.5rem 0 1.5rem",
+                            }}
+                          >
+                            <div
+                              style={{
+                                display: "flex",
+                                justifyContent: "center",
+                                fontSize: "0.6rem",
+                                margin: "0 1.5rem 0 1.5rem",
+                              }}
+                            >
+                              <div
+                                style={{
+                                  marginLeft: "1rem",
+                                  marginRight: "0.5rem",
+                                }}
+                              >
+                                Javascript
+                              </div>
+                              <div style={{ marginRight: "0.5rem" }}>
+                                Peerjs
+                              </div>
+                              <div style={{ marginRight: "1rem" }}>Ejs</div>
+                              <div style={{ marginRight: "1rem" }}>Node</div>
+                            </div>
+                            <div
+                              style={{
+                                display: "flex",
+                                justifyContent: "center",
+                                fontSize: "0.6rem",
+                                margin: "0 1rem 0 1rem",
+                              }}
+                            >
+                              <div
+                                style={{
+                                  marginLeft: "0.5rem",
+                                  marginRight: "0.5rem",
+                                }}
+                              >
+                                WebRTC
+                              </div>
+                              <div style={{ marginRight: "0.5rem" }}>
+                                Express
+                              </div>
+                              <div style={{ marginRight: "0.5rem" }}>
+                                Socket.io
+                              </div>
+                            </div>
+                          </div>
+                        </React.Fragment>
+                      ) : (
+                        <React.Fragment>
+                          <div style={{ display: "flex", fontSize: "0.75rem" }}>
+                            <div style={{ marginRight: "1rem" }}>
+                              Javascript
+                            </div>
+                            <div style={{ marginRight: "1rem" }}>Peerjs</div>
+                            <div style={{ marginRight: "1rem" }}>Ejs</div>
+                            <div style={{ marginRight: "1rem" }}>WebRTC</div>
+                            <div style={{ marginRight: "1rem" }}>Express</div>
+                            <div style={{ marginRight: "1rem" }}>Node</div>
+                            <div>Socket.io</div>
+                          </div>
+                        </React.Fragment>
+                      )}
+                    </div>
+                  </CardContent>
+                </CardActionArea>
+                <div style={{ display: "flex", justifyContent: "center" }}>
+                  <CardActions>
+                    <a
+                      href="https://github.com/mattrbanks/face-conference"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{ color: "#fff" }}
+                    >
+                      <Button
+                        style={{
+                          backgroundImage:
+                            "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
+                          border: "1px solid #000",
+                          fontSize: "1.05rem",
+                        }}
+                        size="large"
+                        color="inherit"
+                      >
+                        Github
+                      </Button>
+                    </a>
+                    <div>
+                      <Button
+                        disabled
+                        style={{
+                          border: "1px solid #000",
+                          color: "#000",
+                          fontSize: "1.05rem",
+                        }}
+                        size="large"
+                        color="inherit"
+                      >
+                        New project
+                      </Button>
+                    </div>
+                  </CardActions>
+                </div>
+              </Card>
+            </div>
+          </div>
         </section>
       </MainStyles>
       <section
@@ -971,7 +1324,8 @@ export default Home
 let MainStyles = styled.div`
   .wide-screen-projects {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
     margin: 5rem 4rem 0 4rem;
     @media (max-width: 1200px) and (orientation: portrait) {
       display: flex;
@@ -987,21 +1341,50 @@ let MainStyles = styled.div`
       align-items: center;
     }
   }
-  .wide-screen-margin {
-    margin-right: 3rem;
+  .wide-screen-projects-lower {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 4rem 4rem 0 4rem;
+    @media (max-width: 1200px) and (orientation: portrait) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 0 1rem 0 1rem;
+    }
+    @media (max-width: 1230px) and (orientation: landscape) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 0 1rem 0 1rem;
+    }
+  }
+  .wide-screen-margin-left {
+    margin-right: 2rem;
+    padding-left: 2rem;
     @media (max-width: 1200px) and (orientation: portrait) {
       margin: 1rem;
+      padding-left: 0;
     }
     @media (max-width: 1230px) and (orientation: landscape) {
       margin: 1rem;
+      padding-left: 0;
     }
   }
-  .mobile-screen-margin {
-    margin-left: 1rem;
-    margin-right: 1rem;
+  .wide-screen-margin-right {
+    padding-left: 2rem;
+    @media (max-width: 1200px) and (orientation: portrait) {
+      margin: 1rem;
+      padding-left: 0;
+    }
+    @media (max-width: 1230px) and (orientation: landscape) {
+      margin: 1rem;
+      padding-left: 0;
+    }
   }
   .project-section-styles {
-    //height: 150vh;
     border-top: 0.0625rem solid grey;
   }
   .project-card-styles {
@@ -1031,13 +1414,51 @@ let MainStyles = styled.div`
       transform: perspective(100px) translateZ(0px);
     }
   }
+  .project-one-card-content {
+    @media (max-width: 673px) and (orientation: landscape) {
+      margin-bottom: 0.75rem;
+    }
+    @media (max-width: 740px) and (min-width: 661px) and (orientation: landscape) {
+      margin-bottom: 0rem;
+    }
+  }
   .project-two-card-content {
     margin-bottom: 2.5rem;
     @media (max-width: 480px) and (orientation: portrait) {
       margin-bottom: 1.5rem;
     }
-    @media (max-width: 673px) and (orientation: landscape) {
+    @media (max-width: 673px) and (min-width: 661px) and (orientation: landscape) {
+      margin-bottom: 1.25rem;
+    }
+    @media (max-width: 660px) and (min-width: 481px) and (orientation: landscape) {
       margin-bottom: 3.5rem;
+    }
+    @media (max-width: 480px) and (orientation: landscape) {
+      margin-bottom: 2.5rem;
+    }
+  }
+  .project-three-card-content {
+    margin-bottom: 2.75rem;
+    @media (max-width: 691px) and (orientation: portrait) {
+      margin-bottom: 1.5rem;
+    }
+    @media (max-width: 660px) and (orientation: landscape) {
+      margin-bottom: 2.25rem;
+    }
+    @media (max-width: 689px) and (min-width: 661px) and (orientation: landscape) {
+      margin-bottom: 1.25rem;
+    }
+  }
+  .project-four-card-content {
+    margin-bottom: 4rem;
+    @media (max-width: 480px) and (orientation: portrait) {
+      margin-bottom: 3.75rem;
+    }
+    @media (max-width: 660px) and (orientation: landscape) {
+      margin-bottom: 4.75rem;
+    }
+    @media (max-width: 689px) and (min-width: 661px) and (orientation: landscape) {
+      margin-bottom: 2.5rem;
     }
   }
   .project-media-transform-styles {
