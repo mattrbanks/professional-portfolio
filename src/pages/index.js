@@ -636,7 +636,7 @@ const Home = () => {
                         </React.Fragment>
                       ) : (
                         <React.Fragment>
-                          <div style={{ display: "flex", fontSize: "0.75rem" }}>
+                          <div style={{ display: "flex", fontSize: "0.7rem" }}>
                             <div style={{ marginRight: "1rem" }}>React</div>
                             <div style={{ marginRight: "1rem" }}>
                               Javascript
@@ -647,16 +647,16 @@ const Home = () => {
                             </div>
                             <div>Material ui</div>
                           </div>
-                          <div style={{ display: "flex", fontSize: "0.75rem" }}>
+                          <div style={{ display: "flex", fontSize: "0.7rem" }}>
                             <div style={{ marginRight: "1rem" }}>
                               Styled components
                             </div>
                             <div style={{ marginRight: "1rem" }}>Socket.io</div>
                             <div style={{ marginRight: "1rem" }}>GraphQL</div>
                             <div style={{ marginRight: "1rem" }}>Express</div>
-                            <div style={{ marginRight: "1rem" }}>Node</div>
+                            <div>Node</div>
                           </div>
-                          <div style={{ display: "flex", fontSize: "0.75rem" }}>
+                          <div style={{ display: "flex", fontSize: "0.7rem" }}>
                             <div style={{ marginRight: "1rem" }}>Gatsby</div>
                           </div>
                         </React.Fragment>
@@ -819,7 +819,7 @@ const Home = () => {
                         </React.Fragment>
                       ) : (
                         <React.Fragment>
-                          <div style={{ display: "flex", fontSize: "0.75rem" }}>
+                          <div style={{ display: "flex", fontSize: "0.7rem" }}>
                             <div style={{ marginRight: "1rem" }}>React</div>
                             <div style={{ marginRight: "1rem" }}>
                               Javascript
@@ -830,7 +830,7 @@ const Home = () => {
                             </div>
                             <div>PayPal</div>
                           </div>
-                          <div style={{ display: "flex", fontSize: "0.75rem" }}>
+                          <div style={{ display: "flex", fontSize: "0.7rem" }}>
                             <div style={{ marginRight: "1rem" }}>
                               React router
                             </div>
@@ -956,7 +956,7 @@ const Home = () => {
                             style={{
                               display: "block",
                               listStyle: "none",
-                              margin: "0.5rem 1.5rem 0 1.5rem",
+                              margin: "0.5rem 1rem 0 1rem",
                             }}
                           >
                             <div
@@ -1004,7 +1004,7 @@ const Home = () => {
                         </React.Fragment>
                       ) : (
                         <React.Fragment>
-                          <div style={{ display: "flex", fontSize: "0.75rem" }}>
+                          <div style={{ display: "flex", fontSize: "0.7rem" }}>
                             <div style={{ marginRight: "1rem" }}>React</div>
                             <div style={{ marginRight: "1rem" }}>
                               Javascript
@@ -1151,7 +1151,7 @@ const Home = () => {
                               <div style={{ marginRight: "0.5rem" }}>
                                 Peerjs
                               </div>
-                              <div style={{ marginRight: "1rem" }}>Ejs</div>
+                              <div style={{ marginRight: "0.5rem" }}>Ejs</div>
                               <div style={{ marginRight: "1rem" }}>Node</div>
                             </div>
                             <div
@@ -1181,7 +1181,7 @@ const Home = () => {
                         </React.Fragment>
                       ) : (
                         <React.Fragment>
-                          <div style={{ display: "flex", fontSize: "0.75rem" }}>
+                          <div style={{ display: "flex", fontSize: "0.7rem" }}>
                             <div style={{ marginRight: "1rem" }}>
                               Javascript
                             </div>
@@ -1390,7 +1390,7 @@ let MainStyles = styled.div`
   }
   .project-card-styles {
     max-width: 27.5rem;
-    height: 53rem;
+    height: 55rem;
     @media (max-width: 690px) and (orientation: portrait) {
       max-width: 20rem;
       height: 50.5rem;
@@ -1439,7 +1439,7 @@ let MainStyles = styled.div`
     }
   }
   .project-three-card-content {
-    margin-bottom: 2.75rem;
+    margin-bottom: 4rem;
     @media (max-width: 691px) and (orientation: portrait) {
       margin-bottom: 1.5rem;
     }
@@ -1451,7 +1451,7 @@ let MainStyles = styled.div`
     }
   }
   .project-four-card-content {
-    margin-bottom: 4rem;
+    margin-bottom: 5.25rem;
     @media (max-width: 480px) and (orientation: portrait) {
       margin-bottom: 3.75rem;
     }
