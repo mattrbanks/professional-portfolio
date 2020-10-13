@@ -956,7 +956,7 @@ const Home = () => {
                             style={{
                               display: "block",
                               listStyle: "none",
-                              margin: "0.5rem 1rem 0 1rem",
+                              margin: "0.5rem 1.5rem 0 1.5rem",
                             }}
                           >
                             <div
@@ -980,25 +980,25 @@ const Home = () => {
                               </div>
                               <div style={{ marginRight: "1rem" }}>Gatsby</div>
                             </div>
+                          </div>
+                          <div
+                            style={{
+                              display: "flex",
+                              justifyContent: "center",
+                              fontSize: "0.6rem",
+                              margin: "0 1rem 0 1rem",
+                            }}
+                          >
                             <div
                               style={{
-                                display: "flex",
-                                justifyContent: "center",
-                                fontSize: "0.6rem",
-                                margin: "0 1rem 0 1rem",
+                                marginLeft: "0.5rem",
+                                marginRight: "0.5rem",
                               }}
                             >
-                              <div
-                                style={{
-                                  marginLeft: "0.5rem",
-                                  marginRight: "0.5rem",
-                                }}
-                              >
-                                Styled components
-                              </div>
-                              <div style={{ marginRight: "0.5rem" }}>
-                                Material ui
-                              </div>
+                              Styled components
+                            </div>
+                            <div style={{ marginRight: "0.5rem" }}>
+                              Material ui
                             </div>
                           </div>
                         </React.Fragment>
