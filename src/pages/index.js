@@ -1426,7 +1426,7 @@ let MainStyles = styled.div`
   .project-two-card-content {
     margin-bottom: 3.75rem;
     @media (max-width: 480px) and (orientation: portrait) {
-      margin-bottom: 2.5rem;
+      margin-bottom: 1.5rem;
     }
     @media (max-width: 689px) and (min-width: 481px) and (orientation: portrait) {
       margin-bottom: 2.5rem;
