@@ -1416,15 +1416,20 @@ let MainStyles = styled.div`
     }
   }
   .project-one-card-content {
-    margin-bottom: 1rem;
     @media (max-width: 673px) and (orientation: landscape) {
       margin-bottom: 0.75rem;
+    }
+    @media (min-width: 674px) and (orientation: landscape) {
+      margin-bottom: 1rem;
     }
   }
   .project-two-card-content {
     margin-bottom: 3.75rem;
     @media (max-width: 480px) and (orientation: portrait) {
-      margin-bottom: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+    @media (max-width: 689px) and (min-width: 481px) and (orientation: portrait) {
+      margin-bottom: 2.5rem;
     }
     @media (max-width: 673px) and (min-width: 661px) and (orientation: landscape) {
       margin-bottom: 1.25rem;
