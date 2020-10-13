@@ -754,7 +754,7 @@ const Home = () => {
                     >
                       <span style={{ fontWeight: "bold" }}>About: </span>I had a
                       lot of fun with this project because these are many of my
-                      favorite retro games. This is like a tribute to games that
+                      favorite retro games. This is like a tribute to the games
                       I am nostalgic for but in the form of a retro game store.
                       I used a real price guide to price each game so they
                       should be very accurately priced in my store. This store
@@ -938,8 +938,8 @@ const Home = () => {
                       projects live and it serves as a central hub for people to
                       get in touch with me for web development work. It has a
                       nav menu that will jump to different sections of the
-                      portfolio and there is also an html resume page that is
-                      has a convenient resume pdf download link. This resume has
+                      portfolio and there is also an html resume page which has
+                      a convenient pdf resume download link. This resume has
                       many links that are useful for recruiters to quickly see
                       my work and contact me.
                     </Typography>
@@ -1416,15 +1416,13 @@ let MainStyles = styled.div`
     }
   }
   .project-one-card-content {
+    margin-bottom: 1rem;
     @media (max-width: 673px) and (orientation: landscape) {
       margin-bottom: 0.75rem;
     }
-    @media (max-width: 740px) and (min-width: 661px) and (orientation: landscape) {
-      margin-bottom: 0rem;
-    }
   }
   .project-two-card-content {
-    margin-bottom: 2.5rem;
+    margin-bottom: 3.75rem;
     @media (max-width: 480px) and (orientation: portrait) {
       margin-bottom: 1.5rem;
     }
@@ -1447,19 +1445,19 @@ let MainStyles = styled.div`
       margin-bottom: 2.25rem;
     }
     @media (max-width: 689px) and (min-width: 661px) and (orientation: landscape) {
-      margin-bottom: 1.25rem;
+      margin-bottom: 2.25rem;
     }
   }
   .project-four-card-content {
     margin-bottom: 5.25rem;
-    @media (max-width: 480px) and (orientation: portrait) {
+    @media (max-width: 689px) and (orientation: portrait) {
       margin-bottom: 3.75rem;
     }
     @media (max-width: 660px) and (orientation: landscape) {
       margin-bottom: 4.75rem;
     }
     @media (max-width: 689px) and (min-width: 661px) and (orientation: landscape) {
-      margin-bottom: 2.5rem;
+      margin-bottom: 3.5rem;
     }
   }
   .project-media-transform-styles {

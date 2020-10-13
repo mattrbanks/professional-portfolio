@@ -186,7 +186,7 @@ const Resume = () => {
               <p>
                 <span style={{ fontWeight: "bold" }}>About:</span> I had a lot
                 of fun with this project because these are many of my favorite
-                retro games. This is like a tribute to games that I am nostalgic
+                retro games. This is like a tribute to the games I am nostalgic
                 for but in the form of a retro game store. I used a real price
                 guide to price each game so they should be very accurately
                 priced in my store. This store template has all the hallmarks of
@@ -232,7 +232,7 @@ const Resume = () => {
                 live and it serves as a central hub for people to get in touch
                 with me for web development work. It has a nav menu that will
                 jump to different sections of the portfolio and there is also an
-                html resume page that is has a convenient resume pdf download
+                html resume page which has a convenient pdf resume download
                 link. This resume has many links that are useful for recruiters
                 to quickly see my work and contact me.
               </p>
