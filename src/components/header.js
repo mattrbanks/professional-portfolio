@@ -1,6 +1,7 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import mblogo from "../images/mblogo.svg"
 
 const Header = ({ siteTitle }) => (
   <header
@@ -17,7 +18,15 @@ const Header = ({ siteTitle }) => (
         maxWidth: `140px`,
         margin: `1.7rem 0 0 0`,
       }}
-    ></div>
+    >
+      <img
+        style={{
+          margin: `0 0 0 2.5rem`,
+        }}
+        alt="mb logo"
+        src={mblogo}
+      />
+    </div>
     <div
       style={{
         margin: `0`,
