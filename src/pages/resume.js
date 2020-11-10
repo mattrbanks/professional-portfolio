@@ -260,7 +260,7 @@ const Resume = () => {
                   Site
                 </a>
               </div>
-              <div style={{ textAlign: "center" }}>
+              <div style={{ textAlign: "center", marginBottom: "1.45rem" }}>
                 <Link
                   style={{ color: "#0000FF", textDecoration: "none" }}
                   to="/#projects"
@@ -268,6 +268,24 @@ const Resume = () => {
                   Link To Portfolio Projects Section
                 </Link>
               </div>
+              <div>
+                <h4>Current Core Technologies Used:</h4>
+              </div>
+              <table>
+                <tr>
+                  <th>Programming</th>
+                  <th>Data</th>
+                  <th>Tools</th>
+                </tr>
+                <tr>
+                  <td>
+                    HTML/CSS, JavaScript, React, GatsbyJS/GraphQL, NodeJS,
+                    Express
+                  </td>
+                  <td>MongoDB</td>
+                  <td>Visual Studio Code, Git, Figma</td>
+                </tr>
+              </table>
             </div>
           </div>
           <div className={"desktop-resume mobile-resume"}>
@@ -282,18 +300,17 @@ const Resume = () => {
                 <h4>Web Developer</h4>
                 <div>Jan 2019 – Present</div>
               </div>
-              <p>Self Taught </p>
               <ul style={{ marginTop: "1rem", marginBottom: "1.45rem" }}>
-                <li>Code every day</li>
                 <li>
-                  Combine multiple standalone projects into one practical
-                  solution with applied features and a real world theme
+                  Build practical web applications that focus on real world
+                  needs and current culture
                 </li>
                 <li>
-                  Build web applications for my professional portfolio and make
+                  Update/improve my portfolio website with new projects and make
                   templates for potential freelance work
                 </li>
-                <li>Use my research skills to learn and apply</li>
+                <li>Experiment with new technologies as needed for projects</li>
+                <li>Git version control and web application deployment</li>
               </ul>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
                 <h4>Teaching Assistant</h4>
