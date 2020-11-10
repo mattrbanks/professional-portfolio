@@ -199,7 +199,7 @@ const Home = () => {
                     marginBottom: "0.5rem",
                   }}
                 >
-                  Javascript
+                  JavaScript
                 </button>
               </a>
               <a
@@ -491,6 +491,74 @@ const Home = () => {
                 </button>
               </a>
             </div>
+            <div
+              style={{
+                display: "block",
+                fontSize: "1rem",
+                margin: "0 1.5rem 1rem 1.5rem",
+              }}
+            >
+              <a
+                href="https://reactrouter.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  marginRight: "0.5rem",
+                }}
+              >
+                <button
+                  style={{
+                    backgroundImage:
+                      "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
+                    cursor: "pointer",
+                    color: "#fff",
+                    marginBottom: "0.5rem",
+                  }}
+                >
+                  PeerJS
+                </button>
+              </a>
+              <a
+                href="https://reactrouter.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  marginRight: "0.5rem",
+                }}
+              >
+                <button
+                  style={{
+                    backgroundImage:
+                      "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
+                    cursor: "pointer",
+                    color: "#fff",
+                    marginBottom: "0.5rem",
+                  }}
+                >
+                  WebRTC
+                </button>
+              </a>
+              <a
+                href="https://reactrouter.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  marginRight: "0.5rem",
+                }}
+              >
+                <button
+                  style={{
+                    backgroundImage:
+                      "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
+                    cursor: "pointer",
+                    color: "#fff",
+                    marginBottom: "0.5rem",
+                  }}
+                >
+                  EJS
+                </button>
+              </a>
+            </div>
           </React.Fragment>
         </div>
       </section>
@@ -595,7 +663,7 @@ const Home = () => {
                               React
                             </div>
                             <div style={{ marginRight: "0.5rem" }}>
-                              Javascript
+                              JavaScript
                             </div>
                             <div style={{ marginRight: "0.5rem" }}>Mongodb</div>
                             <div style={{ marginRight: "0.5rem" }}>
@@ -639,7 +707,7 @@ const Home = () => {
                           <div style={{ display: "flex", fontSize: "0.7rem" }}>
                             <div style={{ marginRight: "1rem" }}>React</div>
                             <div style={{ marginRight: "1rem" }}>
-                              Javascript
+                              JavaScript
                             </div>
                             <div style={{ marginRight: "1rem" }}>Mongodb</div>
                             <div style={{ marginRight: "1rem" }}>
@@ -789,7 +857,7 @@ const Home = () => {
                               React
                             </div>
                             <div style={{ marginRight: "0.5rem" }}>
-                              Javascript
+                              JavaScript
                             </div>
                             <div style={{ marginRight: "0.5rem" }}>
                               Bootstrap
@@ -822,7 +890,7 @@ const Home = () => {
                           <div style={{ display: "flex", fontSize: "0.7rem" }}>
                             <div style={{ marginRight: "1rem" }}>React</div>
                             <div style={{ marginRight: "1rem" }}>
-                              Javascript
+                              JavaScript
                             </div>
                             <div style={{ marginRight: "1rem" }}>Bootstrap</div>
                             <div style={{ marginRight: "1rem" }}>
@@ -976,7 +1044,7 @@ const Home = () => {
                                 React
                               </div>
                               <div style={{ marginRight: "0.5rem" }}>
-                                Javascript
+                                JavaScript
                               </div>
                               <div style={{ marginRight: "1rem" }}>Gatsby</div>
                             </div>
@@ -1007,7 +1075,7 @@ const Home = () => {
                           <div style={{ display: "flex", fontSize: "0.7rem" }}>
                             <div style={{ marginRight: "1rem" }}>React</div>
                             <div style={{ marginRight: "1rem" }}>
-                              Javascript
+                              JavaScript
                             </div>
                             <div style={{ marginRight: "1rem" }}>Gatsby</div>
                             <div style={{ marginRight: "1rem" }}>
@@ -1146,10 +1214,10 @@ const Home = () => {
                                   marginRight: "0.5rem",
                                 }}
                               >
-                                Javascript
+                                JavaScript
                               </div>
                               <div style={{ marginRight: "0.5rem" }}>
-                                Peerjs
+                                PeerJS
                               </div>
                               <div style={{ marginRight: "0.5rem" }}>Ejs</div>
                               <div style={{ marginRight: "1rem" }}>Node</div>
@@ -1183,9 +1251,9 @@ const Home = () => {
                         <React.Fragment>
                           <div style={{ display: "flex", fontSize: "0.7rem" }}>
                             <div style={{ marginRight: "1rem" }}>
-                              Javascript
+                              JavaScript
                             </div>
-                            <div style={{ marginRight: "1rem" }}>Peerjs</div>
+                            <div style={{ marginRight: "1rem" }}>PeerJS</div>
                             <div style={{ marginRight: "1rem" }}>Ejs</div>
                             <div style={{ marginRight: "1rem" }}>WebRTC</div>
                             <div style={{ marginRight: "1rem" }}>Express</div>

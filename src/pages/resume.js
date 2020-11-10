@@ -156,7 +156,7 @@ const Resume = () => {
                 <span style={{ fontWeight: "bold" }}>
                   Technologies used to build it:
                 </span>{" "}
-                React, Javascript, Mongodb, Contentful, Material ui, Styled
+                React, JavaScript, Mongodb, Contentful, Material ui, Styled
                 components, Socket.io, GraphQL, Express, Node, Gatsby
               </p>
               <div style={{ margin: "1rem" }}>
@@ -198,7 +198,7 @@ const Resume = () => {
                 <span style={{ fontWeight: "bold" }}>
                   Technologies used to build it:
                 </span>{" "}
-                React, Javascript, Bootstrap, Styled components, PayPal, React
+                React, JavaScript, Bootstrap, Styled components, PayPal, React
                 router
               </p>
               <div style={{ margin: "1rem" }}>
@@ -240,7 +240,7 @@ const Resume = () => {
                 <span style={{ fontWeight: "bold" }}>
                   Technologies used to build it:
                 </span>{" "}
-                React, Javascript, Gatsby, Styled components, Material ui
+                React, JavaScript, Gatsby, Styled components, Material ui
               </p>
               <div style={{ margin: "1rem" }}>
                 <a
