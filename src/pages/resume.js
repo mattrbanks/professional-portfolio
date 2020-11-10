@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import SEO from "../components/seo"
 import "../components/layout.css"
-import downloadFile from "../../resume/resume-matthew-r-banks.pdf"
+import downloadFile from "../../resume/resume-matthew-r-banks-11-10-2020.pdf"
 
 const Resume = () => {
   return (
@@ -133,7 +133,7 @@ const Resume = () => {
             <div style={{ marginRight: "1rem" }}>
               <h2 style={{ marginRight: "1.5rem" }}>&lang;Projects&rang;</h2>
             </div>
-            <div style={{ padding: "1rem" }}>
+            <div style={{ padding: "1rem", marginRight: "" }}>
               <h2>Eagle Elementary School</h2>
               <p>
                 <span style={{ fontWeight: "bold" }}>Features:</span> Real Time
@@ -271,21 +271,25 @@ const Resume = () => {
               <div>
                 <h4>Current Core Technologies Used:</h4>
               </div>
-              <table>
-                <tr>
-                  <th>Programming</th>
-                  <th>Data</th>
-                  <th>Tools</th>
-                </tr>
-                <tr>
-                  <td>
-                    HTML/CSS, JavaScript, React, GatsbyJS/GraphQL, NodeJS,
-                    Express
-                  </td>
-                  <td>MongoDB</td>
-                  <td>Visual Studio Code, Git, Figma</td>
-                </tr>
-              </table>
+              <div>
+                <table>
+                  <tbody>
+                    <tr>
+                      <th>Programming</th>
+                      <th>Data</th>
+                      <th>Tools</th>
+                    </tr>
+                    <tr>
+                      <td>
+                        HTML/CSS, JavaScript, React, GatsbyJS/GraphQL, NodeJS,
+                        Express
+                      </td>
+                      <td>MongoDB</td>
+                      <td>Visual Studio Code, Git, Figma</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
           <div className={"desktop-resume mobile-resume"}>
