@@ -307,7 +307,7 @@ const Home = () => {
               style={{
                 display: "block",
                 fontSize: "1rem",
-                margin: "0 1.5rem 1rem 1.5rem",
+                margin: "0 1.5rem 0.5rem 1.5rem",
               }}
             >
               <a
