@@ -15,6 +15,7 @@ import Typography from "@material-ui/core/Typography"
 import ImageReusable from "../components/imageReusable"
 import styled from "styled-components"
 import { FaLinkedin, FaGithubSquare, FaFile } from "react-icons/fa"
+import Typed from "react-typed"
 
 const useStyles = makeStyles({
   welcomeSectionStyles: {
@@ -30,11 +31,20 @@ const useStyles = makeStyles({
     justifyContent: "center",
     flexDirection: "column",
   },
+  contactSectionTallStyles: {
+    marginTop: "5rem",
+    height: "50vh",
+    display: "flex",
+    justifyContent: "center",
+    flexDirection: "column",
+  },
   contactSecText: {
     display: "flex",
     flexDirection: "column",
     textAlign: "center",
-    paddingTop: "3em",
+    paddingTop: "1em",
+    height: "6rem",
+    margin: "0 1rem 0 1rem",
   },
   iconsStyle: {
     display: "flex",
@@ -48,31 +58,31 @@ const useStyles = makeStyles({
     color: "#000",
     transition: "transform 1s",
     transform: "perspective(100px) translateZ(-5px)",
-    margin: "2rem",
+    margin: "1rem",
   },
   iconOne: {
     display: "flex",
     color: "#000",
-    margin: "2rem",
+    margin: "1rem",
     transition: "transform 1s",
     transform: "perspective(100px) translateZ(0px)",
-    filter: "drop-shadow(2px 2px 0 rgb(255,0,0))",
+    // filter: "drop-shadow(2px 2px 0 rgb(255,0,0))",
   },
   iconTwo: {
     display: "flex",
     color: "#000",
-    margin: "2rem",
+    margin: "1rem",
     transition: "transform 1s",
     transform: "perspective(100px) translateZ(0px)",
-    filter: "drop-shadow(2px 2px 0 rgb(255,165,0))",
+    // filter: "drop-shadow(2px 2px 0 rgb(255,165,0))",
   },
   iconFour: {
     display: "flex",
     color: "#000",
-    margin: "2rem",
+    margin: "1rem",
     transition: "transform 1s",
     transform: "perspective(100px) translateZ(0px)",
-    filter: "drop-shadow(2px 2px 0 rgb(255,255,0))",
+    // filter: "drop-shadow(2px 2px 0 rgb(255,255,0))",
   },
 })
 
@@ -92,10 +102,14 @@ const Home = () => {
   const iconOneStyle = classes.iconOne
   const iconTwoStyle = classes.iconTwo
   const iconFourStyle = classes.iconFour
+  const contactSectionStyle = classes.contactSectionStyles
+  const contactSecTallStyle = classes.contactSectionTallStyles
 
   const mobileTechnologiesList = useMediaQuery(
     `${theme.breakpoints.between("0", "690")}`
   )
+
+  const contactSecQuery = useMediaQuery("(min-height:650px)")
 
   return (
     <Layout>
@@ -499,7 +513,7 @@ const Home = () => {
               }}
             >
               <a
-                href="https://reactrouter.com/"
+                href="https://peerjs.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
@@ -519,7 +533,7 @@ const Home = () => {
                 </button>
               </a>
               <a
-                href="https://reactrouter.com/"
+                href="https://webrtc.org/"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
@@ -539,7 +553,7 @@ const Home = () => {
                 </button>
               </a>
               <a
-                href="https://reactrouter.com/"
+                href="https://ejs.co/"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
@@ -556,6 +570,26 @@ const Home = () => {
                   }}
                 >
                   EJS
+                </button>
+              </a>
+              <a
+                href="https://figma.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  marginRight: "0.5rem",
+                }}
+              >
+                <button
+                  style={{
+                    backgroundImage:
+                      "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
+                    cursor: "pointer",
+                    color: "#fff",
+                    marginBottom: "0.5rem",
+                  }}
+                >
+                  Figma
                 </button>
               </a>
             </div>
@@ -583,6 +617,362 @@ const Home = () => {
             </div>
           </div>
           <div className={"wide-screen-projects"}>
+            <div className={"wide-screen-margin-left"}>
+              <Card className={"project-card-styles"}>
+                <CardActionArea>
+                  <CardMedia
+                    className={
+                      projectFourHover
+                        ? "project-media-transform-styles"
+                        : "project-media-styles"
+                    }
+                    style={{
+                      maxWidth: "100%",
+                      margin: "0 0 0 0",
+                    }}
+                    title="Matt's Retro Games"
+                    onMouseEnter={() => {
+                      setProjectFourHover(true)
+                    }}
+                    onMouseLeave={() => {
+                      setProjectFourHover(false)
+                    }}
+                  >
+                    <ImageReusable
+                      style={{ position: "relative" }}
+                      alt="picture of school site project"
+                      filename="faceConferenceImg.png"
+                    />
+                  </CardMedia>
+                  <CardContent className={"project-four-card-content"}>
+                    <Typography gutterBottom variant="h5" component="h2">
+                      Face Conference
+                    </Typography>
+                    <Typography
+                      variant="caption"
+                      color="textPrimary"
+                      component="p"
+                    >
+                      <span style={{ fontWeight: "bold" }}>
+                        Planned Features:{" "}
+                      </span>{" "}
+                      Name login to display the name on video, dashboard with
+                      options to create a new room or join an existing room,
+                      button to exit the chat and go back to the dashboard
+                    </Typography>
+                    <Typography
+                      variant="caption"
+                      color="textPrimary"
+                      component="p"
+                    >
+                      <span style={{ fontWeight: "bold" }}>About: </span>This is
+                      my latest project. It is a video chat website that
+                      utilizes WebRTC technology. The world is changing fast and
+                      video meetings are becoming more common. Face Conference
+                      is a place where you and your friends can talk, face to
+                      face, and catch up online. I wanted to experiment with
+                      WebRTC and this is a little project for me to familiarize
+                      myself with the technology.
+                    </Typography>
+                    <div
+                      style={{
+                        display: "block",
+                        listStyle: "none",
+                        margin: "0.5rem 1.5rem 0 1.5rem",
+                      }}
+                    >
+                      {mobileTechnologiesList ? (
+                        <React.Fragment>
+                          <div
+                            style={{
+                              display: "block",
+                              listStyle: "none",
+                              margin: "0.5rem 1.5rem 0 1.5rem",
+                            }}
+                          >
+                            <div
+                              style={{
+                                display: "flex",
+                                justifyContent: "center",
+                                fontSize: "0.6rem",
+                                margin: "0 1.5rem 0 1.5rem",
+                              }}
+                            >
+                              <div
+                                style={{
+                                  marginLeft: "1rem",
+                                  marginRight: "0.5rem",
+                                }}
+                              >
+                                JavaScript
+                              </div>
+                              <div style={{ marginRight: "0.5rem" }}>
+                                PeerJS
+                              </div>
+                              <div style={{ marginRight: "0.5rem" }}>Ejs</div>
+                              <div style={{ marginRight: "1rem" }}>Node</div>
+                            </div>
+                            <div
+                              style={{
+                                display: "flex",
+                                justifyContent: "center",
+                                fontSize: "0.6rem",
+                                margin: "0 1rem 0 1rem",
+                              }}
+                            >
+                              <div
+                                style={{
+                                  marginLeft: "0.5rem",
+                                  marginRight: "0.5rem",
+                                }}
+                              >
+                                WebRTC
+                              </div>
+                              <div style={{ marginRight: "0.5rem" }}>
+                                Express
+                              </div>
+                              <div style={{ marginRight: "0.5rem" }}>
+                                Socket.io
+                              </div>
+                            </div>
+                          </div>
+                        </React.Fragment>
+                      ) : (
+                        <React.Fragment>
+                          <div style={{ display: "flex", fontSize: "0.7rem" }}>
+                            <div style={{ marginRight: "1rem" }}>
+                              JavaScript
+                            </div>
+                            <div style={{ marginRight: "1rem" }}>PeerJS</div>
+                            <div style={{ marginRight: "1rem" }}>Ejs</div>
+                            <div style={{ marginRight: "1rem" }}>WebRTC</div>
+                            <div style={{ marginRight: "1rem" }}>Express</div>
+                            <div style={{ marginRight: "1rem" }}>Node</div>
+                            <div>Socket.io</div>
+                          </div>
+                        </React.Fragment>
+                      )}
+                    </div>
+                  </CardContent>
+                </CardActionArea>
+                <div style={{ display: "flex", justifyContent: "center" }}>
+                  <CardActions>
+                    <a
+                      href="https://github.com/mattrbanks/face-conference"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{ color: "#fff" }}
+                    >
+                      <Button
+                        style={{
+                          backgroundImage:
+                            "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
+                          border: "1px solid #000",
+                          fontSize: "1.05rem",
+                        }}
+                        size="large"
+                        color="inherit"
+                      >
+                        Github
+                      </Button>
+                    </a>
+                    <div>
+                      <Button
+                        disabled
+                        style={{
+                          border: "1px solid #000",
+                          color: "#000",
+                          fontSize: "1.05rem",
+                        }}
+                        size="large"
+                        color="inherit"
+                      >
+                        New project
+                      </Button>
+                    </div>
+                  </CardActions>
+                </div>
+              </Card>
+            </div>
+            <div className={"wide-screen-margin-right"}>
+              <Card className={"project-card-styles"}>
+                <CardActionArea>
+                  <CardMedia
+                    className={
+                      projectTwoHover
+                        ? "project-media-transform-styles"
+                        : "project-media-styles"
+                    }
+                    style={{
+                      maxWidth: "100%",
+                      margin: "0 0 0 0",
+                    }}
+                    title="Matt's Retro Games"
+                    onMouseEnter={() => {
+                      setProjectTwoHover(true)
+                    }}
+                    onMouseLeave={() => {
+                      setProjectTwoHover(false)
+                    }}
+                  >
+                    <ImageReusable
+                      style={{ position: "relative" }}
+                      alt="picture of school site project"
+                      filename="QuickChat.png"
+                    />
+                  </CardMedia>
+                  <CardContent className={"project-two-card-content"}>
+                    <Typography gutterBottom variant="h5" component="h2">
+                      Quick Chat
+                    </Typography>
+                    <Typography
+                      variant="caption"
+                      color="textPrimary"
+                      component="p"
+                    >
+                      <span style={{ fontWeight: "bold" }}>Features: </span>{" "}
+                      PayPal, Search bar, Game product pages, Detail page for
+                      each product, Cart checkout with tax (USA)
+                    </Typography>
+                    <Typography
+                      variant="caption"
+                      color="textPrimary"
+                      component="p"
+                    >
+                      <span style={{ fontWeight: "bold" }}>About: </span>I had a
+                      lot of fun with this project because these are many of my
+                      favorite retro games. This is like a tribute to the games
+                      I am nostalgic for but in the form of a retro game store.
+                      I used a real price guide to price each game so they
+                      should be very accurately priced in my store. This store
+                      template has all the hallmarks of an e-commerce website
+                      and it utilizes a sandbox PayPal that can be activated in
+                      the future to handle real transactions. I won't be parting
+                      with my collection though.
+                    </Typography>
+                    <div
+                      style={{
+                        display: "block",
+                        listStyle: "none",
+                        margin: "0.5rem 1.5rem 0 1.5rem",
+                      }}
+                    >
+                      {mobileTechnologiesList ? (
+                        <React.Fragment>
+                          <div
+                            style={{
+                              display: "flex",
+                              justifyContent: "center",
+                              fontSize: "0.6rem",
+                              margin: "0 1.5rem 0 1.5rem",
+                            }}
+                          >
+                            <div
+                              style={{
+                                marginLeft: "1rem",
+                                marginRight: "0.5rem",
+                              }}
+                            >
+                              React
+                            </div>
+                            <div style={{ marginRight: "0.5rem" }}>
+                              JavaScript
+                            </div>
+                            <div style={{ marginRight: "0.5rem" }}>
+                              Bootstrap
+                            </div>
+                            <div style={{ marginRight: "1rem" }}>PayPal</div>
+                          </div>
+                          <div
+                            style={{
+                              display: "flex",
+                              justifyContent: "center",
+                              fontSize: "0.6rem",
+                              margin: "0 1rem 0 1rem",
+                            }}
+                          >
+                            <div
+                              style={{
+                                marginLeft: "0.5rem",
+                                marginRight: "0.5rem",
+                              }}
+                            >
+                              Styled components
+                            </div>
+                            <div style={{ marginRight: "0.5rem" }}>
+                              React router
+                            </div>
+                          </div>
+                        </React.Fragment>
+                      ) : (
+                        <React.Fragment>
+                          <div style={{ display: "flex", fontSize: "0.7rem" }}>
+                            <div style={{ marginRight: "1rem" }}>React</div>
+                            <div style={{ marginRight: "1rem" }}>
+                              JavaScript
+                            </div>
+                            <div style={{ marginRight: "1rem" }}>Bootstrap</div>
+                            <div style={{ marginRight: "1rem" }}>
+                              Styled components
+                            </div>
+                            <div>PayPal</div>
+                          </div>
+                          <div style={{ display: "flex", fontSize: "0.7rem" }}>
+                            <div style={{ marginRight: "1rem" }}>
+                              React router
+                            </div>
+                          </div>
+                        </React.Fragment>
+                      )}
+                    </div>
+                  </CardContent>
+                </CardActionArea>
+                <div style={{ display: "flex", justifyContent: "center" }}>
+                  <CardActions>
+                    <a
+                      href="https://github.com/mattrbanks/retro-game-store-portfolio-project"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{ color: "#fff" }}
+                    >
+                      <Button
+                        style={{
+                          backgroundImage:
+                            "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
+                          border: "1px solid #000",
+                          fontSize: "1.05rem",
+                        }}
+                        size="large"
+                        color="inherit"
+                      >
+                        See my code
+                      </Button>
+                    </a>
+                    <a
+                      href="https://matts-retro-games.netlify.app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{ color: "#fff" }}
+                    >
+                      <Button
+                        style={{
+                          backgroundImage:
+                            "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
+                          border: "1px solid #000",
+                          fontSize: "1.05rem",
+                        }}
+                        size="large"
+                        color="inherit"
+                      >
+                        Try the site
+                      </Button>
+                    </a>
+                  </CardActions>
+                </div>
+              </Card>
+            </div>
+          </div>
+          <div className={"wide-screen-projects-lower"}>
             <div className={"wide-screen-margin-left"}>
               <Card className={"project-card-styles"}>
                 <CardActionArea>
@@ -1127,197 +1517,33 @@ const Home = () => {
                 </div>
               </Card>
             </div>
-            <div className={"wide-screen-margin-right"}>
-              <Card className={"project-card-styles"}>
-                <CardActionArea>
-                  <CardMedia
-                    className={
-                      projectFourHover
-                        ? "project-media-transform-styles"
-                        : "project-media-styles"
-                    }
-                    style={{
-                      maxWidth: "100%",
-                      margin: "0 0 0 0",
-                    }}
-                    title="Matt's Retro Games"
-                    onMouseEnter={() => {
-                      setProjectFourHover(true)
-                    }}
-                    onMouseLeave={() => {
-                      setProjectFourHover(false)
-                    }}
-                  >
-                    <ImageReusable
-                      style={{ position: "relative" }}
-                      alt="picture of school site project"
-                      filename="faceConferenceImg.png"
-                    />
-                  </CardMedia>
-                  <CardContent className={"project-four-card-content"}>
-                    <Typography gutterBottom variant="h5" component="h2">
-                      Face Conference
-                    </Typography>
-                    <Typography
-                      variant="caption"
-                      color="textPrimary"
-                      component="p"
-                    >
-                      <span style={{ fontWeight: "bold" }}>
-                        Planned Features:{" "}
-                      </span>{" "}
-                      Name login to display the name on video, dashboard with
-                      options to create a new room or join an existing room,
-                      button to exit the chat and go back to the dashboard
-                    </Typography>
-                    <Typography
-                      variant="caption"
-                      color="textPrimary"
-                      component="p"
-                    >
-                      <span style={{ fontWeight: "bold" }}>About: </span>This is
-                      my latest project. It is a video chat website that
-                      utilizes WebRTC technology. The world is changing fast and
-                      video meetings are becoming more common. Face Conference
-                      is a place where you and your friends can talk, face to
-                      face, and catch up online. I wanted to experiment with
-                      WebRTC and this is a little project for me to familiarize
-                      myself with the technology.
-                    </Typography>
-                    <div
-                      style={{
-                        display: "block",
-                        listStyle: "none",
-                        margin: "0.5rem 1.5rem 0 1.5rem",
-                      }}
-                    >
-                      {mobileTechnologiesList ? (
-                        <React.Fragment>
-                          <div
-                            style={{
-                              display: "block",
-                              listStyle: "none",
-                              margin: "0.5rem 1.5rem 0 1.5rem",
-                            }}
-                          >
-                            <div
-                              style={{
-                                display: "flex",
-                                justifyContent: "center",
-                                fontSize: "0.6rem",
-                                margin: "0 1.5rem 0 1.5rem",
-                              }}
-                            >
-                              <div
-                                style={{
-                                  marginLeft: "1rem",
-                                  marginRight: "0.5rem",
-                                }}
-                              >
-                                JavaScript
-                              </div>
-                              <div style={{ marginRight: "0.5rem" }}>
-                                PeerJS
-                              </div>
-                              <div style={{ marginRight: "0.5rem" }}>Ejs</div>
-                              <div style={{ marginRight: "1rem" }}>Node</div>
-                            </div>
-                            <div
-                              style={{
-                                display: "flex",
-                                justifyContent: "center",
-                                fontSize: "0.6rem",
-                                margin: "0 1rem 0 1rem",
-                              }}
-                            >
-                              <div
-                                style={{
-                                  marginLeft: "0.5rem",
-                                  marginRight: "0.5rem",
-                                }}
-                              >
-                                WebRTC
-                              </div>
-                              <div style={{ marginRight: "0.5rem" }}>
-                                Express
-                              </div>
-                              <div style={{ marginRight: "0.5rem" }}>
-                                Socket.io
-                              </div>
-                            </div>
-                          </div>
-                        </React.Fragment>
-                      ) : (
-                        <React.Fragment>
-                          <div style={{ display: "flex", fontSize: "0.7rem" }}>
-                            <div style={{ marginRight: "1rem" }}>
-                              JavaScript
-                            </div>
-                            <div style={{ marginRight: "1rem" }}>PeerJS</div>
-                            <div style={{ marginRight: "1rem" }}>Ejs</div>
-                            <div style={{ marginRight: "1rem" }}>WebRTC</div>
-                            <div style={{ marginRight: "1rem" }}>Express</div>
-                            <div style={{ marginRight: "1rem" }}>Node</div>
-                            <div>Socket.io</div>
-                          </div>
-                        </React.Fragment>
-                      )}
-                    </div>
-                  </CardContent>
-                </CardActionArea>
-                <div style={{ display: "flex", justifyContent: "center" }}>
-                  <CardActions>
-                    <a
-                      href="https://github.com/mattrbanks/face-conference"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      style={{ color: "#fff" }}
-                    >
-                      <Button
-                        style={{
-                          backgroundImage:
-                            "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
-                          border: "1px solid #000",
-                          fontSize: "1.05rem",
-                        }}
-                        size="large"
-                        color="inherit"
-                      >
-                        Github
-                      </Button>
-                    </a>
-                    <div>
-                      <Button
-                        disabled
-                        style={{
-                          border: "1px solid #000",
-                          color: "#000",
-                          fontSize: "1.05rem",
-                        }}
-                        size="large"
-                        color="inherit"
-                      >
-                        New project
-                      </Button>
-                    </div>
-                  </CardActions>
-                </div>
-              </Card>
-            </div>
           </div>
         </section>
       </MainStyles>
       <section
         id="contact"
-        className={classes.contactSectionStyles}
+        className={contactSecQuery ? contactSecTallStyle : contactSectionStyle}
         style={{ position: "relative" }}
       >
         <div className={classes.contactSecText}>
-          <h2>I look forward to working with you!</h2>
-          <p id="finalWords">&lang;Let's create solutions together&rang;</p>
+          <h2>
+            <Typed
+              strings={[
+                "I look forward to working with you!",
+                "Let's create solutions together.",
+                "Peruse my GitHub by clicking below.",
+                "Connect with me on LinkedIn below.",
+                "Click below to see my resume.",
+              ]}
+              typeSpeed={40}
+              backSpeed={50}
+              loop
+            />
+            {/* <p id="finalWords">&lang;Let's create solutions together&rang;</p> */}
+          </h2>
         </div>
         <div className={classes.iconsStyle}>
-          <div>
+          <div style={{ borderLeft: "2px solid red", borderRadius: "50px" }}>
             <a
               href="https://github.com/mattrbanks"
               target="_blank"
@@ -1325,13 +1551,21 @@ const Home = () => {
               className={iconOneHover ? iconOneStyle : iconContactStyle}
             >
               <FaGithubSquare
-                style={{ fontSize: "70px" }}
+                style={{
+                  fontSize: "70px",
+                  filter: "drop-shadow(2px 2px 0 rgb(255,0,0))",
+                }}
                 onMouseEnter={() => setIconOneHover(true)}
                 onMouseLeave={() => setIconOneHover(false)}
               />
             </a>
           </div>
-          <div>
+          <div
+            style={{
+              borderTop: "2px solid orange",
+              borderBottom: "2px solid orange",
+            }}
+          >
             <a
               href="https://www.linkedin.com/in/matthewr-banks"
               target="_blank"
@@ -1339,19 +1573,27 @@ const Home = () => {
               className={iconTwoHover ? iconTwoStyle : iconContactStyle}
             >
               <FaLinkedin
-                style={{ fontSize: "70px" }}
+                style={{
+                  fontSize: "70px",
+                  filter: "drop-shadow(2px 2px 0 rgb(255,165,0))",
+                }}
                 onMouseEnter={() => setIconTwoHover(true)}
                 onMouseLeave={() => setIconTwoHover(false)}
               />
             </a>
           </div>
-          <div>
+          <div
+            style={{ borderRight: "2px solid yellow", borderRadius: "50px" }}
+          >
             <Link
               to="/resume"
               className={iconFourHover ? iconFourStyle : iconContactStyle}
             >
               <FaFile
-                style={{ fontSize: "65px" }}
+                style={{
+                  fontSize: "65px",
+                  filter: "drop-shadow(2px 2px 0 rgb(255,255,0))",
+                }}
                 onMouseEnter={() => setIconFourHover(true)}
                 onMouseLeave={() => setIconFourHover(false)}
               />
@@ -1547,5 +1789,8 @@ let MainStyles = styled.div`
       transition: transform 1s;
       transform: perspective(100px) translateZ(0.5px);
     }
+  }
+
+  @media (max-height: 650px) {
   }
 `
