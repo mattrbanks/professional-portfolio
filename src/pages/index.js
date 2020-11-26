@@ -1740,7 +1740,7 @@ let MainStyles = styled.div`
     height: 55rem;
     @media (max-width: 690px) and (orientation: portrait) {
       max-width: 20rem;
-      height: 50.5rem;
+      height: 51rem;
     }
     @media (max-width: 660px) and (orientation: landscape) {
       max-width: 20rem;
