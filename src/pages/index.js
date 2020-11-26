@@ -716,7 +716,8 @@ const Home = () => {
                                 PeerJS
                               </div>
                               <div style={{ marginRight: "0.5rem" }}>Ejs</div>
-                              <div style={{ marginRight: "1rem" }}>Node</div>
+                              <div style={{ marginRight: "0.5rem" }}>Node</div>
+                              <div style={{ marginRight: "1rem" }}>Mongodb</div>
                             </div>
                             <div
                               style={{
@@ -755,6 +756,9 @@ const Home = () => {
                             <div style={{ marginRight: "1rem" }}>Express</div>
                             <div style={{ marginRight: "1rem" }}>Node</div>
                             <div>Socket.io</div>
+                          </div>
+                          <div style={{ display: "flex", fontSize: "0.7rem" }}>
+                            <div style={{ marginRight: "1rem" }}>Mongodb</div>
                           </div>
                         </React.Fragment>
                       )}
@@ -1769,10 +1773,10 @@ let MainStyles = styled.div`
   .project-two-card-content {
     margin-bottom: 3.75rem;
     @media (max-width: 480px) and (orientation: portrait) {
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.25rem;
     }
     @media (max-width: 689px) and (min-width: 481px) and (orientation: portrait) {
-      margin-bottom: 2.5rem;
+      margin-bottom: 1.75rem;
     }
     @media (max-width: 673px) and (min-width: 661px) and (orientation: landscape) {
       margin-bottom: 1.25rem;
@@ -1797,7 +1801,7 @@ let MainStyles = styled.div`
     }
   }
   .project-four-card-content {
-    margin-bottom: 5.25rem;
+    margin-bottom: 4rem;
     @media (max-width: 689px) and (orientation: portrait) {
       margin-bottom: 3.75rem;
     }
@@ -1811,10 +1815,10 @@ let MainStyles = styled.div`
   .project-five-card-content {
     margin-bottom: 3.75rem;
     @media (max-width: 480px) and (orientation: portrait) {
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.25rem;
     }
     @media (max-width: 689px) and (min-width: 481px) and (orientation: portrait) {
-      margin-bottom: 2.5rem;
+      margin-bottom: 1.75rem;
     }
     @media (max-width: 673px) and (min-width: 661px) and (orientation: landscape) {
       margin-bottom: 1.25rem;
