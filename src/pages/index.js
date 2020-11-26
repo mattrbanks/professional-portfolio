@@ -96,6 +96,7 @@ const Home = () => {
   const [projectTwoHover, setProjectTwoHover] = React.useState(false)
   const [projectThreeHover, setProjectThreeHover] = React.useState(false)
   const [projectFourHover, setProjectFourHover] = React.useState(false)
+  const [projectFiveHover, setProjectFiveHover] = React.useState(false)
 
   //styles
   const iconContactStyle = classes.iconContact
@@ -630,7 +631,7 @@ const Home = () => {
                       maxWidth: "100%",
                       margin: "0 0 0 0",
                     }}
-                    title="Matt's Retro Games"
+                    title="Face Conference"
                     onMouseEnter={() => {
                       setProjectFourHover(true)
                     }}
@@ -638,11 +639,18 @@ const Home = () => {
                       setProjectFourHover(false)
                     }}
                   >
-                    <ImageReusable
-                      style={{ position: "relative" }}
-                      alt="picture of school site project"
-                      filename="faceConferenceImg.png"
-                    />
+                    <a
+                      href="https://face-conference.herokuapp.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{ color: "#fff" }}
+                    >
+                      <ImageReusable
+                        style={{ position: "relative" }}
+                        alt="picture of video chat project"
+                        filename="faceConferenceImg.png"
+                      />
+                    </a>
                   </CardMedia>
                   <CardContent className={"project-four-card-content"}>
                     <Typography gutterBottom variant="h5" component="h2">
@@ -653,12 +661,10 @@ const Home = () => {
                       color="textPrimary"
                       component="p"
                     >
-                      <span style={{ fontWeight: "bold" }}>
-                        Planned Features:{" "}
-                      </span>{" "}
-                      Name login to display the name on video, dashboard with
-                      options to create a new room or join an existing room,
-                      button to exit the chat and go back to the dashboard
+                      <span style={{ fontWeight: "bold" }}>Features: </span>{" "}
+                      Dashboard with options to create a new room or join the
+                      demo lobby, A user can disable the video, audio, or hang
+                      up the call and go back to the dashboard
                     </Typography>
                     <Typography
                       variant="caption"
@@ -773,23 +779,28 @@ const Home = () => {
                         size="large"
                         color="inherit"
                       >
-                        Github
+                        See My Code
                       </Button>
                     </a>
-                    <div>
+                    <a
+                      href="https://face-conference.herokuapp.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{ color: "#fff" }}
+                    >
                       <Button
-                        disabled
                         style={{
+                          backgroundImage:
+                            "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
                           border: "1px solid #000",
-                          color: "#000",
                           fontSize: "1.05rem",
                         }}
                         size="large"
                         color="inherit"
                       >
-                        New project
+                        Try The Site
                       </Button>
-                    </div>
+                    </a>
                   </CardActions>
                 </div>
               </Card>
@@ -807,7 +818,7 @@ const Home = () => {
                       maxWidth: "100%",
                       margin: "0 0 0 0",
                     }}
-                    title="Matt's Retro Games"
+                    title="Quick Chat"
                     onMouseEnter={() => {
                       setProjectTwoHover(true)
                     }}
@@ -815,13 +826,20 @@ const Home = () => {
                       setProjectTwoHover(false)
                     }}
                   >
-                    <ImageReusable
-                      style={{ position: "relative" }}
-                      alt="picture of school site project"
-                      filename="QuickChat.png"
-                    />
+                    <a
+                      href="https://quick-chat.netlify.app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{ color: "#fff" }}
+                    >
+                      <ImageReusable
+                        style={{ position: "relative" }}
+                        alt="picture of quick chat project"
+                        filename="QuickChat.png"
+                      />
+                    </a>
                   </CardMedia>
-                  <CardContent className={"project-two-card-content"}>
+                  <CardContent className={"project-five-card-content"}>
                     <Typography gutterBottom variant="h5" component="h2">
                       Quick Chat
                     </Typography>
@@ -831,28 +849,29 @@ const Home = () => {
                       component="p"
                     >
                       <span style={{ fontWeight: "bold" }}>Features: </span>{" "}
-                      PayPal, Search bar, Game product pages, Detail page for
-                      each product, Cart checkout with tax (USA)
+                      Group chat, Private chat, Push notifications, Help
+                      section, Wide selection of emojis, Unique user id, Logged
+                      in user list
                     </Typography>
                     <Typography
                       variant="caption"
                       color="textPrimary"
                       component="p"
                     >
-                      <span style={{ fontWeight: "bold" }}>About: </span>I had a
-                      lot of fun with this project because these are many of my
-                      favorite retro games. This is like a tribute to the games
-                      I am nostalgic for but in the form of a retro game store.
-                      I used a real price guide to price each game so they
-                      should be very accurately priced in my store. This store
-                      template has all the hallmarks of an e-commerce website
-                      and it utilizes a sandbox PayPal that can be activated in
-                      the future to handle real transactions. I won't be parting
-                      with my collection though.
+                      <span style={{ fontWeight: "bold" }}>About: </span>This is
+                      a real-time chat web application that has group topic
+                      rooms and private messaging with push notifications. There
+                      is a help button, with full instructions, to get new users
+                      up and running. There is a very fun emoji picker with just
+                      about every emoji out there. Private messages are equipped
+                      with a service worker to handle push notifications.
+                      Notifications must be allowed and they fire when the
+                      receiver is not in the private conversation.
                     </Typography>
                     <div
                       style={{
                         display: "block",
+
                         listStyle: "none",
                         margin: "0.5rem 1.5rem 0 1.5rem",
                       }}
@@ -878,29 +897,24 @@ const Home = () => {
                             <div style={{ marginRight: "0.5rem" }}>
                               JavaScript
                             </div>
-                            <div style={{ marginRight: "0.5rem" }}>
-                              Bootstrap
-                            </div>
-                            <div style={{ marginRight: "1rem" }}>PayPal</div>
+                            <div style={{ marginRight: "0.5rem" }}>Gatsby</div>
+                            <div style={{ marginRight: "1rem" }}>Socket.io</div>
                           </div>
                           <div
                             style={{
                               display: "flex",
                               justifyContent: "center",
                               fontSize: "0.6rem",
-                              margin: "0 1rem 0 1rem",
+                              margin: "0 1rem 1rem 1rem",
                             }}
                           >
-                            <div
-                              style={{
-                                marginLeft: "0.5rem",
-                                marginRight: "0.5rem",
-                              }}
-                            >
-                              Styled components
-                            </div>
                             <div style={{ marginRight: "0.5rem" }}>
-                              React router
+                              Material ui
+                            </div>
+                            <div style={{ marginRight: "0.5rem" }}>Node</div>
+                            <div style={{ marginRight: "0.5rem" }}>Express</div>
+                            <div style={{ marginRight: "0.5rem" }}>
+                              Web Push
                             </div>
                           </div>
                         </React.Fragment>
@@ -911,16 +925,14 @@ const Home = () => {
                             <div style={{ marginRight: "1rem" }}>
                               JavaScript
                             </div>
-                            <div style={{ marginRight: "1rem" }}>Bootstrap</div>
-                            <div style={{ marginRight: "1rem" }}>
-                              Styled components
-                            </div>
-                            <div>PayPal</div>
+                            <div style={{ marginRight: "1rem" }}>Gatsby</div>
+                            <div style={{ marginRight: "1rem" }}>Socket.io</div>
+                            <div>Material ui</div>
                           </div>
                           <div style={{ display: "flex", fontSize: "0.7rem" }}>
-                            <div style={{ marginRight: "1rem" }}>
-                              React router
-                            </div>
+                            <div style={{ marginRight: "1rem" }}>Node</div>
+                            <div style={{ marginRight: "1rem" }}>Express</div>
+                            <div style={{ marginRight: "1rem" }}>Web Push</div>
                           </div>
                         </React.Fragment>
                       )}
@@ -930,7 +942,7 @@ const Home = () => {
                 <div style={{ display: "flex", justifyContent: "center" }}>
                   <CardActions>
                     <a
-                      href="https://github.com/mattrbanks/retro-game-store-portfolio-project"
+                      href="https://github.com/mattrbanks/Quick-Chat"
                       target="_blank"
                       rel="noopener noreferrer"
                       style={{ color: "#fff" }}
@@ -949,7 +961,7 @@ const Home = () => {
                       </Button>
                     </a>
                     <a
-                      href="https://matts-retro-games.netlify.app/"
+                      href="https://quick-chat.netlify.app/"
                       target="_blank"
                       rel="noopener noreferrer"
                       style={{ color: "#fff" }}
@@ -991,11 +1003,18 @@ const Home = () => {
                       setProjectOneHover(false)
                     }}
                   >
-                    <ImageReusable
-                      style={{ position: "relative" }}
-                      alt="picture of school site project"
-                      filename="EagleElementarySchool.PNG"
-                    />
+                    <a
+                      href="https://eagle-elementary-school.netlify.app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{ color: "#fff" }}
+                    >
+                      <ImageReusable
+                        style={{ position: "relative" }}
+                        alt="picture of school site project"
+                        filename="EagleElementarySchool.PNG"
+                      />
+                    </a>
                   </CardMedia>
                   <CardContent className={"project-one-card-content"}>
                     <Typography gutterBottom variant="h5" component="h2">
@@ -1187,10 +1206,17 @@ const Home = () => {
                       setProjectTwoHover(false)
                     }}
                   >
-                    <Image
-                      style={{ position: "relative" }}
-                      alt="picture of game store site project"
-                    />
+                    <a
+                      href="https://matts-retro-games.netlify.app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{ color: "#fff" }}
+                    >
+                      <Image
+                        style={{ position: "relative" }}
+                        alt="picture of game store site project"
+                      />
+                    </a>
                   </CardMedia>
                   <CardContent className={"project-two-card-content"}>
                     <Typography gutterBottom variant="h5" component="h2">
@@ -1259,7 +1285,7 @@ const Home = () => {
                               display: "flex",
                               justifyContent: "center",
                               fontSize: "0.6rem",
-                              margin: "0 1rem 0 1rem",
+                              margin: "0 1rem 1rem 1rem",
                             }}
                           >
                             <div
@@ -1357,7 +1383,7 @@ const Home = () => {
                       maxWidth: "100%",
                       margin: "0 0 0 0",
                     }}
-                    title="Matt's Retro Games"
+                    title="Professional Portfolio"
                     onMouseEnter={() => {
                       setProjectThreeHover(true)
                     }}
@@ -1365,11 +1391,18 @@ const Home = () => {
                       setProjectThreeHover(false)
                     }}
                   >
-                    <ImageReusable
-                      style={{ position: "relative" }}
-                      alt="picture of school site project"
-                      filename="ProfessionalPortfolioSiteCropped.png"
-                    />
+                    <a
+                      href="https://mattbanksdev.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{ color: "#fff" }}
+                    >
+                      <ImageReusable
+                        style={{ position: "relative" }}
+                        alt="picture of professional portfolio"
+                        filename="ProfessionalPortfolioSiteCropped.png"
+                      />
+                    </a>
                   </CardMedia>
                   <CardContent className={"project-three-card-content"}>
                     <Typography gutterBottom variant="h5" component="h2">
@@ -1745,7 +1778,7 @@ let MainStyles = styled.div`
       margin-bottom: 1.25rem;
     }
     @media (max-width: 660px) and (min-width: 481px) and (orientation: landscape) {
-      margin-bottom: 3.5rem;
+      margin-bottom: 2.5rem;
     }
     @media (max-width: 480px) and (orientation: landscape) {
       margin-bottom: 2.5rem;
@@ -1773,6 +1806,24 @@ let MainStyles = styled.div`
     }
     @media (max-width: 689px) and (min-width: 661px) and (orientation: landscape) {
       margin-bottom: 3.5rem;
+    }
+  }
+  .project-five-card-content {
+    margin-bottom: 3.75rem;
+    @media (max-width: 480px) and (orientation: portrait) {
+      margin-bottom: 1.5rem;
+    }
+    @media (max-width: 689px) and (min-width: 481px) and (orientation: portrait) {
+      margin-bottom: 2.5rem;
+    }
+    @media (max-width: 673px) and (min-width: 661px) and (orientation: landscape) {
+      margin-bottom: 1.25rem;
+    }
+    @media (max-width: 660px) and (min-width: 481px) and (orientation: landscape) {
+      margin-bottom: 2.5rem;
+    }
+    @media (max-width: 480px) and (orientation: landscape) {
+      margin-bottom: 2.5rem;
     }
   }
   .project-media-transform-styles {

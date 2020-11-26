@@ -1,8 +1,8 @@
 import React from "react"
-import { Link } from "gatsby"
 import SEO from "../components/seo"
 import "../components/layout.css"
-import downloadFile from "../../resume/resume-matthew-r-banks-11-10-2020.pdf"
+import downloadFile from "../../resume/resume-matthew-r-banks-11-25-2020.pdf"
+import styled from "styled-components"
 
 const Resume = () => {
   return (
@@ -23,134 +23,223 @@ const Resume = () => {
         >
           <h1>Matthew Banks</h1>
           <h2>Web Developer</h2>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "space-around",
-            }}
-          >
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "row",
-                justifyContent: "center",
-              }}
-            >
+          <ResumeDiv>
+            <div>
+              <div className={"contacts"}>
+                <p>
+                  <a
+                    href="https://mattbanksdev.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      color: "#0000FF",
+                      textDecoration: "none",
+                      marginRight: "0.5rem",
+                    }}
+                  >
+                    mattbanksdev.com
+                  </a>
+                </p>{" "}
+                <p>
+                  <a
+                    href="mailto:banks.matt81@gmail.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      color: "#0000FF",
+                      textDecoration: "none",
+                      marginLeft: "0.5rem",
+                    }}
+                  >
+                    banks.matt81@gmail.com
+                  </a>
+                </p>{" "}
+              </div>
+              <div className={"contacts"}>
+                <p>
+                  <a
+                    href="https://www.linkedin.com/in/matthewr-banks"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      color: "#0000FF",
+                      textDecoration: "none",
+                      marginRight: "0.5rem",
+                    }}
+                  >
+                    linkedin.com/in/matthewr-banks
+                  </a>
+                </p>
+                <p>
+                  <a
+                    href="https://github.com/mattrbanks"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      color: "#0000FF",
+                      textDecoration: "none",
+                      marginLeft: "0.5rem",
+                    }}
+                  >
+                    github.com/mattrbanks
+                  </a>
+                </p>
+              </div>
+            </div>
+            <div className={"contacts"}>
+              <p style={{ marginRight: "0.5rem" }}>(203) 706-2262</p>
               <p>
                 <a
-                  href="https://mattbanksdev.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{
-                    color: "#0000FF",
-                    textDecoration: "none",
-                    marginRight: "0.5rem",
-                  }}
-                >
-                  mattbanksdev.com
-                </a>
-              </p>{" "}
-              |
-              <p>
-                <a
-                  href="mailto:banks.matt81@gmail.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href={downloadFile}
+                  download
                   style={{
                     color: "#0000FF",
                     textDecoration: "none",
                     marginLeft: "0.5rem",
                   }}
                 >
-                  banks.matt81@gmail.com
-                </a>
-              </p>{" "}
-            </div>
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "row",
-                justifyContent: "center",
-              }}
-            >
-              <p>
-                <a
-                  href="https://www.linkedin.com/in/matthewr-banks"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{
-                    color: "#0000FF",
-                    textDecoration: "none",
-                    marginRight: "0.5rem",
-                  }}
-                >
-                  linkedin.com/in/matthewr-banks
-                </a>
-              </p>
-              |
-              <p>
-                <a
-                  href="https://github.com/mattrbanks"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{
-                    color: "#0000FF",
-                    textDecoration: "none",
-                    marginLeft: "0.5rem",
-                  }}
-                >
-                  github.com/mattrbanks
+                  &rarr; Download Resume PDF &larr;
                 </a>
               </p>
             </div>
-          </div>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "row",
-              justifyContent: "center",
-            }}
-          >
-            <p style={{ marginRight: "0.5rem" }}>(203) 706-2262</p>|
-            <p>
-              <a
-                href={downloadFile}
-                download
-                style={{
-                  color: "#0000FF",
-                  textDecoration: "none",
-                  marginLeft: "0.5rem",
-                }}
-              >
-                &rarr; Download Resume PDF &larr;
-              </a>
-            </p>
-          </div>
+          </ResumeDiv>
         </div>
         <div style={{ display: "block" }}>
           <div className={"desktop-resume mobile-resume"}>
             <div style={{ marginRight: "1rem" }}>
               <h2 style={{ marginRight: "1.5rem" }}>&lang;Projects&rang;</h2>
             </div>
-            <div style={{ padding: "1rem", marginRight: "" }}>
-              <h2>Eagle Elementary School</h2>
+            <div style={{ padding: "1rem" }}>
+              <div>
+                <h2>Face Conference</h2>
+                <div style={{ margin: "0 0 1rem 0" }}>
+                  <a
+                    style={{
+                      color: "#0000FF",
+                      textDecoration: "none",
+                      border: "1px solid blue",
+                      padding: "0.25rem",
+                    }}
+                    href="https://github.com/mattrbanks/face-conference"
+                  >
+                    See My Code
+                  </a>
+                  <a
+                    style={{
+                      marginLeft: "1rem",
+                      color: "#0000FF",
+                      textDecoration: "none",
+                      border: "1px solid blue",
+                      padding: "0.25rem",
+                    }}
+                    href="https://face-conference.herokuapp.com/"
+                  >
+                    Try The Site
+                  </a>
+                </div>
+              </div>
+              <p>
+                <span style={{ fontWeight: "bold" }}>Features:</span> Dashboard
+                with options to create a new room or join the demo lobby, A user
+                can disable the video, audio, or hang up the call and go back to
+                the dashboard
+              </p>
+              <p>
+                <span style={{ fontWeight: "bold" }}>About:</span> This is a
+                video chat website that utilizes WebRTC technology. Face
+                Conference is a place where you and your friends can talk, face
+                to face, and catch up online.
+              </p>
+              <p>
+                <span style={{ fontWeight: "bold" }}>
+                  Technologies used to build it:
+                </span>{" "}
+                JavaScript, PeerJS, EJS, Socket.io, WebRTC, Express, Node
+              </p>
+              <div>
+                <h2>Quick Chat</h2>
+                <div style={{ margin: "0 0 1rem 0" }}>
+                  <a
+                    style={{
+                      color: "#0000FF",
+                      textDecoration: "none",
+                      border: "1px solid blue",
+                      padding: "0.25rem",
+                    }}
+                    href="https://github.com/mattrbanks/Quick-Chat"
+                  >
+                    See My Code
+                  </a>
+                  <a
+                    style={{
+                      marginLeft: "1rem",
+                      color: "#0000FF",
+                      textDecoration: "none",
+                      border: "1px solid blue",
+                      padding: "0.25rem",
+                    }}
+                    href="https://quick-chat.netlify.app/"
+                  >
+                    Try The Site
+                  </a>
+                </div>
+              </div>
+              <p>
+                <span style={{ fontWeight: "bold" }}>Features:</span> Group
+                chat, Private chat, Push notifications, Help section, Wide
+                selection of emojis, Unique user id, Logged in user list
+              </p>
+              <p>
+                <span style={{ fontWeight: "bold" }}>About:</span> This is a
+                real-time chat web application that has group topic rooms and
+                private messaging with push notifications. Private messages are
+                equipped with a service worker to handle push notifications.
+              </p>
+              <p>
+                <span style={{ fontWeight: "bold" }}>
+                  Technologies used to build it:
+                </span>{" "}
+                React, JavaScript, Material ui, Socket.io, Express, Node,
+                Gatsby, Web Push
+              </p>
+              <div>
+                <h2>Eagle Elementary School</h2>
+                <div style={{ margin: "0 0 1rem 0" }}>
+                  <a
+                    style={{
+                      color: "#0000FF",
+                      textDecoration: "none",
+                      border: "1px solid blue",
+                      padding: "0.25rem",
+                    }}
+                    href="https://github.com/mattrbanks/school-site-chat-survey-portfolio-project"
+                  >
+                    See My Code
+                  </a>
+                  <a
+                    style={{
+                      marginLeft: "1rem",
+                      color: "#0000FF",
+                      textDecoration: "none",
+                      border: "1px solid blue",
+                      padding: "0.25rem",
+                    }}
+                    href="https://eagle-elementary-school.netlify.app/"
+                  >
+                    Try The Site
+                  </a>
+                </div>
+              </div>
               <p>
                 <span style={{ fontWeight: "bold" }}>Features:</span> Real Time
                 Chat App, Blog connected to CMS, Survey connected to database,
                 Based on real school curriculum
               </p>
               <p>
-                <span style={{ fontWeight: "bold" }}>About:</span> This is a
-                template elementary school site I created which targets
-                progressive school environments becoming more socially
-                distanced. It has a real-time chat for parents and teachers with
-                private messaging and push notifications. The events page is
-                connected to a content management system for school faculty to
-                easily use without the help of a programmer. The survey is
-                connected to a mongodb atlas database that collects responses
-                from parents. The curriculum section is based on real curriculum
-                standards.
+                <span style={{ fontWeight: "bold" }}>About:</span> This is an
+                elementary school site which targets progressive school
+                environments becoming more socially distanced. It is based on
+                real curriculum standards.
               </p>
               <p>
                 <span style={{ fontWeight: "bold" }}>
@@ -159,40 +248,46 @@ const Resume = () => {
                 React, JavaScript, Mongodb, Contentful, Material ui, Styled
                 components, Socket.io, GraphQL, Express, Node, Gatsby
               </p>
-              <div style={{ margin: "1rem" }}>
-                <a
-                  style={{ color: "#0000FF", textDecoration: "none" }}
-                  href="https://github.com/mattrbanks/school-site-chat-survey-portfolio-project"
-                >
-                  Code
-                </a>
-                <a
-                  style={{
-                    marginLeft: "1rem",
-                    color: "#0000FF",
-                    textDecoration: "none",
-                  }}
-                  href="https://eagle-elementary-school.netlify.app/"
-                >
-                  Site
-                </a>
+              <div>
+                <h2>Matt's Retro Games</h2>
+                <div style={{ margin: "0 0 1rem 0" }}>
+                  <a
+                    style={{
+                      color: "#0000FF",
+                      textDecoration: "none",
+                      border: "1px solid blue",
+                      padding: "0.25rem",
+                    }}
+                    href="https://github.com/mattrbanks/retro-game-store-portfolio-project"
+                  >
+                    See My Code
+                  </a>
+                  <a
+                    style={{
+                      marginLeft: "1rem",
+                      color: "#0000FF",
+                      textDecoration: "none",
+                      border: "1px solid blue",
+                      padding: "0.25rem",
+                    }}
+                    href="https://matts-retro-games.netlify.app/"
+                  >
+                    Try The Site
+                  </a>
+                </div>
               </div>
-              <h2>Matt's Retro Games</h2>
               <p>
                 <span style={{ fontWeight: "bold" }}>Features:</span> PayPal,
                 Search bar, Game product pages, Detail page for each product,
                 Cart checkout with tax (USA)
               </p>
               <p>
-                <span style={{ fontWeight: "bold" }}>About:</span> I had a lot
-                of fun with this project because these are many of my favorite
-                retro games. This is like a tribute to the games I am nostalgic
-                for but in the form of a retro game store. I used a real price
-                guide to price each game so they should be very accurately
-                priced in my store. This store template has all the hallmarks of
-                an e-commerce website and it utilizes a sandbox PayPal that can
-                be activated in the future to handle real transactions. I won't
-                be parting with my collection though.
+                <span style={{ fontWeight: "bold" }}>About:</span> This is a
+                tribute to the games I am nostalgic for but in the form of a
+                retro game store. The games are all accurately priced. This
+                store includes all the hallmarks of an e-commerce website and it
+                utilizes a sandbox PayPal that can be activated in the future to
+                handle real transactions.
               </p>
               <p>
                 <span style={{ fontWeight: "bold" }}>
@@ -201,25 +296,34 @@ const Resume = () => {
                 React, JavaScript, Bootstrap, Styled components, PayPal, React
                 router
               </p>
-              <div style={{ margin: "1rem" }}>
-                <a
-                  style={{ color: "#0000FF", textDecoration: "none" }}
-                  href="https://github.com/mattrbanks/retro-game-store-portfolio-project"
-                >
-                  Code
-                </a>
-                <a
-                  style={{
-                    marginLeft: "1rem",
-                    color: "#0000FF",
-                    textDecoration: "none",
-                  }}
-                  href="https://matts-retro-games.netlify.app/"
-                >
-                  Site
-                </a>
+              <div>
+                <h2>Professional Portfolio</h2>
+                <div style={{ margin: "0 0 1rem 0" }}>
+                  <a
+                    style={{
+                      color: "#0000FF",
+                      textDecoration: "none",
+                      border: "1px solid blue",
+                      padding: "0.25rem",
+                    }}
+                    href="https://github.com/mattrbanks/professional-portfolio"
+                  >
+                    See My Code
+                  </a>
+                  <a
+                    style={{
+                      marginLeft: "1rem",
+                      color: "#0000FF",
+                      textDecoration: "none",
+                      border: "1px solid blue",
+                      padding: "0.25rem",
+                    }}
+                    href="https://mattbanksdev.com/"
+                  >
+                    Try The Site
+                  </a>
+                </div>
               </div>
-              <h2>Professional Portfolio</h2>
               <p>
                 <span style={{ fontWeight: "bold" }}>Features:</span> Welcome
                 section with a current skills/technologies list, A projects
@@ -230,11 +334,7 @@ const Resume = () => {
                 <span style={{ fontWeight: "bold" }}>About:</span> This is my
                 personal portfolio website. This is where all my latest projects
                 live and it serves as a central hub for people to get in touch
-                with me for web development work. It has a nav menu that will
-                jump to different sections of the portfolio and there is also an
-                html resume page which has a convenient pdf resume download
-                link. This resume has many links that are useful for recruiters
-                to quickly see my work and contact me.
+                with me for web development work.
               </p>
               <p>
                 <span style={{ fontWeight: "bold" }}>
@@ -242,31 +342,13 @@ const Resume = () => {
                 </span>{" "}
                 React, JavaScript, Gatsby, Styled components, Material ui
               </p>
-              <div style={{ margin: "1rem" }}>
-                <a
-                  style={{ color: "#0000FF", textDecoration: "none" }}
-                  href="https://github.com/mattrbanks/professional-portfolio"
-                >
-                  Code
-                </a>
-                <a
-                  style={{
-                    marginLeft: "1rem",
-                    color: "#0000FF",
-                    textDecoration: "none",
-                  }}
-                  href="https://mattbanksdev.com/"
-                >
-                  Site
-                </a>
-              </div>
               <div style={{ textAlign: "center", marginBottom: "1.45rem" }}>
-                <Link
+                <a
                   style={{ color: "#0000FF", textDecoration: "none" }}
-                  to="/#projects"
+                  href="https://mattbanksdev.com/#projects"
                 >
-                  Link To Portfolio Projects Section
-                </Link>
+                  Click Here For More Information On These Projects
+                </a>
               </div>
               <div>
                 <h4>Current Core Technologies Used:</h4>
@@ -282,9 +364,9 @@ const Resume = () => {
                     <tr>
                       <td>
                         HTML/CSS, JavaScript, React, GatsbyJS/GraphQL, NodeJS,
-                        Express
+                        Express, PHP
                       </td>
-                      <td>MongoDB</td>
+                      <td>MongoDB, MySQL</td>
                       <td>Visual Studio Code, Git, Figma</td>
                     </tr>
                   </tbody>
@@ -345,7 +427,7 @@ const Resume = () => {
                 <div>Feb 2014 – Feb 2015</div>
               </div>
               <p>
-                Aerotek (3M Purification, Temporary)
+                3M Purification
                 <br />
                 Meriden, CT
               </p>
@@ -372,7 +454,7 @@ const Resume = () => {
                 <div>Aug 2010 – May 2011</div>
               </div>
               <p>
-                Reitman Personnel (454 Life Sciences, Temporary)
+                454 Life Sciences
                 <br />
                 Branford, CT
               </p>
@@ -425,12 +507,26 @@ const Resume = () => {
             </div>
           </div>
         </div>
-        <Link style={{ color: "#0000FF", textDecoration: "none" }} to="/">
-          Back to Portfolio
-        </Link>
+        <a
+          style={{ color: "#0000FF", textDecoration: "none" }}
+          href="https://mattbanksdev.com/"
+        >
+          Go To Portfolio Website
+        </a>
       </div>
     </React.Fragment>
   )
 }
 
 export default Resume
+
+const ResumeDiv = styled.div`
+  .contacts {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    @media (max-width: 455px) and (orientation: portrait) {
+      display: block;
+    }
+  }
+`
