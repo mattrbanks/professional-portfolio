@@ -66,7 +66,6 @@ const useStyles = makeStyles({
     margin: "1rem",
     transition: "transform 1s",
     transform: "perspective(100px) translateZ(0px)",
-    // filter: "drop-shadow(2px 2px 0 rgb(255,0,0))",
   },
   iconTwo: {
     display: "flex",
@@ -74,7 +73,6 @@ const useStyles = makeStyles({
     margin: "1rem",
     transition: "transform 1s",
     transform: "perspective(100px) translateZ(0px)",
-    // filter: "drop-shadow(2px 2px 0 rgb(255,165,0))",
   },
   iconFour: {
     display: "flex",
@@ -82,7 +80,6 @@ const useStyles = makeStyles({
     margin: "1rem",
     transition: "transform 1s",
     transform: "perspective(100px) translateZ(0px)",
-    // filter: "drop-shadow(2px 2px 0 rgb(255,255,0))",
   },
 })
 
@@ -593,6 +590,46 @@ const Home = () => {
                   Figma
                 </button>
               </a>
+              <a
+                href="https://www.php.net/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  marginRight: "0.5rem",
+                }}
+              >
+                <button
+                  style={{
+                    backgroundImage:
+                      "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
+                    cursor: "pointer",
+                    color: "#fff",
+                    marginBottom: "0.5rem",
+                  }}
+                >
+                  PHP
+                </button>
+              </a>
+              <a
+                href="https://www.mysql.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  marginRight: "0.5rem",
+                }}
+              >
+                <button
+                  style={{
+                    backgroundImage:
+                      "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
+                    cursor: "pointer",
+                    color: "#fff",
+                    marginBottom: "0.5rem",
+                  }}
+                >
+                  MySQL
+                </button>
+              </a>
             </div>
           </React.Fragment>
         </div>
@@ -814,7 +851,7 @@ const Home = () => {
                 <CardActionArea>
                   <CardMedia
                     className={
-                      projectTwoHover
+                      projectFiveHover
                         ? "project-media-transform-styles"
                         : "project-media-styles"
                     }
@@ -824,10 +861,10 @@ const Home = () => {
                     }}
                     title="Quick Chat"
                     onMouseEnter={() => {
-                      setProjectTwoHover(true)
+                      setProjectFiveHover(true)
                     }}
                     onMouseLeave={() => {
-                      setProjectTwoHover(false)
+                      setProjectFiveHover(false)
                     }}
                   >
                     <a
@@ -1844,8 +1881,5 @@ let MainStyles = styled.div`
       transition: transform 1s;
       transform: perspective(100px) translateZ(0.5px);
     }
-  }
-
-  @media (max-height: 650px) {
   }
 `
