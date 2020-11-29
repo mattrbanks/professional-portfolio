@@ -189,6 +189,8 @@ const Home = () => {
                     cursor: "pointer",
                     color: "#fff",
                     marginBottom: "0.5rem",
+                    border: "1px solid #000",
+                    borderRadius: "50px",
                   }}
                 >
                   React
@@ -209,6 +211,8 @@ const Home = () => {
                     cursor: "pointer",
                     color: "#fff",
                     marginBottom: "0.5rem",
+                    border: "1px solid #000",
+                    borderRadius: "50px",
                   }}
                 >
                   JavaScript
@@ -229,6 +233,8 @@ const Home = () => {
                     cursor: "pointer",
                     color: "#fff",
                     marginBottom: "0.5rem",
+                    border: "1px solid #000",
+                    borderRadius: "50px",
                   }}
                 >
                   Mongodb
@@ -249,6 +255,8 @@ const Home = () => {
                     cursor: "pointer",
                     color: "#fff",
                     marginBottom: "0.5rem",
+                    border: "1px solid #000",
+                    borderRadius: "50px",
                   }}
                 >
                   Contentful
@@ -269,6 +277,8 @@ const Home = () => {
                     cursor: "pointer",
                     color: "#fff",
                     marginBottom: "0.5rem",
+                    border: "1px solid #000",
+                    borderRadius: "50px",
                   }}
                 >
                   Material-ui
@@ -289,6 +299,8 @@ const Home = () => {
                     cursor: "pointer",
                     color: "#fff",
                     marginBottom: "0.5rem",
+                    border: "1px solid #000",
+                    borderRadius: "50px",
                   }}
                 >
                   Styled-components
@@ -309,6 +321,8 @@ const Home = () => {
                     cursor: "pointer",
                     color: "#fff",
                     marginBottom: "0.5rem",
+                    border: "1px solid #000",
+                    borderRadius: "50px",
                   }}
                 >
                   Socket.io
@@ -337,6 +351,8 @@ const Home = () => {
                     cursor: "pointer",
                     color: "#fff",
                     marginBottom: "0.5rem",
+                    border: "1px solid #000",
+                    borderRadius: "50px",
                   }}
                 >
                   Express
@@ -357,6 +373,8 @@ const Home = () => {
                     cursor: "pointer",
                     color: "#fff",
                     marginBottom: "0.5rem",
+                    border: "1px solid #000",
+                    borderRadius: "50px",
                   }}
                 >
                   Node
@@ -377,6 +395,8 @@ const Home = () => {
                     cursor: "pointer",
                     color: "#fff",
                     marginBottom: "0.5rem",
+                    border: "1px solid #000",
+                    borderRadius: "50px",
                   }}
                 >
                   Gatsby
@@ -397,6 +417,8 @@ const Home = () => {
                     cursor: "pointer",
                     color: "#fff",
                     marginBottom: "0.5rem",
+                    border: "1px solid #000",
+                    borderRadius: "50px",
                   }}
                 >
                   HTML
@@ -417,6 +439,8 @@ const Home = () => {
                     cursor: "pointer",
                     color: "#fff",
                     marginBottom: "0.5rem",
+                    border: "1px solid #000",
+                    borderRadius: "50px",
                   }}
                 >
                   CSS
@@ -437,6 +461,8 @@ const Home = () => {
                     cursor: "pointer",
                     color: "#fff",
                     marginBottom: "0.5rem",
+                    border: "1px solid #000",
+                    borderRadius: "50px",
                   }}
                 >
                   Bootstrap
@@ -457,6 +483,8 @@ const Home = () => {
                     cursor: "pointer",
                     color: "#fff",
                     marginBottom: "0.5rem",
+                    border: "1px solid #000",
+                    borderRadius: "50px",
                   }}
                 >
                   PayPal
@@ -477,6 +505,8 @@ const Home = () => {
                     cursor: "pointer",
                     color: "#fff",
                     marginBottom: "0.5rem",
+                    border: "1px solid #000",
+                    borderRadius: "50px",
                   }}
                 >
                   React router
@@ -497,6 +527,8 @@ const Home = () => {
                     cursor: "pointer",
                     color: "#fff",
                     marginBottom: "0.5rem",
+                    border: "1px solid #000",
+                    borderRadius: "50px",
                   }}
                 >
                   GraphQL
@@ -525,6 +557,8 @@ const Home = () => {
                     cursor: "pointer",
                     color: "#fff",
                     marginBottom: "0.5rem",
+                    border: "1px solid #000",
+                    borderRadius: "50px",
                   }}
                 >
                   PeerJS
@@ -545,6 +579,8 @@ const Home = () => {
                     cursor: "pointer",
                     color: "#fff",
                     marginBottom: "0.5rem",
+                    border: "1px solid #000",
+                    borderRadius: "50px",
                   }}
                 >
                   WebRTC
@@ -565,6 +601,8 @@ const Home = () => {
                     cursor: "pointer",
                     color: "#fff",
                     marginBottom: "0.5rem",
+                    border: "1px solid #000",
+                    borderRadius: "50px",
                   }}
                 >
                   EJS
@@ -585,6 +623,8 @@ const Home = () => {
                     cursor: "pointer",
                     color: "#fff",
                     marginBottom: "0.5rem",
+                    border: "1px solid #000",
+                    borderRadius: "50px",
                   }}
                 >
                   Figma
@@ -605,6 +645,8 @@ const Home = () => {
                     cursor: "pointer",
                     color: "#fff",
                     marginBottom: "0.5rem",
+                    border: "1px solid #000",
+                    borderRadius: "50px",
                   }}
                 >
                   PHP
@@ -625,6 +667,8 @@ const Home = () => {
                     cursor: "pointer",
                     color: "#fff",
                     marginBottom: "0.5rem",
+                    border: "1px solid #000",
+                    borderRadius: "50px",
                   }}
                 >
                   MySQL
@@ -699,9 +743,9 @@ const Home = () => {
                       component="p"
                     >
                       <span style={{ fontWeight: "bold" }}>Features: </span>{" "}
-                      Dashboard with options to create a new room or join the
-                      demo lobby, A user can disable the video, audio, or hang
-                      up the call and go back to the dashboard
+                      Intuitive dashboard with options to create a new room or
+                      join a demo lobby &#8226; Disable the video, audio, or
+                      hang up the call and go back to the dashboard
                     </Typography>
                     <Typography
                       variant="caption"
@@ -815,6 +859,7 @@ const Home = () => {
                           backgroundImage:
                             "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
                           border: "1px solid #000",
+                          borderRadius: "50px",
                           fontSize: "1.05rem",
                         }}
                         size="large"
@@ -834,6 +879,7 @@ const Home = () => {
                           backgroundImage:
                             "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
                           border: "1px solid #000",
+                          borderRadius: "50px",
                           fontSize: "1.05rem",
                         }}
                         size="large"
@@ -890,9 +936,9 @@ const Home = () => {
                       component="p"
                     >
                       <span style={{ fontWeight: "bold" }}>Features: </span>{" "}
-                      Group chat, Private chat, Push notifications, Help
-                      section, Wide selection of emojis, Unique user id, Logged
-                      in user list
+                      Group chat &#8226; Private chat &#8226; Push notifications
+                      &#8226; Help section &#8226; Wide selection of emojis
+                      &#8226; Unique user id &#8226; Logged in user list
                     </Typography>
                     <Typography
                       variant="caption"
@@ -993,6 +1039,7 @@ const Home = () => {
                           backgroundImage:
                             "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
                           border: "1px solid #000",
+                          borderRadius: "50px",
                           fontSize: "1.05rem",
                         }}
                         size="large"
@@ -1012,6 +1059,7 @@ const Home = () => {
                           backgroundImage:
                             "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
                           border: "1px solid #000",
+                          borderRadius: "50px",
                           fontSize: "1.05rem",
                         }}
                         size="large"
@@ -1067,8 +1115,9 @@ const Home = () => {
                       component="p"
                     >
                       <span style={{ fontWeight: "bold" }}>Features: </span>{" "}
-                      Real Time Chat App, Blog connected to CMS, Survey
-                      connected to database, Based on real school curriculum
+                      Parent/Teacher Chat &#8226; Blog connected to CMS &#8226;
+                      Survey connected to database &#8226; Based on real school
+                      curriculum
                     </Typography>
                     <Typography
                       variant="caption"
@@ -1076,7 +1125,7 @@ const Home = () => {
                       component="p"
                     >
                       <span style={{ fontWeight: "bold" }}>About: </span>This is
-                      a template elementary school site I created which targets
+                      a modern elementary school site I created which targets
                       progressive school environments becoming more socially
                       distanced. It has a real-time chat for parents and
                       teachers with private messaging and push notifications.
@@ -1195,6 +1244,7 @@ const Home = () => {
                           backgroundImage:
                             "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
                           border: "1px solid #000",
+                          borderRadius: "50px",
                           fontSize: "1.05rem",
                         }}
                         size="large"
@@ -1214,6 +1264,7 @@ const Home = () => {
                           backgroundImage:
                             "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
                           border: "1px solid #000",
+                          borderRadius: "50px",
                           fontSize: "1.05rem",
                         }}
                         size="large"
@@ -1269,8 +1320,9 @@ const Home = () => {
                       component="p"
                     >
                       <span style={{ fontWeight: "bold" }}>Features: </span>{" "}
-                      PayPal, Search bar, Game product pages, Detail page for
-                      each product, Cart checkout with tax (USA)
+                      PayPal &#8226; Search bar &#8226; Game product pages
+                      &#8226; Detail page for each product &#8226; Cart checkout
+                      with tax (USA)
                     </Typography>
                     <Typography
                       variant="caption"
@@ -1282,10 +1334,10 @@ const Home = () => {
                       favorite retro games. This is like a tribute to the games
                       I am nostalgic for but in the form of a retro game store.
                       I used a real price guide to price each game so they
-                      should be very accurately priced in my store. This store
-                      template has all the hallmarks of an e-commerce website
-                      and it utilizes a sandbox PayPal that can be activated in
-                      the future to handle real transactions. I won't be parting
+                      should be very accurately priced in my store. This game
+                      store has all the hallmarks of an e-commerce website and
+                      it utilizes a sandbox PayPal that can be activated in the
+                      future to handle real transactions. I won't be parting
                       with my collection though.
                     </Typography>
                     <div
@@ -1378,6 +1430,7 @@ const Home = () => {
                           backgroundImage:
                             "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
                           border: "1px solid #000",
+                          borderRadius: "50px",
                           fontSize: "1.05rem",
                         }}
                         size="large"
@@ -1397,6 +1450,7 @@ const Home = () => {
                           backgroundImage:
                             "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
                           border: "1px solid #000",
+                          borderRadius: "50px",
                           fontSize: "1.05rem",
                         }}
                         size="large"
@@ -1455,10 +1509,10 @@ const Home = () => {
                       component="p"
                     >
                       <span style={{ fontWeight: "bold" }}>Features: </span>{" "}
-                      Welcome section with a current skills/technologies list, A
-                      projects section to view code and try the sites, Resume
-                      page with pdf download, Contact section with github and
-                      other useful info
+                      Welcome section with a current skills/technologies list
+                      &#8226; A projects section to view code and try the sites
+                      &#8226; Resume page with pdf download &#8226; Contact
+                      section with github and other useful info
                     </Typography>
                     <Typography
                       variant="caption"
@@ -1565,6 +1619,7 @@ const Home = () => {
                           backgroundImage:
                             "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
                           border: "1px solid #000",
+                          borderRadius: "50px",
                           fontSize: "1.05rem",
                         }}
                         size="large"
@@ -1578,6 +1633,7 @@ const Home = () => {
                         disabled
                         style={{
                           border: "1px solid #000",
+                          borderRadius: "50px",
                           color: "#000",
                           fontSize: "1.05rem",
                         }}

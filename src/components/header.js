@@ -45,7 +45,7 @@ const Header = ({ siteTitle }) => (
           {siteTitle}
         </Link>
       </h1>
-      <p style={{ color: `white` }}>Web Developer</p>
+      <p style={{ color: `white` }}>Full Stack Web Developer</p>
     </div>
   </header>
 )
