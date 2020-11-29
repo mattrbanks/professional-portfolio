@@ -1864,14 +1864,14 @@ let MainStyles = styled.div`
     }
   }
   .project-two-card-content {
-    margin-bottom: 3.75rem;
+    margin-bottom: 3.5rem;
     @media (max-width: 480px) and (orientation: portrait) {
       margin-bottom: 1rem;
     }
     @media (max-width: 689px) and (min-width: 481px) and (orientation: portrait) {
       margin-bottom: 1.5rem;
     }
-    @media (max-width: 673px) and (min-width: 661px) and (orientation: landscape) {
+    @media (max-width: 689px) and (min-width: 661px) and (orientation: landscape) {
       margin-bottom: 1.25rem;
     }
     @media (max-width: 660px) and (min-width: 481px) and (orientation: landscape) {
