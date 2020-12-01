@@ -736,7 +736,7 @@ const Home = () => {
                       />
                     </a>
                   </CardMedia>
-                  <CardContent className={"project-four-card-content"}>
+                  <CardContent>
                     <Typography gutterBottom variant="h5" component="h2">
                       Face Conference
                     </Typography>
@@ -851,7 +851,6 @@ const Home = () => {
                 </CardActionArea>
                 <div
                   className={"card-bottom-btns"}
-                  // style={{ display: "flex", justifyContent: "center" }}
                 >
                   <div style={{ display: "flex", justifyContent: "center" }}>
                     <CardActions>
@@ -937,7 +936,7 @@ const Home = () => {
                       />
                     </a>
                   </CardMedia>
-                  <CardContent className={"project-five-card-content"}>
+                  <CardContent>
                     <Typography gutterBottom variant="h5" component="h2">
                       Quick Chat
                     </Typography>
@@ -1039,7 +1038,6 @@ const Home = () => {
                 </CardActionArea>
                 <div
                   className={"card-bottom-btns"}
-                  // style={{ display: "flex", justifyContent: "center" }}
                 >
                   <div style={{ display: "flex", justifyContent: "center" }}>
                     <CardActions>
@@ -1124,7 +1122,7 @@ const Home = () => {
                       />
                     </a>
                   </CardMedia>
-                  <CardContent className={"project-one-card-content"}>
+                  <CardContent>
                     <Typography gutterBottom variant="h5" component="h2">
                       Eagle Elementary School
                     </Typography>
@@ -1252,7 +1250,6 @@ const Home = () => {
                 </CardActionArea>
                 <div
                   className={"card-bottom-btns"}
-                  // style={{ display: "flex", justifyContent: "center" }}
                 >
                   <div style={{ display: "flex", justifyContent: "center" }}>
                     <CardActions>
@@ -1337,7 +1334,7 @@ const Home = () => {
                       />
                     </a>
                   </CardMedia>
-                  <CardContent className={"project-two-card-content"}>
+                  <CardContent>
                     <Typography gutterBottom variant="h5" component="h2">
                       Matt's Retro Games
                     </Typography>
@@ -1446,15 +1443,6 @@ const Home = () => {
                 </CardActionArea>
                 <div
                   className={"card-bottom-btns"}
-                  style={
-                    {
-                      // display: "flex",
-                      // justifyContent: "center",
-                      // position: "absolute",
-                      // bottom: "2%",
-                      // left: "15%",
-                    }
-                  }
                 >
                   <div style={{ display: "flex", justifyContent: "center" }}>
                     <CardActions>
@@ -1542,7 +1530,7 @@ const Home = () => {
                       />
                     </a>
                   </CardMedia>
-                  <CardContent className={"project-three-card-content"}>
+                  <CardContent>
                     <Typography gutterBottom variant="h5" component="h2">
                       Professional Portfolio
                     </Typography>
@@ -1651,7 +1639,6 @@ const Home = () => {
                 </CardActionArea>
                 <div
                   className={"card-bottom-btns"}
-                  // style={{ display: "flex", justifyContent: "center" }}
                 >
                   <div style={{ display: "flex", justifyContent: "center" }}>
                     <CardActions>
@@ -1717,7 +1704,6 @@ const Home = () => {
               backSpeed={50}
               loop
             />
-            {/* <p id="finalWords">&lang;Let's create solutions together&rang;</p> */}
           </h2>
         </div>
         <div className={classes.iconsStyle}>
@@ -1903,74 +1889,6 @@ let MainStyles = styled.div`
       transform: perspective(100px) translateZ(0px);
     }
   }
-  // .project-one-card-content {
-  //   @media (max-width: 673px) and (orientation: landscape) {
-  //     margin-bottom: 0.75rem;
-  //   }
-  //   @media (min-width: 674px) and (orientation: landscape) {
-  //     margin-bottom: 1rem;
-  //   }
-  // }
-  // .project-two-card-content {
-  //   margin-bottom: 3.5rem;
-  //   @media (max-width: 480px) and (orientation: portrait) {
-  //     margin-bottom: 1rem;
-  //   }
-  //   @media (max-width: 689px) and (min-width: 481px) and (orientation: portrait) {
-  //     margin-bottom: 1.5rem;
-  //   }
-  //   @media (max-width: 689px) and (min-width: 661px) and (orientation: landscape) {
-  //     margin-bottom: 1.25rem;
-  //   }
-  //   @media (max-width: 660px) and (min-width: 481px) and (orientation: landscape) {
-  //     margin-bottom: 2.5rem;
-  //   }
-  //   @media (max-width: 480px) and (orientation: landscape) {
-  //     margin-bottom: 2.5rem;
-  //   }
-  // }
-  // .project-three-card-content {
-  //   margin-bottom: 4rem;
-  //   @media (max-width: 691px) and (orientation: portrait) {
-  //     margin-bottom: 1.5rem;
-  //   }
-  //   @media (max-width: 660px) and (orientation: landscape) {
-  //     margin-bottom: 2.25rem;
-  //   }
-  //   @media (max-width: 689px) and (min-width: 661px) and (orientation: landscape) {
-  //     margin-bottom: 2.25rem;
-  //   }
-  // }
-  // .project-four-card-content {
-  //   margin-bottom: 4rem;
-  //   @media (max-width: 689px) and (orientation: portrait) {
-  //     margin-bottom: 3.75rem;
-  //   }
-  //   @media (max-width: 660px) and (orientation: landscape) {
-  //     margin-bottom: 4.75rem;
-  //   }
-  //   @media (max-width: 689px) and (min-width: 661px) and (orientation: landscape) {
-  //     margin-bottom: 3.5rem;
-  //   }
-  // }
-  // .project-five-card-content {
-  //   margin-bottom: 3.75rem;
-  //   @media (max-width: 480px) and (orientation: portrait) {
-  //     margin-bottom: 1.25rem;
-  //   }
-  //   @media (max-width: 689px) and (min-width: 481px) and (orientation: portrait) {
-  //     margin-bottom: 1.75rem;
-  //   }
-  //   @media (max-width: 673px) and (min-width: 661px) and (orientation: landscape) {
-  //     margin-bottom: 1.25rem;
-  //   }
-  //   @media (max-width: 660px) and (min-width: 481px) and (orientation: landscape) {
-  //     margin-bottom: 2.5rem;
-  //   }
-  //   @media (max-width: 480px) and (orientation: landscape) {
-  //     margin-bottom: 2.5rem;
-  //   }
-  // }
   .project-media-transform-styles {
     height: 27.5rem;
     transition: transform 1s;
@@ -1990,21 +1908,5 @@ let MainStyles = styled.div`
     position: absolute;
     bottom: 2%;
     width: 100%;
-    // left: 15%;
-    // @media (max-width: 690px) and (min-width: 481px) and (orientation: portrait) {
-    //   position: absolute;
-    //   bottom: 2%;
-    //   left: 2.5%;
-    // }
-    // @media (max-width: 480px) and (orientation: portrait) {
-    //   position: absolute;
-    //   bottom: 2%;
-    //   left: 1.5%;
-    // }
-    // @media (max-width: 660px) and (orientation: landscape) {
-    //   position: absolute;
-    //   bottom: 2%;
-    //   left: 2.5%;
-    // }
   }
 `
