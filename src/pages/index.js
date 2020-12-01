@@ -853,48 +853,50 @@ const Home = () => {
                   className={"card-bottom-btns"}
                   // style={{ display: "flex", justifyContent: "center" }}
                 >
-                  <CardActions>
-                    <a
-                      href="https://github.com/mattrbanks/face-conference"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      style={{ color: "#fff" }}
-                    >
-                      <Button
-                        style={{
-                          backgroundImage:
-                            "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
-                          border: "1px solid #000",
-                          borderRadius: "50px",
-                          fontSize: "1.05rem",
-                        }}
-                        size="large"
-                        color="inherit"
+                  <div style={{ display: "flex", justifyContent: "center" }}>
+                    <CardActions>
+                      <a
+                        href="https://github.com/mattrbanks/face-conference"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{ color: "#fff" }}
                       >
-                        See My Code
-                      </Button>
-                    </a>
-                    <a
-                      href="https://face-conference.herokuapp.com/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      style={{ color: "#fff" }}
-                    >
-                      <Button
-                        style={{
-                          backgroundImage:
-                            "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
-                          border: "1px solid #000",
-                          borderRadius: "50px",
-                          fontSize: "1.05rem",
-                        }}
-                        size="large"
-                        color="inherit"
+                        <Button
+                          style={{
+                            backgroundImage:
+                              "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
+                            border: "1px solid #000",
+                            borderRadius: "50px",
+                            fontSize: "1.05rem",
+                          }}
+                          size="large"
+                          color="inherit"
+                        >
+                          See My Code
+                        </Button>
+                      </a>
+                      <a
+                        href="https://face-conference.herokuapp.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{ color: "#fff" }}
                       >
-                        Try The Site
-                      </Button>
-                    </a>
-                  </CardActions>
+                        <Button
+                          style={{
+                            backgroundImage:
+                              "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
+                            border: "1px solid #000",
+                            borderRadius: "50px",
+                            fontSize: "1.05rem",
+                          }}
+                          size="large"
+                          color="inherit"
+                        >
+                          Try The Site
+                        </Button>
+                      </a>
+                    </CardActions>
+                  </div>
                 </div>
               </Card>
             </div>
@@ -1039,48 +1041,50 @@ const Home = () => {
                   className={"card-bottom-btns"}
                   // style={{ display: "flex", justifyContent: "center" }}
                 >
-                  <CardActions>
-                    <a
-                      href="https://github.com/mattrbanks/Quick-Chat"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      style={{ color: "#fff" }}
-                    >
-                      <Button
-                        style={{
-                          backgroundImage:
-                            "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
-                          border: "1px solid #000",
-                          borderRadius: "50px",
-                          fontSize: "1.05rem",
-                        }}
-                        size="large"
-                        color="inherit"
+                  <div style={{ display: "flex", justifyContent: "center" }}>
+                    <CardActions>
+                      <a
+                        href="https://github.com/mattrbanks/Quick-Chat"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{ color: "#fff" }}
                       >
-                        See my code
-                      </Button>
-                    </a>
-                    <a
-                      href="https://quick-chat.netlify.app/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      style={{ color: "#fff" }}
-                    >
-                      <Button
-                        style={{
-                          backgroundImage:
-                            "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
-                          border: "1px solid #000",
-                          borderRadius: "50px",
-                          fontSize: "1.05rem",
-                        }}
-                        size="large"
-                        color="inherit"
+                        <Button
+                          style={{
+                            backgroundImage:
+                              "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
+                            border: "1px solid #000",
+                            borderRadius: "50px",
+                            fontSize: "1.05rem",
+                          }}
+                          size="large"
+                          color="inherit"
+                        >
+                          See my code
+                        </Button>
+                      </a>
+                      <a
+                        href="https://quick-chat.netlify.app/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{ color: "#fff" }}
                       >
-                        Try the site
-                      </Button>
-                    </a>
-                  </CardActions>
+                        <Button
+                          style={{
+                            backgroundImage:
+                              "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
+                            border: "1px solid #000",
+                            borderRadius: "50px",
+                            fontSize: "1.05rem",
+                          }}
+                          size="large"
+                          color="inherit"
+                        >
+                          Try the site
+                        </Button>
+                      </a>
+                    </CardActions>
+                  </div>
                 </div>
               </Card>
             </div>
@@ -1250,48 +1254,50 @@ const Home = () => {
                   className={"card-bottom-btns"}
                   // style={{ display: "flex", justifyContent: "center" }}
                 >
-                  <CardActions>
-                    <a
-                      href="https://github.com/mattrbanks/school-site-chat-survey-portfolio-project"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      style={{ color: "#fff" }}
-                    >
-                      <Button
-                        style={{
-                          backgroundImage:
-                            "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
-                          border: "1px solid #000",
-                          borderRadius: "50px",
-                          fontSize: "1.05rem",
-                        }}
-                        size="large"
-                        color="inherit"
+                  <div style={{ display: "flex", justifyContent: "center" }}>
+                    <CardActions>
+                      <a
+                        href="https://github.com/mattrbanks/school-site-chat-survey-portfolio-project"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{ color: "#fff" }}
                       >
-                        See my code
-                      </Button>
-                    </a>
-                    <a
-                      href="https://eagle-elementary-school.netlify.app/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      style={{ color: "#fff" }}
-                    >
-                      <Button
-                        style={{
-                          backgroundImage:
-                            "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
-                          border: "1px solid #000",
-                          borderRadius: "50px",
-                          fontSize: "1.05rem",
-                        }}
-                        size="large"
-                        color="inherit"
+                        <Button
+                          style={{
+                            backgroundImage:
+                              "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
+                            border: "1px solid #000",
+                            borderRadius: "50px",
+                            fontSize: "1.05rem",
+                          }}
+                          size="large"
+                          color="inherit"
+                        >
+                          See my code
+                        </Button>
+                      </a>
+                      <a
+                        href="https://eagle-elementary-school.netlify.app/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{ color: "#fff" }}
                       >
-                        Try the site
-                      </Button>
-                    </a>
-                  </CardActions>
+                        <Button
+                          style={{
+                            backgroundImage:
+                              "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
+                            border: "1px solid #000",
+                            borderRadius: "50px",
+                            fontSize: "1.05rem",
+                          }}
+                          size="large"
+                          color="inherit"
+                        >
+                          Try the site
+                        </Button>
+                      </a>
+                    </CardActions>
+                  </div>
                 </div>
               </Card>
             </div>
@@ -1450,48 +1456,50 @@ const Home = () => {
                     }
                   }
                 >
-                  <CardActions>
-                    <a
-                      href="https://github.com/mattrbanks/retro-game-store-portfolio-project"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      style={{ color: "#fff" }}
-                    >
-                      <Button
-                        style={{
-                          backgroundImage:
-                            "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
-                          border: "1px solid #000",
-                          borderRadius: "50px",
-                          fontSize: "1.05rem",
-                        }}
-                        size="large"
-                        color="inherit"
+                  <div style={{ display: "flex", justifyContent: "center" }}>
+                    <CardActions>
+                      <a
+                        href="https://github.com/mattrbanks/retro-game-store-portfolio-project"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{ color: "#fff" }}
                       >
-                        See my code
-                      </Button>
-                    </a>
-                    <a
-                      href="https://matts-retro-games.netlify.app/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      style={{ color: "#fff" }}
-                    >
-                      <Button
-                        style={{
-                          backgroundImage:
-                            "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
-                          border: "1px solid #000",
-                          borderRadius: "50px",
-                          fontSize: "1.05rem",
-                        }}
-                        size="large"
-                        color="inherit"
+                        <Button
+                          style={{
+                            backgroundImage:
+                              "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
+                            border: "1px solid #000",
+                            borderRadius: "50px",
+                            fontSize: "1.05rem",
+                          }}
+                          size="large"
+                          color="inherit"
+                        >
+                          See my code
+                        </Button>
+                      </a>
+                      <a
+                        href="https://matts-retro-games.netlify.app/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{ color: "#fff" }}
                       >
-                        Try the site
-                      </Button>
-                    </a>
-                  </CardActions>
+                        <Button
+                          style={{
+                            backgroundImage:
+                              "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
+                            border: "1px solid #000",
+                            borderRadius: "50px",
+                            fontSize: "1.05rem",
+                          }}
+                          size="large"
+                          color="inherit"
+                        >
+                          Try the site
+                        </Button>
+                      </a>
+                    </CardActions>
+                  </div>
                 </div>
               </Card>
             </div>
@@ -1645,43 +1653,45 @@ const Home = () => {
                   className={"card-bottom-btns"}
                   // style={{ display: "flex", justifyContent: "center" }}
                 >
-                  <CardActions>
-                    <a
-                      href="https://github.com/mattrbanks/professional-portfolio"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      style={{ color: "#fff" }}
-                    >
-                      <Button
-                        style={{
-                          backgroundImage:
-                            "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
-                          border: "1px solid #000",
-                          borderRadius: "50px",
-                          fontSize: "1.05rem",
-                        }}
-                        size="large"
-                        color="inherit"
+                  <div style={{ display: "flex", justifyContent: "center" }}>
+                    <CardActions>
+                      <a
+                        href="https://github.com/mattrbanks/professional-portfolio"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{ color: "#fff" }}
                       >
-                        See my code
-                      </Button>
-                    </a>
-                    <div>
-                      <Button
-                        disabled
-                        style={{
-                          border: "1px solid #000",
-                          borderRadius: "50px",
-                          color: "#000",
-                          fontSize: "1.05rem",
-                        }}
-                        size="large"
-                        color="inherit"
-                      >
-                        On Site Now
-                      </Button>
-                    </div>
-                  </CardActions>
+                        <Button
+                          style={{
+                            backgroundImage:
+                              "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
+                            border: "1px solid #000",
+                            borderRadius: "50px",
+                            fontSize: "1.05rem",
+                          }}
+                          size="large"
+                          color="inherit"
+                        >
+                          See my code
+                        </Button>
+                      </a>
+                      <div>
+                        <Button
+                          disabled
+                          style={{
+                            border: "1px solid #000",
+                            borderRadius: "50px",
+                            color: "#000",
+                            fontSize: "1.05rem",
+                          }}
+                          size="large"
+                          color="inherit"
+                        >
+                          On Site Now
+                        </Button>
+                      </div>
+                    </CardActions>
+                  </div>
                 </div>
               </Card>
             </div>
@@ -1979,21 +1989,22 @@ let MainStyles = styled.div`
   .card-bottom-btns {
     position: absolute;
     bottom: 2%;
-    left: 15%;
-    @media (max-width: 690px) and (min-width: 481px) and (orientation: portrait) {
-      position: absolute;
-      bottom: 2%;
-      left: 2.5%;
-    }
-    @media (max-width: 480px) and (orientation: portrait) {
-      position: absolute;
-      bottom: 2%;
-      left: 1.5%;
-    }
-    @media (max-width: 660px) and (orientation: landscape) {
-      position: absolute;
-      bottom: 2%;
-      left: 2.5%;
-    }
+    width: 100%;
+    // left: 15%;
+    // @media (max-width: 690px) and (min-width: 481px) and (orientation: portrait) {
+    //   position: absolute;
+    //   bottom: 2%;
+    //   left: 2.5%;
+    // }
+    // @media (max-width: 480px) and (orientation: portrait) {
+    //   position: absolute;
+    //   bottom: 2%;
+    //   left: 1.5%;
+    // }
+    // @media (max-width: 660px) and (orientation: landscape) {
+    //   position: absolute;
+    //   bottom: 2%;
+    //   left: 2.5%;
+    // }
   }
 `
