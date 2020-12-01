@@ -1980,15 +1980,20 @@ let MainStyles = styled.div`
     position: absolute;
     bottom: 2%;
     left: 15%;
-    @media (max-width: 690px) and (orientation: portrait) {
+    @media (max-width: 690px) and (min-width: 481px) and (orientation: portrait) {
       position: absolute;
       bottom: 2%;
-      left: 2%;
+      left: 2.5%;
+    }
+    @media (max-width: 480px) and (orientation: portrait) {
+      position: absolute;
+      bottom: 2%;
+      left: 1.5%;
     }
     @media (max-width: 660px) and (orientation: landscape) {
       position: absolute;
       bottom: 2%;
-      left: 2%;
+      left: 2.5%;
     }
   }
 `
