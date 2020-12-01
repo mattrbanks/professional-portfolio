@@ -163,6 +163,29 @@ const Home = () => {
             <br />
             to improve my skills.
           </p>
+          <a
+            href="https://github.com/mattrbanks"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button
+              style={{
+                backgroundColor: "rgb(255, 192, 76, 0.9)",
+                color: "#000",
+                border: "2px solid #000",
+                borderRadius: "50px",
+                fontSize: "1.05rem",
+                fontWeight: "bold",
+                padding: "0.3rem",
+                marginBottom: "1.45rem",
+                cursor: "pointer",
+              }}
+              size="large"
+              color="inherit"
+            >
+              GitHub
+            </button>
+          </a>
           <div>
             <h2>Technologies I have worked with so far:</h2>
           </div>
@@ -674,6 +697,28 @@ const Home = () => {
                   MySQL
                 </button>
               </a>
+              <a
+                href="https://www.npmjs.com/package/web-push"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  marginRight: "0.5rem",
+                }}
+              >
+                <button
+                  style={{
+                    backgroundImage:
+                      "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
+                    cursor: "pointer",
+                    color: "#fff",
+                    marginBottom: "0.5rem",
+                    border: "1px solid #000",
+                    borderRadius: "50px",
+                  }}
+                >
+                  Web Push
+                </button>
+              </a>
             </div>
           </React.Fragment>
         </div>
@@ -849,9 +894,7 @@ const Home = () => {
                     </div>
                   </CardContent>
                 </CardActionArea>
-                <div
-                  className={"card-bottom-btns"}
-                >
+                <div className={"card-bottom-btns"}>
                   <div style={{ display: "flex", justifyContent: "center" }}>
                     <CardActions>
                       <a
@@ -1036,9 +1079,7 @@ const Home = () => {
                     </div>
                   </CardContent>
                 </CardActionArea>
-                <div
-                  className={"card-bottom-btns"}
-                >
+                <div className={"card-bottom-btns"}>
                   <div style={{ display: "flex", justifyContent: "center" }}>
                     <CardActions>
                       <a
@@ -1248,9 +1289,7 @@ const Home = () => {
                     </div>
                   </CardContent>
                 </CardActionArea>
-                <div
-                  className={"card-bottom-btns"}
-                >
+                <div className={"card-bottom-btns"}>
                   <div style={{ display: "flex", justifyContent: "center" }}>
                     <CardActions>
                       <a
@@ -1441,9 +1480,7 @@ const Home = () => {
                     </div>
                   </CardContent>
                 </CardActionArea>
-                <div
-                  className={"card-bottom-btns"}
-                >
+                <div className={"card-bottom-btns"}>
                   <div style={{ display: "flex", justifyContent: "center" }}>
                     <CardActions>
                       <a
@@ -1637,9 +1674,7 @@ const Home = () => {
                     </div>
                   </CardContent>
                 </CardActionArea>
-                <div
-                  className={"card-bottom-btns"}
-                >
+                <div className={"card-bottom-btns"}>
                   <div style={{ display: "flex", justifyContent: "center" }}>
                     <CardActions>
                       <a
