@@ -260,7 +260,7 @@ const Home = () => {
                     borderRadius: "50px",
                   }}
                 >
-                  Mongodb
+                  MongoDB
                 </button>
               </a>
               <a
@@ -846,7 +846,7 @@ const Home = () => {
                               </div>
                               <div style={{ marginRight: "0.5rem" }}>Ejs</div>
                               <div style={{ marginRight: "0.5rem" }}>Node</div>
-                              <div style={{ marginRight: "1rem" }}>Mongodb</div>
+                              <div style={{ marginRight: "1rem" }}>MongoDB</div>
                             </div>
                             <div
                               style={{
@@ -887,7 +887,7 @@ const Home = () => {
                             <div>Socket.io</div>
                           </div>
                           <div style={{ display: "flex", fontSize: "0.7rem" }}>
-                            <div style={{ marginRight: "1rem" }}>Mongodb</div>
+                              <div style={{ marginRight: "1rem" }}>MongoDB</div>
                           </div>
                         </React.Fragment>
                       )}
@@ -1222,7 +1222,7 @@ const Home = () => {
                             <div style={{ marginRight: "0.5rem" }}>
                               JavaScript
                             </div>
-                            <div style={{ marginRight: "0.5rem" }}>Mongodb</div>
+                            <div style={{ marginRight: "0.5rem" }}>MongoDB</div>
                             <div style={{ marginRight: "0.5rem" }}>
                               Contentful
                             </div>
@@ -1266,7 +1266,7 @@ const Home = () => {
                             <div style={{ marginRight: "1rem" }}>
                               JavaScript
                             </div>
-                            <div style={{ marginRight: "1rem" }}>Mongodb</div>
+                              <div style={{ marginRight: "1rem" }}>MongoDB</div>
                             <div style={{ marginRight: "1rem" }}>
                               Contentful
                             </div>

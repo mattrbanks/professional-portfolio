@@ -45,7 +45,10 @@ const Header = ({ siteTitle }) => (
           {siteTitle}
         </Link>
       </h1>
-      <p style={{ color: `white` }}>Full Stack Web Developer</p>
+      <p style={{ color: `white`, marginBottom: `1rem` }}>
+        Full Stack Web Developer
+      </p>
+      <p style={{ color: `white` }}>Email: banks.matt81@gmail.com</p>
     </div>
   </header>
 )
