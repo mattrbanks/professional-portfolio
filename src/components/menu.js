@@ -21,7 +21,7 @@ const useStyles = makeStyles({
   barTop: {
     width: "35px",
     height: "5px",
-    backgroundColor: "#000",
+    backgroundColor: "#fff",
     margin: "6px 0",
     transition: "0.4s",
     transform: "rotate(45deg) translate(-15.5px, 25px)",
@@ -29,7 +29,7 @@ const useStyles = makeStyles({
   barBottom: {
     width: "40px",
     height: "5px",
-    backgroundColor: "#000",
+    backgroundColor: "#fff",
     margin: "6px 0",
     transition: "0.4s",
     transform: "rotate(-45deg) translate(-1.5px, -5px)",
@@ -37,7 +37,7 @@ const useStyles = makeStyles({
   changeBarTop: {
     width: "35px",
     height: "5px",
-    backgroundColor: "#000",
+    backgroundColor: "#fff",
     margin: "6px 0",
     transition: "0.4s",
     transform: "rotate(-45deg) translate(-25.3px, -18px)",
@@ -45,7 +45,7 @@ const useStyles = makeStyles({
   changeBarBottom: {
     width: "40px",
     height: "5px",
-    backgroundColor: "#000",
+    backgroundColor: "#fff",
     margin: "6px 0",
     transition: "0.4s",
     transform: "rotate(45deg) translate(-10px, -1px)",
