@@ -147,7 +147,7 @@ const Home = () => {
           >
             <ImageReusable
               alt="picture of school site project"
-              filename="PortfolioPicture.jpg"
+              filename="profile-picture-new-auto-linkedin-cropped.png"
             />
           </div>
         </div>
@@ -887,7 +887,7 @@ const Home = () => {
                             <div>Socket.io</div>
                           </div>
                           <div style={{ display: "flex", fontSize: "0.7rem" }}>
-                              <div style={{ marginRight: "1rem" }}>MongoDB</div>
+                            <div style={{ marginRight: "1rem" }}>MongoDB</div>
                           </div>
                         </React.Fragment>
                       )}
@@ -1266,7 +1266,7 @@ const Home = () => {
                             <div style={{ marginRight: "1rem" }}>
                               JavaScript
                             </div>
-                              <div style={{ marginRight: "1rem" }}>MongoDB</div>
+                            <div style={{ marginRight: "1rem" }}>MongoDB</div>
                             <div style={{ marginRight: "1rem" }}>
                               Contentful
                             </div>
