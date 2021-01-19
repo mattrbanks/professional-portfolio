@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import Button from "@material-ui/core/Button"
 import MenuItem from "@material-ui/core/MenuItem"
 import MenuList from "@material-ui/core/MenuList"
@@ -82,16 +81,16 @@ const Menu = () => {
             }}
           >
             <li>
-              <Link to="#welcome">About Me</Link>
+              <a href="#welcome">About Me</a>
             </li>
             <li>
-              <Link to="#projects">My Projects</Link>
+              <a href="#projects">My Projects</a>
             </li>
             <li>
-              <Link to="#contact">Contact</Link>
+              <a href="#contact">Contact</a>
             </li>
             <li>
-              <Link to="/resume">Resume</Link>
+              <a href="/resume">Resume</a>
             </li>
           </ul>
         </div>
@@ -125,46 +124,46 @@ const Menu = () => {
           <div style={{ display: "block", margin: "1rem" }}>
             <div>
               <MenuItem>
-                <Link
+                <a
                   onClick={handleToggle}
                   style={{ color: "#fff" }}
-                  to="#welcome"
+                  href="#welcome"
                 >
                   About
-                </Link>
+                </a>
               </MenuItem>
             </div>
             <div>
               <MenuItem>
-                <Link
+                <a
                   onClick={handleToggle}
                   style={{ color: "#fff" }}
-                  to="#projects"
+                  href="#projects"
                 >
                   Projects
-                </Link>
+                </a>
               </MenuItem>
             </div>
             <div>
               <MenuItem>
-                <Link
+                <a
                   onClick={handleToggle}
                   style={{ color: "#fff" }}
-                  to="#contact"
+                  href="#contact"
                 >
                   Contact
-                </Link>
+                </a>
               </MenuItem>
             </div>
             <div>
               <MenuItem>
-                <Link
+                <a
                   onClick={handleToggle}
                   style={{ color: "#fff" }}
-                  to="/resume"
+                  href="/resume"
                 >
                   Resume
-                </Link>
+                </a>
               </MenuItem>
             </div>
           </div>
