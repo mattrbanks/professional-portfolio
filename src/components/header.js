@@ -12,8 +12,7 @@ import "./layout.css"
 
 const useStyles = makeStyles({
   root: {
-    backgroundImage:
-      "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
+    backgroundColor: "transparent",
     paddingTop: "1rem",
   },
   mobileMenuIcon: {
@@ -75,8 +74,12 @@ const Header = ({ siteTitle }) => {
   return (
     <header
       style={{
-        // backgroundImage:
-        //   "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
+        backgroundImage:
+          "url(https://raw.githubusercontent.com/mattrbanks/professional-portfolio/2c1027951a0cb760d36ddf03c7389a8cb869e359/src/images/portfolio-header.svg)",
+        backgroundPosition: `70%`,
+        backgroundSize: `cover`,
+        backgroundRepeat: `no-repeat`,
+        height: `100vh`,
         marginBottom: `0`,
         display: `flex`,
       }}
@@ -107,18 +110,124 @@ const Header = ({ siteTitle }) => {
           <Link
             to="/"
             style={{
-              color: `#000`,
+              color: `#fff`,
               textDecoration: `none`,
             }}
           >
             {siteTitle}
           </Link>
         </h2>
-        <p style={{ color: `#000`, marginBottom: `1rem` }}>
+        <p style={{ color: `#fff`, marginBottom: `1rem` }}>
           Full Stack Web Developer
         </p>
         {/* <p style={{ color: `#000` }}>Email: banks.matt81@gmail.com</p> */}
       </div>
+
+      <React.Fragment>
+        <DesktopOnly>
+          <div className={root}>
+            <ul
+              style={{
+                listStyle: "none",
+                display: "flex",
+                justifyContent: "space-evenly",
+                fontSize: "1.25rem",
+              }}
+            >
+              <li>
+                <a href="#welcome">About Me</a>
+              </li>
+              <li>
+                <a href="#projects">My Projects</a>
+              </li>
+              <li>
+                <a href="#contact">Contact</a>
+              </li>
+              <li>
+                <a href="/resume">Resume</a>
+              </li>
+            </ul>
+          </div>
+        </DesktopOnly>
+
+        <div
+          className={
+            "show-mobile-nav mobile-menu-styles-p mobile-menu-styles-l"
+          }
+          style={{ position: "relative" }}
+        >
+          <Button
+            style={{ position: "absolute", top: "40%" }}
+            disableRipple={true}
+            onClick={handleToggle}
+          >
+            <div className={classes.mobileMenuIcon}>
+              <div
+                className={open === false ? barTopCSS : changeBarTopCSS}
+              ></div>
+              <div
+                className={open === false ? barMiddleCSS : changeBarMiddleCSS}
+              ></div>
+              <div
+                className={open === false ? barBottomCSS : changeBarBottomCSS}
+              ></div>
+            </div>
+          </Button>
+          <MenuList
+            className={
+              open ? "mobile-nav-open-styles" : "mobile-nav-close-styles"
+            }
+            autoFocusItem={true}
+          >
+            <div style={{ display: "block", margin: "1rem" }}>
+              <div>
+                <MenuItem>
+                  <a
+                    onClick={handleToggle}
+                    style={{ color: "#fff" }}
+                    href="#welcome"
+                  >
+                    About
+                  </a>
+                </MenuItem>
+              </div>
+              <div>
+                <MenuItem>
+                  <a
+                    onClick={handleToggle}
+                    style={{ color: "#fff" }}
+                    href="#projects"
+                  >
+                    Projects
+                  </a>
+                </MenuItem>
+              </div>
+              <div>
+                <MenuItem>
+                  <a
+                    onClick={handleToggle}
+                    style={{ color: "#fff" }}
+                    href="#contact"
+                  >
+                    Contact
+                  </a>
+                </MenuItem>
+              </div>
+              <div>
+                <MenuItem>
+                  <a
+                    onClick={handleToggle}
+                    style={{ color: "#fff" }}
+                    href="/resume"
+                  >
+                    Resume
+                  </a>
+                </MenuItem>
+              </div>
+            </div>
+          </MenuList>
+        </div>
+      </React.Fragment>
     </header>
   )
 }
@@ -132,3 +241,26 @@ Header.defaultProps = {
 }
 
 export default Header
+
+let DesktopOnly = styled.div`
+  a {
+    text-decoration: none;
+    background-image: linear-gradient(#fff, #fff);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size 0.3s;
+    color: #fff;
+  }
+
+  a:hover,
+  a:focus {
+    background-size: 100% 2px;
+  }
+  @media (max-width: 500px) and (orientation: portrait) {
+    display: none;
+  }
+  @media (max-width: 900px) and (orientation: landscape) {
+    display: none;
+  }
+`
