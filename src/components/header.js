@@ -12,7 +12,6 @@ import "./layout.css"
 
 const useStyles = makeStyles({
   root: {
-    backgroundColor: "transparent",
     paddingTop: "1rem",
   },
   mobileMenuIcon: {
@@ -26,7 +25,7 @@ const useStyles = makeStyles({
     backgroundColor: "#fff",
     margin: "6px 0",
     transition: "0.4s",
-    transform: "rotate(45deg) translate(-15.5px, 25px)",
+    transform: "rotate(45deg) translate(5.5px, 25px)",
   },
   barBottom: {
     width: "40px",
@@ -34,7 +33,7 @@ const useStyles = makeStyles({
     backgroundColor: "#fff",
     margin: "6px 0",
     transition: "0.4s",
-    transform: "rotate(-45deg) translate(-1.5px, -5px)",
+    transform: "rotate(-45deg) translate(-1.5px, 16px)",
   },
   changeBarTop: {
     width: "35px",
@@ -42,7 +41,7 @@ const useStyles = makeStyles({
     backgroundColor: "#fff",
     margin: "6px 0",
     transition: "0.4s",
-    transform: "rotate(-45deg) translate(-25.3px, -18px)",
+    transform: "rotate(-45deg) translate(-25.3px, 3px)",
   },
   changeBarBottom: {
     width: "40px",
@@ -50,7 +49,7 @@ const useStyles = makeStyles({
     backgroundColor: "#fff",
     margin: "6px 0",
     transition: "0.4s",
-    transform: "rotate(45deg) translate(-10px, -1px)",
+    transform: "rotate(45deg) translate(11px, -1px)",
   },
 })
 
@@ -75,13 +74,14 @@ const Header = ({ siteTitle }) => {
     <header
       style={{
         backgroundImage:
-          "url(https://raw.githubusercontent.com/mattrbanks/professional-portfolio/2c1027951a0cb760d36ddf03c7389a8cb869e359/src/images/portfolio-header.svg)",
+          "url(https://raw.githubusercontent.com/mattrbanks/professional-portfolio/f79929663ea0f1bb9a7cf12511d70108fe1832bb/src/images/portfolio-mobile-header.svg)",
         backgroundPosition: `70%`,
         backgroundSize: `cover`,
         backgroundRepeat: `no-repeat`,
         height: `100vh`,
         marginBottom: `0`,
         display: `flex`,
+        position: `relative`,
       }}
     >
       <div
@@ -154,7 +154,7 @@ const Header = ({ siteTitle }) => {
           className={
             "show-mobile-nav mobile-menu-styles-p mobile-menu-styles-l"
           }
-          style={{ position: "relative" }}
+          // style={{ position: "relative" }}
         >
           <Button
             style={{ position: "absolute", top: "40%" }}
@@ -173,60 +173,62 @@ const Header = ({ siteTitle }) => {
               ></div>
             </div>
           </Button>
-          <MenuList
-            className={
-              open ? "mobile-nav-open-styles" : "mobile-nav-close-styles"
-            }
-            autoFocusItem={true}
-          >
-            <div style={{ display: "block", margin: "1rem" }}>
-              <div>
-                <MenuItem>
-                  <a
-                    onClick={handleToggle}
-                    style={{ color: "#fff" }}
-                    href="#welcome"
-                  >
-                    About
-                  </a>
-                </MenuItem>
-              </div>
-              <div>
-                <MenuItem>
-                  <a
-                    onClick={handleToggle}
-                    style={{ color: "#fff" }}
-                    href="#projects"
-                  >
-                    Projects
-                  </a>
-                </MenuItem>
-              </div>
-              <div>
-                <MenuItem>
-                  <a
-                    onClick={handleToggle}
-                    style={{ color: "#fff" }}
-                    href="#contact"
-                  >
-                    Contact
-                  </a>
-                </MenuItem>
-              </div>
-              <div>
-                <MenuItem>
-                  <a
-                    onClick={handleToggle}
-                    style={{ color: "#fff" }}
-                    href="/resume"
-                  >
-                    Resume
-                  </a>
-                </MenuItem>
-              </div>
-            </div>
-          </MenuList>
+
+          
         </div>
+        <MenuList
+          className={
+            open ? "mobile-nav-open-styles" : "mobile-nav-close-styles"
+          }
+          autoFocusItem={true}
+        >
+          <div style={{ display: "block", margin: "1rem" }}>
+            <div>
+              <MenuItem>
+                <a
+                  onClick={handleToggle}
+                  style={{ color: "#fff" }}
+                  href="#welcome"
+                >
+                  About
+                  </a>
+              </MenuItem>
+            </div>
+            <div>
+              <MenuItem>
+                <a
+                  onClick={handleToggle}
+                  style={{ color: "#fff" }}
+                  href="#projects"
+                >
+                  Projects
+                  </a>
+              </MenuItem>
+            </div>
+            <div>
+              <MenuItem>
+                <a
+                  onClick={handleToggle}
+                  style={{ color: "#fff" }}
+                  href="#contact"
+                >
+                  Contact
+                  </a>
+              </MenuItem>
+            </div>
+            <div>
+              <MenuItem>
+                <a
+                  onClick={handleToggle}
+                  style={{ color: "#fff" }}
+                  href="/resume"
+                >
+                  Resume
+                  </a>
+              </MenuItem>
+            </div>
+          </div>
+        </MenuList>
       </React.Fragment>
     </header>
   )
@@ -243,6 +245,7 @@ Header.defaultProps = {
 export default Header
 
 let DesktopOnly = styled.div`
+  //width: 50%;
   a {
     text-decoration: none;
     background-image: linear-gradient(#fff, #fff);
@@ -251,6 +254,7 @@ let DesktopOnly = styled.div`
     background-size: 0% 2px;
     transition: background-size 0.3s;
     color: #fff;
+    margin-right: 1rem;
   }
 
   a:hover,
