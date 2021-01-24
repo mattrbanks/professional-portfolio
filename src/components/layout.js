@@ -17,10 +17,24 @@ const Layout = ({ children }) => {
     }
   `)
 
+  const [offsetY, setOffsetY] = React.useState()
+
+  function scrollPosition() {
+    setOffsetY(window.scrollY)
+  }
+
+  window.addEventListener("scroll", scrollPosition)
+
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      {/* <Menu /> */}
+      {offsetY > 50 ? (
+        <React.Fragment>
+          <Menu />
+          <Header siteTitle={data.site.siteMetadata.title} />
+        </React.Fragment>
+      ) : (
+        <Header siteTitle={data.site.siteMetadata.title} />
+      )}
       <div>
         <main>{children}</main>
       </div>

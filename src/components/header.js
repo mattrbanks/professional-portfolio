@@ -2,7 +2,6 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import mblogo from "../images/mblogo.svg"
-
 import Button from "@material-ui/core/Button"
 import MenuItem from "@material-ui/core/MenuItem"
 import MenuList from "@material-ui/core/MenuList"
@@ -173,9 +172,8 @@ const Header = ({ siteTitle }) => {
               ></div>
             </div>
           </Button>
-
-          
         </div>
+
         <MenuList
           className={
             open ? "mobile-nav-open-styles" : "mobile-nav-close-styles"
@@ -191,7 +189,7 @@ const Header = ({ siteTitle }) => {
                   href="#welcome"
                 >
                   About
-                  </a>
+                </a>
               </MenuItem>
             </div>
             <div>
@@ -202,7 +200,7 @@ const Header = ({ siteTitle }) => {
                   href="#projects"
                 >
                   Projects
-                  </a>
+                </a>
               </MenuItem>
             </div>
             <div>
@@ -213,7 +211,7 @@ const Header = ({ siteTitle }) => {
                   href="#contact"
                 >
                   Contact
-                  </a>
+                </a>
               </MenuItem>
             </div>
             <div>
@@ -224,7 +222,7 @@ const Header = ({ siteTitle }) => {
                   href="/resume"
                 >
                   Resume
-                  </a>
+                </a>
               </MenuItem>
             </div>
           </div>
