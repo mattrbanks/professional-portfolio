@@ -16,6 +16,7 @@ const useStyles = makeStyles({
     position: "fixed",
     width: "100%",
     zIndex: "1000",
+    opacity: "0.95",
   },
   mobileMenuIcon: {
     position: "relative",
@@ -96,54 +97,48 @@ const Menu = () => {
           </div>
           <div
             style={{
-              margin: `0 0 0 1.5rem`,
+              margin: `0 1rem 0 1.75rem`,
               maxWidth: 960,
               //padding: `1.5rem 1.0875rem 1.5rem 0rem`,
             }}
           >
-            <h2 style={{ margin: 0, paddingBottom: `0rem` }}>
-              <a
-                href="/"
-                style={{
-                  color: `#fff`,
-                  textDecoration: `none`,
-                }}
-              >
-                Matthew Banks
-              </a>
+            <h2 style={{ color: `#fff`, margin: 0, paddingBottom: `0rem` }}>
+              Matthew Banks
             </h2>
             <p style={{ color: `#fff`, marginBottom: `1rem` }}>
               Full Stack Web Developer
             </p>
             {/* <p style={{ color: `#000` }}>Email: banks.matt81@gmail.com</p> */}
           </div>
-          <ul
-            style={{
-              listStyle: "none",
-              display: "flex",
-              justifyContent: "space-evenly",
-              fontSize: "1.25rem",
-            }}
-          >
-            <li>
-              <a href="javascript:document.getElementById('welcome').scrollIntoView(true);">
-                About Me
-              </a>
-            </li>
-            <li>
-              <a href="javascript:document.getElementById('projects').scrollIntoView(true);">
-                My Projects
-              </a>
-            </li>
-            <li>
-              <a href="javascript:document.getElementById('contact').scrollIntoView(true);">
-                Contact
-              </a>
-            </li>
-            <li>
-              <a href="/resume">Resume</a>
-            </li>
-          </ul>
+          <div>
+            <ul
+              style={{
+                listStyle: "none",
+                display: "flex",
+                justifyContent: "space-evenly",
+                fontSize: "1.25rem",
+              }}
+            >
+              <li>
+                <a href="javascript:document.getElementById('welcome').scrollIntoView(true);">
+                  About Me
+                </a>
+              </li>
+              <li>
+                <a href="javascript:document.getElementById('projects').scrollIntoView(true);">
+                  My Projects
+                </a>
+              </li>
+              <li>
+                <a href="javascript:document.getElementById('contact').scrollIntoView(true);">
+                  Contact
+                </a>
+              </li>
+              <li>
+                <a href="/resume">Resume</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </DesktopOnly>
 
@@ -275,6 +270,10 @@ let DesktopOnly = styled.div`
 
   a:hover {
     background-size: 100% 2px;
+  }
+
+  li {
+    margin-right: 1rem;
   }
 
   @media (max-width: 500px) and (orientation: portrait) {
