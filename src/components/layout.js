@@ -23,7 +23,9 @@ const Layout = ({ children }) => {
     setOffsetY(window.scrollY)
   }
 
-  window.addEventListener("scroll", scrollPosition)
+  if (typeof window !== `undefined`) {
+    window.addEventListener("scroll", scrollPosition)
+  }
 
   return (
     <>
