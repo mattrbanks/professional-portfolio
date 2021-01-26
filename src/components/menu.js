@@ -78,15 +78,7 @@ const Menu = () => {
     <React.Fragment>
       <DesktopOnly>
         <div className={root}>
-          <div
-          // style={{
-          //   position: "fixed",
-          //   width: `100%`,
-          //   maxWidth: `140px`,
-          //   margin: `0.5rem 0 0 0`,
-          //   left: "0",
-          // }}
-          >
+          <div>
             <img
               style={{
                 margin: `0 0 0 2.5rem`,
@@ -99,7 +91,6 @@ const Menu = () => {
             style={{
               margin: `0 1rem 0 1.75rem`,
               maxWidth: 960,
-              //padding: `1.5rem 1.0875rem 1.5rem 0rem`,
             }}
           >
             <h2 style={{ color: `#fff`, margin: 0, paddingBottom: `0rem` }}>
@@ -108,7 +99,6 @@ const Menu = () => {
             <p style={{ color: `#fff`, marginBottom: `1rem` }}>
               Full Stack Web Developer
             </p>
-            {/* <p style={{ color: `#000` }}>Email: banks.matt81@gmail.com</p> */}
           </div>
           <div>
             <ul

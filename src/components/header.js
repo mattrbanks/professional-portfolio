@@ -119,7 +119,6 @@ const Header = ({ siteTitle }) => {
         <p style={{ color: `#fff`, marginBottom: `1rem` }}>
           Full Stack Web Developer
         </p>
-        {/* <p style={{ color: `#000` }}>Email: banks.matt81@gmail.com</p> */}
       </div>
 
       <React.Fragment>
@@ -153,7 +152,6 @@ const Header = ({ siteTitle }) => {
           className={
             "show-mobile-nav mobile-menu-styles-p mobile-menu-styles-l"
           }
-          // style={{ position: "relative" }}
         >
           <Button
             style={{ position: "absolute", top: "15%" }}
@@ -243,7 +241,6 @@ Header.defaultProps = {
 export default Header
 
 let DesktopOnly = styled.div`
-  //width: 50%;
   a {
     text-decoration: none;
     background-image: linear-gradient(#fff, #fff);

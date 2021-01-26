@@ -117,15 +117,7 @@ const Home = () => {
           backgroundImage:
             "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
         }}
-      >
-        {/* <div
-          style={{
-            background: "rgb(21, 27, 122)",
-            background: "linear-gradient(177.5deg, transparent 49%, white 51%)",
-            height: "5rem",
-          }}
-        ></div> */}
-      </nav>
+      ></nav>
       <section id="welcome" className={classes.welcomeSectionStyles}>
         <div
           style={{
