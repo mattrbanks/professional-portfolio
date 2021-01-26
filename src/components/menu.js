@@ -143,14 +143,17 @@ const Menu = () => {
       </DesktopOnly>
 
       <div
-        className={"show-mobile-nav mobile-menu-styles-p mobile-menu-styles-l"}
+        className={
+          "show-mobile-nav mobile-menu-styles-fixed-p mobile-menu-styles-fixed-l"
+        }
         style={{
           backgroundImage:
             "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
-          paddingTop: "1rem",
+          paddingTop: "0",
           position: "fixed",
           width: "100%",
           zIndex: "1000",
+          opacity: "0.95",
         }}
       >
         <div

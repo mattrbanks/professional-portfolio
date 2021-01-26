@@ -156,7 +156,7 @@ const Header = ({ siteTitle }) => {
           // style={{ position: "relative" }}
         >
           <Button
-            style={{ position: "absolute", top: "40%" }}
+            style={{ position: "absolute", top: "15%" }}
             disableRipple={true}
             onClick={handleToggle}
           >

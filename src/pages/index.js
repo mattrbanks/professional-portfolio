@@ -1563,7 +1563,7 @@ const Home = () => {
                       <ImageReusable
                         style={{ position: "relative" }}
                         alt="picture of professional portfolio"
-                        filename="ProfessionalPortfolioSiteCropped.png"
+                        filename="ProfessionalPortfolioSiteCroppedNew.PNG"
                       />
                     </a>
                   </CardMedia>
