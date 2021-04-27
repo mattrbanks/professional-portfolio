@@ -94,6 +94,7 @@ const Home = () => {
   const [projectThreeHover, setProjectThreeHover] = React.useState(false)
   const [projectFourHover, setProjectFourHover] = React.useState(false)
   const [projectFiveHover, setProjectFiveHover] = React.useState(false)
+  const [projectSixHover, setProjectSixHover] = React.useState(false)
 
   //styles
   const iconContactStyle = classes.iconContact
@@ -1704,6 +1705,197 @@ const Home = () => {
                           On Site Now
                         </Button>
                       </div>
+                    </CardActions>
+                  </div>
+                </div>
+              </Card>
+            </div>
+            <div className={"wide-screen-margin-right"}>
+              <Card
+                className={"project-card-styles"}
+                style={{ position: "relative" }}
+              >
+                <CardActionArea>
+                  <CardMedia
+                    className={
+                      projectSixHover
+                        ? "project-media-transform-styles"
+                        : "project-media-styles"
+                    }
+                    style={{
+                      maxWidth: "100%",
+                      margin: "0 0 0 0",
+                    }}
+                    title="Kasey Banks Portfolio"
+                    onMouseEnter={() => {
+                      setProjectSixHover(true)
+                    }}
+                    onMouseLeave={() => {
+                      setProjectSixHover(false)
+                    }}
+                  >
+                    <a
+                      href="https://kaseybanksportfolio.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{ color: "#fff" }}
+                    >
+                      <Image
+                        style={{ position: "relative" }}
+                        alt="picture of kasey banks portfolio site project"
+                      />
+                    </a>
+                  </CardMedia>
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="h2">
+                      Kasey Banks Portfolio
+                    </Typography>
+                    <Typography
+                      variant="caption"
+                      color="textPrimary"
+                      component="p"
+                    >
+                      <span style={{ fontWeight: "bold" }}>Features: </span>{" "}
+                      PayPal &#8226; Search bar &#8226; Game product pages
+                      &#8226; Detail page for each product &#8226; Cart checkout
+                      with tax (USA)
+                    </Typography>
+                    <Typography
+                      variant="caption"
+                      color="textPrimary"
+                      component="p"
+                    >
+                      <span style={{ fontWeight: "bold" }}>About: </span>I had a
+                      lot of fun with this project because these are many of my
+                      favorite retro games. This is like a tribute to the games
+                      I am nostalgic for but in the form of a retro game store.
+                      I used a real price guide to price each game so they
+                      should be very accurately priced in my store. This game
+                      store has all the hallmarks of an e-commerce website and
+                      it utilizes a sandbox PayPal that can be activated in the
+                      future to handle real transactions. I won't be parting
+                      with my collection though.
+                    </Typography>
+                    <div
+                      style={{
+                        display: "block",
+                        listStyle: "none",
+                        margin: "0.5rem 1.5rem 0 1.5rem",
+                      }}
+                    >
+                      {mobileTechnologiesList ? (
+                        <React.Fragment>
+                          <div
+                            style={{
+                              display: "flex",
+                              justifyContent: "center",
+                              fontSize: "0.6rem",
+                              margin: "0 1.5rem 0 1.5rem",
+                            }}
+                          >
+                            <div
+                              style={{
+                                marginLeft: "1rem",
+                                marginRight: "0.5rem",
+                              }}
+                            >
+                              React
+                            </div>
+                            <div style={{ marginRight: "0.5rem" }}>
+                              JavaScript
+                            </div>
+                            <div style={{ marginRight: "0.5rem" }}>
+                              Bootstrap
+                            </div>
+                            <div style={{ marginRight: "1rem" }}>PayPal</div>
+                          </div>
+                          <div
+                            style={{
+                              display: "flex",
+                              justifyContent: "center",
+                              fontSize: "0.6rem",
+                              margin: "0 1rem 1rem 1rem",
+                            }}
+                          >
+                            <div
+                              style={{
+                                marginLeft: "0.5rem",
+                                marginRight: "0.5rem",
+                              }}
+                            >
+                              Styled components
+                            </div>
+                            <div style={{ marginRight: "0.5rem" }}>
+                              React router
+                            </div>
+                          </div>
+                        </React.Fragment>
+                      ) : (
+                          <React.Fragment>
+                            <div style={{ display: "flex", fontSize: "0.7rem" }}>
+                              <div style={{ marginRight: "1rem" }}>React</div>
+                              <div style={{ marginRight: "1rem" }}>
+                                JavaScript
+                            </div>
+                              <div style={{ marginRight: "1rem" }}>Bootstrap</div>
+                              <div style={{ marginRight: "1rem" }}>
+                                Styled components
+                            </div>
+                              <div>PayPal</div>
+                            </div>
+                            <div style={{ display: "flex", fontSize: "0.7rem" }}>
+                              <div style={{ marginRight: "1rem" }}>
+                                React router
+                            </div>
+                            </div>
+                          </React.Fragment>
+                        )}
+                    </div>
+                  </CardContent>
+                </CardActionArea>
+                <div className={"card-bottom-btns"}>
+                  <div style={{ display: "flex", justifyContent: "center" }}>
+                    <CardActions>
+                      <a
+                        href="https://github.com/mattrbanks/retro-game-store-portfolio-project"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{ color: "#fff" }}
+                      >
+                        <Button
+                          style={{
+                            backgroundImage:
+                              "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
+                            border: "1px solid #000",
+                            borderRadius: "50px",
+                            fontSize: "1.05rem",
+                          }}
+                          size="large"
+                          color="inherit"
+                        >
+                          See my code
+                        </Button>
+                      </a>
+                      <a
+                        href="https://matts-retro-games.netlify.app/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{ color: "#fff" }}
+                      >
+                        <Button
+                          style={{
+                            backgroundImage:
+                              "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
+                            border: "1px solid #000",
+                            borderRadius: "50px",
+                            fontSize: "1.05rem",
+                          }}
+                          size="large"
+                          color="inherit"
+                        >
+                          Try the site
+                        </Button>
+                      </a>
                     </CardActions>
                   </div>
                 </div>
