@@ -1740,9 +1740,10 @@ const Home = () => {
                       rel="noopener noreferrer"
                       style={{ color: "#fff" }}
                     >
-                      <Image
+                      <ImageReusable
                         style={{ position: "relative" }}
-                        alt="picture of kasey banks portfolio site project"
+                        alt="picture of kasey banks portfolio site"
+                        filename="kaseybanksportfoliosite.png"
                       />
                     </a>
                   </CardMedia>
@@ -1756,25 +1757,19 @@ const Home = () => {
                       component="p"
                     >
                       <span style={{ fontWeight: "bold" }}>Features: </span>{" "}
-                      PayPal &#8226; Search bar &#8226; Game product pages
-                      &#8226; Detail page for each product &#8226; Cart checkout
-                      with tax (USA)
+                      Real Educational Data &#8226; Custom Design &#8226; Video Gallery
+                      &#8226; Contact Form &#8226; Resume Page
                     </Typography>
                     <Typography
                       variant="caption"
                       color="textPrimary"
                       component="p"
                     >
-                      <span style={{ fontWeight: "bold" }}>About: </span>I had a
-                      lot of fun with this project because these are many of my
-                      favorite retro games. This is like a tribute to the games
-                      I am nostalgic for but in the form of a retro game store.
-                      I used a real price guide to price each game so they
-                      should be very accurately priced in my store. This game
-                      store has all the hallmarks of an e-commerce website and
-                      it utilizes a sandbox PayPal that can be activated in the
-                      future to handle real transactions. I won't be parting
-                      with my collection though.
+                      <span style={{ fontWeight: "bold" }}>About: </span>This is a professional 
+                      portfolio that highlights the work of an educator over the span of her career. 
+                      She is transitioning from an instructional coach to an administrator and she is 
+                      highlighting each position she has had over the years. D3 was used to visually 
+                      represent the data provided.
                     </Typography>
                     <div
                       style={{
