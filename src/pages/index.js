@@ -712,6 +712,50 @@ const Home = () => {
                   Web Push
                 </button>
               </a>
+              <a
+                href="https://www.npmjs.com/package/web-push"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  marginRight: "0.5rem",
+                }}
+              >
+                <button
+                  style={{
+                    backgroundImage:
+                      "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
+                    cursor: "pointer",
+                    color: "#fff",
+                    marginBottom: "0.5rem",
+                    border: "1px solid #000",
+                    borderRadius: "50px",
+                  }}
+                >
+                  Tailwind CSS
+                </button>
+              </a>
+              <a
+                href="https://www.npmjs.com/package/web-push"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  marginRight: "0.5rem",
+                }}
+              >
+                <button
+                  style={{
+                    backgroundImage:
+                      "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
+                    cursor: "pointer",
+                    color: "#fff",
+                    marginBottom: "0.5rem",
+                    border: "1px solid #000",
+                    borderRadius: "50px",
+                  }}
+                >
+                  D3
+                </button>
+              </a>
             </div>
           </React.Fragment>
         </div>
@@ -1757,19 +1801,20 @@ const Home = () => {
                       component="p"
                     >
                       <span style={{ fontWeight: "bold" }}>Features: </span>{" "}
-                      Real Educational Data &#8226; Custom Design &#8226; Video Gallery
-                      &#8226; Contact Form &#8226; Resume Page
+                      Real Educational Data &#8226; Custom Design &#8226; Video
+                      Gallery &#8226; Contact Form &#8226; Resume Page
                     </Typography>
                     <Typography
                       variant="caption"
                       color="textPrimary"
                       component="p"
                     >
-                      <span style={{ fontWeight: "bold" }}>About: </span>This is a professional 
-                      portfolio that highlights the work of an educator over the span of her career. 
-                      She is transitioning from an instructional coach to an administrator and she is 
-                      highlighting each position she has had over the years. D3 was used to visually 
-                      represent the data provided.
+                      <span style={{ fontWeight: "bold" }}>About: </span>This is
+                      a professional portfolio that highlights the work of an
+                      educator over the span of her career. She is transitioning
+                      from an instructional coach to an administrator and she is
+                      highlighting each position she has had over the years. D3
+                      was used to visually represent the data provided.
                     </Typography>
                     <div
                       style={{
@@ -1799,10 +1844,8 @@ const Home = () => {
                             <div style={{ marginRight: "0.5rem" }}>
                               JavaScript
                             </div>
-                            <div style={{ marginRight: "0.5rem" }}>
-                              Bootstrap
-                            </div>
-                            <div style={{ marginRight: "1rem" }}>PayPal</div>
+                            <div style={{ marginRight: "0.5rem" }}>Gatsby</div>
+                            <div style={{ marginRight: "1rem" }}>Figma</div>
                           </div>
                           <div
                             style={{
@@ -1818,33 +1861,35 @@ const Home = () => {
                                 marginRight: "0.5rem",
                               }}
                             >
-                              Styled components
+                              Tailwind CSS
                             </div>
                             <div style={{ marginRight: "0.5rem" }}>
-                              React router
+                              Netlify Forms
                             </div>
+                            <div style={{ marginRight: "0.5rem" }}>D3</div>
                           </div>
                         </React.Fragment>
                       ) : (
-                          <React.Fragment>
-                            <div style={{ display: "flex", fontSize: "0.7rem" }}>
-                              <div style={{ marginRight: "1rem" }}>React</div>
-                              <div style={{ marginRight: "1rem" }}>
-                                JavaScript
+                        <React.Fragment>
+                          <div style={{ display: "flex", fontSize: "0.7rem" }}>
+                            <div style={{ marginRight: "1rem" }}>React</div>
+                            <div style={{ marginRight: "1rem" }}>
+                              JavaScript
                             </div>
-                              <div style={{ marginRight: "1rem" }}>Bootstrap</div>
-                              <div style={{ marginRight: "1rem" }}>
-                                Styled components
+                            <div style={{ marginRight: "1rem" }}>
+                              Tailwind CSS
                             </div>
-                              <div>PayPal</div>
+                            <div style={{ marginRight: "1rem" }}>
+                              Netlify Forms
                             </div>
-                            <div style={{ display: "flex", fontSize: "0.7rem" }}>
-                              <div style={{ marginRight: "1rem" }}>
-                                React router
-                            </div>
-                            </div>
-                          </React.Fragment>
-                        )}
+                            <div>reCAPTCHA</div>
+                          </div>
+                          <div style={{ display: "flex", fontSize: "0.7rem" }}>
+                            <div style={{ marginRight: "1rem" }}>Figma</div>
+                            <div style={{ marginRight: "1rem" }}>D3</div>
+                          </div>
+                        </React.Fragment>
+                      )}
                     </div>
                   </CardContent>
                 </CardActionArea>
@@ -1852,7 +1897,7 @@ const Home = () => {
                   <div style={{ display: "flex", justifyContent: "center" }}>
                     <CardActions>
                       <a
-                        href="https://github.com/mattrbanks/retro-game-store-portfolio-project"
+                        href="https://github.com/mattrbanks/kasey-banks-professional-portfolio"
                         target="_blank"
                         rel="noopener noreferrer"
                         style={{ color: "#fff" }}
@@ -1872,7 +1917,7 @@ const Home = () => {
                         </Button>
                       </a>
                       <a
-                        href="https://matts-retro-games.netlify.app/"
+                        href="https://kaseybanksportfolio.com/"
                         target="_blank"
                         rel="noopener noreferrer"
                         style={{ color: "#fff" }}
