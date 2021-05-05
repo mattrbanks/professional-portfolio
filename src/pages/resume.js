@@ -1,7 +1,7 @@
 import React from "react"
 import SEO from "../components/seo"
 import "../components/layout.css"
-import downloadFile from "../../resume/matthew-banks-resume-1-10-2021.pdf"
+import downloadFile from "../../resume/matthew-banks-resume-5-04-2021.pdf"
 import styled from "styled-components"
 
 const Resume = () => {
@@ -143,7 +143,61 @@ const Resume = () => {
               </div>
               <div style={{ padding: "1rem" }}>
                 <div>
-                  <h2>Face Conference</h2>
+                  <h2>Kasey Banks Portfolio</h2>
+                  <div style={{ margin: "0 0 1rem 0" }}>
+                    <a
+                      style={{
+                        color: "#0000FF",
+                        textDecoration: "none",
+                        border: "1px solid blue",
+                        borderRadius: "50px",
+                        padding: "0.25rem",
+                      }}
+                      href="https://github.com/mattrbanks/kasey-banks-professional-portfolio"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      See My Code
+                    </a>
+                    <a
+                      style={{
+                        marginLeft: "1rem",
+                        color: "#0000FF",
+                        textDecoration: "none",
+                        border: "1px solid blue",
+                        borderRadius: "50px",
+                        padding: "0.25rem",
+                      }}
+                      href="https://kaseybanksportfolio.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Try The Site
+                    </a>
+                  </div>
+                </div>
+                <p>
+                  <span style={{ fontWeight: "bold" }}>Features:</span> Real
+                  educational data &#8226; Custom design &#8226; Video Gallery
+                  &#8226; Contact Form &#8226; Resume page
+                </p>
+                <p>
+                  <span style={{ fontWeight: "bold" }}>About:</span> This is a
+                  professional portfolio that highlights the work of an educator
+                  over the span of her career. She is transitioning from an
+                  instructional coach to an administrator and she is
+                  highlighting each position she has had over the years. D3 was
+                  used to visually represent the data provided.
+                </p>
+                <p>
+                  <span style={{ fontWeight: "bold" }}>
+                    Technologies used to build it:
+                  </span>{" "}
+                  React, JavaScript, Tailwind CSS, Netlify Forms, reCAPTCHA,
+                  Figma, D3
+                </p>
+                <div>
+                  <h2 className={"h2-margin"}>Face Conference</h2>
                   <div style={{ margin: "0 0 1rem 0" }}>
                     <a
                       style={{
@@ -154,6 +208,8 @@ const Resume = () => {
                         padding: "0.25rem",
                       }}
                       href="https://github.com/mattrbanks/face-conference"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       See My Code
                     </a>
@@ -167,6 +223,8 @@ const Resume = () => {
                         padding: "0.25rem",
                       }}
                       href="https://face-conference.herokuapp.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       Try The Site
                     </a>
@@ -203,6 +261,8 @@ const Resume = () => {
                         padding: "0.25rem",
                       }}
                       href="https://github.com/mattrbanks/Quick-Chat"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       See My Code
                     </a>
@@ -216,6 +276,8 @@ const Resume = () => {
                         padding: "0.25rem",
                       }}
                       href="https://quick-chat.netlify.app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       Try The Site
                     </a>
@@ -253,6 +315,8 @@ const Resume = () => {
                         padding: "0.25rem",
                       }}
                       href="https://github.com/mattrbanks/school-site-chat-survey-portfolio-project"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       See My Code
                     </a>
@@ -266,6 +330,8 @@ const Resume = () => {
                         padding: "0.25rem",
                       }}
                       href="https://eagle-elementary-school.netlify.app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       Try The Site
                     </a>
@@ -302,6 +368,8 @@ const Resume = () => {
                         padding: "0.25rem",
                       }}
                       href="https://github.com/mattrbanks/retro-game-store-portfolio-project"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       See My Code
                     </a>
@@ -315,6 +383,8 @@ const Resume = () => {
                         padding: "0.25rem",
                       }}
                       href="https://matts-retro-games.netlify.app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       Try The Site
                     </a>
@@ -352,6 +422,8 @@ const Resume = () => {
                         padding: "0.25rem",
                       }}
                       href="https://github.com/mattrbanks/professional-portfolio"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       See My Code
                     </a>
@@ -365,6 +437,8 @@ const Resume = () => {
                         padding: "0.25rem",
                       }}
                       href="https://mattbanksdev.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       Try The Site
                     </a>
@@ -426,6 +500,30 @@ const Resume = () => {
                     Experiment with new technologies as needed for projects
                   </li>
                   <li>Git version control and web application deployment</li>
+                </ul>
+                <div
+                  style={{ display: "flex", justifyContent: "space-between" }}
+                >
+                  <h4>Carpenter Assistant</h4>
+                  <div>Jan 2018 – Mar 2021</div>
+                </div>
+                <p>
+                  Banks Home Improvement LLC
+                  <br />
+                  Middletown, CT
+                </p>
+                <ul style={{ marginTop: "1rem", marginBottom: "1.45rem" }}>
+                  <li>
+                    Assist with lifting, positioning, securing, and cutting of
+                    materials during installation
+                  </li>
+                  <li>
+                    Use tools like saws, nail guns, tape measures, levels,
+                    hammers, squares, and ladders to finish jobs
+                  </li>
+                  <li>
+                    Keep work areas clean to maintain a safe work environment
+                  </li>
                 </ul>
                 <div
                   style={{ display: "flex", justifyContent: "space-between" }}
