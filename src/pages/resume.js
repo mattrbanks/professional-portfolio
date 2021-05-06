@@ -126,7 +126,7 @@ const Resume = () => {
                 <tr>
                   <td>
                     HTML5/CSS3, JavaScript, React, GatsbyJS/GraphQL, NodeJS,
-                    Express, PHP
+                    Express, Tailwind CSS, PHP
                   </td>
                   <td>MongoDB, MySQL</td>
                   <td>Git, GitHub, Visual Studio Code, Figma</td>
