@@ -713,7 +713,7 @@ const Home = () => {
                 </button>
               </a>
               <a
-                href="https://www.npmjs.com/package/web-push"
+                href="https://tailwindcss.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
@@ -735,7 +735,7 @@ const Home = () => {
                 </button>
               </a>
               <a
-                href="https://www.npmjs.com/package/web-push"
+                href="https://d3js.org/"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
