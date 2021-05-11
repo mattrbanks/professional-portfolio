@@ -1812,10 +1812,9 @@ const Home = () => {
                       <span style={{ fontWeight: "bold" }}>About: </span>This is
                       a professional portfolio that highlights the work of an
                       educator over the span of her career. She is transitioning
-                      from an instructional coach to an administrator and she is
-                      highlighting each position she has had over the years. D3
-                      was used to visually represent the data provided. There is
-                      a contact form that utilizes reCAPTCHA and is connected to
+                      from an instructional coach to an administrator. D3 was
+                      used to visually represent the data provided. There is a
+                      contact form that utilizes reCAPTCHA and is connected to
                       email via Netlify Forms. There is a video gallery that
                       spans the course of her career, including coaching
                       teachers; teaching students remotely; facilitating data
@@ -1851,7 +1850,7 @@ const Home = () => {
                               JavaScript
                             </div>
                             <div style={{ marginRight: "0.5rem" }}>Gatsby</div>
-                            <div style={{ marginRight: "1rem" }}>Figma</div>
+                            <div style={{ marginRight: "1rem" }}>reCAPTCHA</div>
                           </div>
                           <div
                             style={{
@@ -1872,6 +1871,7 @@ const Home = () => {
                             <div style={{ marginRight: "0.5rem" }}>
                               Netlify Forms
                             </div>
+                            <div style={{ marginRight: "0.5rem" }}>Figma</div>
                             <div style={{ marginRight: "0.5rem" }}>D3</div>
                           </div>
                         </React.Fragment>
@@ -1892,6 +1892,7 @@ const Home = () => {
                           </div>
                           <div style={{ display: "flex", fontSize: "0.7rem" }}>
                             <div style={{ marginRight: "1rem" }}>Figma</div>
+                            <div style={{ marginRight: "1rem" }}>Gatsby</div>
                             <div style={{ marginRight: "1rem" }}>D3</div>
                           </div>
                         </React.Fragment>

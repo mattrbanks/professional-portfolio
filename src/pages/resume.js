@@ -1,7 +1,7 @@
 import React from "react"
 import SEO from "../components/seo"
 import "../components/layout.css"
-import downloadFile from "../../resume/matthew-banks-resume-5-04-2021.pdf"
+import downloadFile from "../../resume/matthew-banks-resume-5-11-2021.pdf"
 import styled from "styled-components"
 
 const Resume = () => {
