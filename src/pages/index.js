@@ -1818,7 +1818,7 @@ const Home = () => {
                       email via Netlify Forms. There is a video gallery that
                       spans the course of her career, including coaching
                       teachers; teaching students remotely; facilitating data
-                      team meetings with teachers; and setting routines with
+                      team meetings with teachers, and setting routines with
                       elementary students.
                     </Typography>
                     <div
