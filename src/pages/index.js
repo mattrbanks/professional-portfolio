@@ -148,14 +148,21 @@ const Home = () => {
           <h1>&lang;Greetings&rang;</h1>
         </div>
         <div style={{ fontSize: "1.5rem" }}>
-          <p>
-            I am a software engineer who is dedicated to creating modern
-            user-friendly interfaces.
-            <br /> I like figuring out how things work and finding solutions to
-            problems. <br /> I really enjoy learning and I am always looking
-            <br />
-            to improve my skills.
-          </p>
+          <div
+            style={{
+              width: "100%",
+              display: "flex",
+              justifyContent: "center",
+              textAlign: "left",
+            }}
+          >
+            <p>
+              I am a web developer who is dedicated to creating modern
+              user-friendly interfaces <br /> to solve problems efficiently. I
+              have a continuous improvement mindset and I am <br /> actively
+              seeking a work environment where I can grow as a developer.
+            </p>
+          </div>
           <a
             href="https://github.com/mattrbanks"
             target="_blank"
