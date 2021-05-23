@@ -108,6 +108,10 @@ const Home = () => {
     `${theme.breakpoints.between("0", "690")}`
   )
 
+  const welcomeTextSmallerWidth = useMediaQuery(
+    `${theme.breakpoints.between("0", "1100")}`
+  )
+
   const contactSecQuery = useMediaQuery("(min-height:650px)")
 
   return (
@@ -156,12 +160,21 @@ const Home = () => {
               textAlign: "left",
             }}
           >
-            <p>
-              I am a web developer who is dedicated to creating modern
-              user-friendly interfaces <br /> to solve problems efficiently. I
-              have a continuous improvement mindset and I am <br /> actively
-              seeking a work environment where I can grow as a developer.
-            </p>
+            {welcomeTextSmallerWidth ? (
+              <p>
+                I am a web developer who is dedicated to creating modern
+                user-friendly interfaces to solve problems efficiently. I have a
+                continuous improvement mindset and I am actively seeking a work
+                environment where I can grow as a developer.
+              </p>
+            ) : (
+              <p>
+                I am a web developer who is dedicated to creating modern
+                user-friendly interfaces <br /> to solve problems efficiently. I
+                have a continuous improvement mindset and I am <br /> actively
+                seeking a work environment where I can grow as a developer.
+              </p>
+            )}
           </div>
           <a
             href="https://github.com/mattrbanks"
