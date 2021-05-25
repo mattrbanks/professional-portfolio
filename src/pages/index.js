@@ -16,6 +16,7 @@ import ImageReusable from "../components/imageReusable"
 import styled from "styled-components"
 import { FaLinkedin, FaGithubSquare, FaFile } from "react-icons/fa"
 import Typed from "react-typed"
+import VisibilitySensor from "react-visibility-sensor"
 
 const useStyles = makeStyles({
   welcomeSectionStyles: {
@@ -81,6 +82,14 @@ const useStyles = makeStyles({
     transition: "transform 1s",
     transform: "perspective(100px) translateZ(0px)",
   },
+  btnHover: {
+    transition: "transform .05s",
+    transform: "perspective(100px) translateZ(0px)",
+    "&:hover": {
+      transition: "transform .05s",
+      transform: "scale(1.1)",
+    },
+  },
 })
 
 const Home = () => {
@@ -95,6 +104,10 @@ const Home = () => {
   const [projectFourHover, setProjectFourHover] = React.useState(false)
   const [projectFiveHover, setProjectFiveHover] = React.useState(false)
   const [projectSixHover, setProjectSixHover] = React.useState(false)
+  const [hoverGrow, setHoverGrow] = React.useState(
+    "perspective(100px) translateZ(0px)"
+  )
+  const [visibility, setVisibility] = React.useState(false)
 
   //styles
   const iconContactStyle = classes.iconContact
@@ -148,9 +161,22 @@ const Home = () => {
             />
           </div>
         </div>
-        <div>
-          <h1>&lang;Greetings&rang;</h1>
-        </div>
+        <VisibilitySensor
+          onChange={isVisible => {
+            setVisibility(isVisible)
+            console.log(visibility)
+          }}
+        >
+          <div>
+            {visibility ? (
+              <h1>
+                <Typed strings={["&lang;Greetings&rang;"]} typeSpeed={40} />
+              </h1>
+            ) : (
+              <h1>&lang;&rang;</h1>
+            )}
+          </div>
+        </VisibilitySensor>
         <div style={{ fontSize: "1.5rem" }}>
           <div
             style={{
@@ -192,9 +218,17 @@ const Home = () => {
                 padding: "0.3rem",
                 marginBottom: "1.45rem",
                 cursor: "pointer",
+                transition: "transform .05s",
+                transform: `${hoverGrow}`,
               }}
               size="large"
               color="inherit"
+              onMouseEnter={() => {
+                setHoverGrow("scale(1.1)")
+              }}
+              onMouseLeave={() => {
+                setHoverGrow("perspective(100px) translateZ(0px)")
+              }}
             >
               GitHub
             </button>
@@ -219,6 +253,7 @@ const Home = () => {
                 }}
               >
                 <button
+                  className={classes.btnHover}
                   style={{
                     backgroundImage:
                       "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
@@ -241,6 +276,7 @@ const Home = () => {
                 }}
               >
                 <button
+                  className={classes.btnHover}
                   style={{
                     backgroundImage:
                       "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
@@ -263,6 +299,7 @@ const Home = () => {
                 }}
               >
                 <button
+                  className={classes.btnHover}
                   style={{
                     backgroundImage:
                       "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
@@ -285,6 +322,7 @@ const Home = () => {
                 }}
               >
                 <button
+                  className={classes.btnHover}
                   style={{
                     backgroundImage:
                       "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
@@ -307,6 +345,7 @@ const Home = () => {
                 }}
               >
                 <button
+                  className={classes.btnHover}
                   style={{
                     backgroundImage:
                       "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
@@ -329,6 +368,7 @@ const Home = () => {
                 }}
               >
                 <button
+                  className={classes.btnHover}
                   style={{
                     backgroundImage:
                       "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
@@ -351,6 +391,7 @@ const Home = () => {
                 }}
               >
                 <button
+                  className={classes.btnHover}
                   style={{
                     backgroundImage:
                       "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
@@ -381,6 +422,7 @@ const Home = () => {
                 }}
               >
                 <button
+                  className={classes.btnHover}
                   style={{
                     backgroundImage:
                       "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
@@ -403,6 +445,7 @@ const Home = () => {
                 }}
               >
                 <button
+                  className={classes.btnHover}
                   style={{
                     backgroundImage:
                       "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
@@ -425,6 +468,7 @@ const Home = () => {
                 }}
               >
                 <button
+                  className={classes.btnHover}
                   style={{
                     backgroundImage:
                       "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
@@ -447,6 +491,7 @@ const Home = () => {
                 }}
               >
                 <button
+                  className={classes.btnHover}
                   style={{
                     backgroundImage:
                       "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
@@ -469,6 +514,7 @@ const Home = () => {
                 }}
               >
                 <button
+                  className={classes.btnHover}
                   style={{
                     backgroundImage:
                       "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
@@ -491,6 +537,7 @@ const Home = () => {
                 }}
               >
                 <button
+                  className={classes.btnHover}
                   style={{
                     backgroundImage:
                       "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
@@ -513,6 +560,7 @@ const Home = () => {
                 }}
               >
                 <button
+                  className={classes.btnHover}
                   style={{
                     backgroundImage:
                       "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
@@ -535,6 +583,7 @@ const Home = () => {
                 }}
               >
                 <button
+                  className={classes.btnHover}
                   style={{
                     backgroundImage:
                       "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
@@ -557,6 +606,7 @@ const Home = () => {
                 }}
               >
                 <button
+                  className={classes.btnHover}
                   style={{
                     backgroundImage:
                       "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
@@ -587,6 +637,7 @@ const Home = () => {
                 }}
               >
                 <button
+                  className={classes.btnHover}
                   style={{
                     backgroundImage:
                       "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
@@ -609,6 +660,7 @@ const Home = () => {
                 }}
               >
                 <button
+                  className={classes.btnHover}
                   style={{
                     backgroundImage:
                       "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
@@ -631,6 +683,7 @@ const Home = () => {
                 }}
               >
                 <button
+                  className={classes.btnHover}
                   style={{
                     backgroundImage:
                       "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
@@ -653,6 +706,7 @@ const Home = () => {
                 }}
               >
                 <button
+                  className={classes.btnHover}
                   style={{
                     backgroundImage:
                       "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
@@ -675,6 +729,7 @@ const Home = () => {
                 }}
               >
                 <button
+                  className={classes.btnHover}
                   style={{
                     backgroundImage:
                       "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
@@ -697,6 +752,7 @@ const Home = () => {
                 }}
               >
                 <button
+                  className={classes.btnHover}
                   style={{
                     backgroundImage:
                       "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
@@ -719,6 +775,7 @@ const Home = () => {
                 }}
               >
                 <button
+                  className={classes.btnHover}
                   style={{
                     backgroundImage:
                       "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
@@ -741,6 +798,7 @@ const Home = () => {
                 }}
               >
                 <button
+                  className={classes.btnHover}
                   style={{
                     backgroundImage:
                       "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
@@ -763,6 +821,7 @@ const Home = () => {
                 }}
               >
                 <button
+                  className={classes.btnHover}
                   style={{
                     backgroundImage:
                       "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
@@ -961,6 +1020,7 @@ const Home = () => {
                         style={{ color: "#fff" }}
                       >
                         <Button
+                          className={classes.btnHover}
                           style={{
                             backgroundImage:
                               "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
@@ -981,6 +1041,7 @@ const Home = () => {
                         style={{ color: "#fff" }}
                       >
                         <Button
+                          className={classes.btnHover}
                           style={{
                             backgroundImage:
                               "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
@@ -1146,6 +1207,7 @@ const Home = () => {
                         style={{ color: "#fff" }}
                       >
                         <Button
+                          className={classes.btnHover}
                           style={{
                             backgroundImage:
                               "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
@@ -1166,6 +1228,7 @@ const Home = () => {
                         style={{ color: "#fff" }}
                       >
                         <Button
+                          className={classes.btnHover}
                           style={{
                             backgroundImage:
                               "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
@@ -1356,6 +1419,7 @@ const Home = () => {
                         style={{ color: "#fff" }}
                       >
                         <Button
+                          className={classes.btnHover}
                           style={{
                             backgroundImage:
                               "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
@@ -1376,6 +1440,7 @@ const Home = () => {
                         style={{ color: "#fff" }}
                       >
                         <Button
+                          className={classes.btnHover}
                           style={{
                             backgroundImage:
                               "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
@@ -1547,6 +1612,7 @@ const Home = () => {
                         style={{ color: "#fff" }}
                       >
                         <Button
+                          className={classes.btnHover}
                           style={{
                             backgroundImage:
                               "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
@@ -1567,6 +1633,7 @@ const Home = () => {
                         style={{ color: "#fff" }}
                       >
                         <Button
+                          className={classes.btnHover}
                           style={{
                             backgroundImage:
                               "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
@@ -1741,6 +1808,7 @@ const Home = () => {
                         style={{ color: "#fff" }}
                       >
                         <Button
+                          className={classes.btnHover}
                           style={{
                             backgroundImage:
                               "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
@@ -1930,6 +1998,7 @@ const Home = () => {
                         style={{ color: "#fff" }}
                       >
                         <Button
+                          className={classes.btnHover}
                           style={{
                             backgroundImage:
                               "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
@@ -1950,6 +2019,7 @@ const Home = () => {
                         style={{ color: "#fff" }}
                       >
                         <Button
+                          className={classes.btnHover}
                           style={{
                             backgroundImage:
                               "linear-gradient(90deg, #151b7a 5%, #323286 36%, #415498 100%)",
@@ -2194,5 +2264,13 @@ let MainStyles = styled.div`
     position: absolute;
     bottom: 2%;
     width: 100%;
+  }
+  .btn-bef-hover {
+    transition: "transform .05s";
+    transform: "perspective(100px) translateZ(0px)";
+  }
+  .btn-aft-hover {
+    transition: "transform .05s";
+    transform: "scale(2)";
   }
 `
