@@ -17,6 +17,7 @@ import styled from "styled-components"
 import { FaLinkedin, FaGithubSquare, FaFile } from "react-icons/fa"
 import Typed from "react-typed"
 import VisibilitySensor from "react-visibility-sensor"
+import GitHubCalendar from "react-github-calendar"
 
 const useStyles = makeStyles({
   welcomeSectionStyles: {
@@ -233,6 +234,9 @@ const Home = () => {
               GitHub
             </button>
           </a>
+          <div>
+            <GitHubCalendar username="mattrbanks" />
+          </div>
           <div>
             <h2>Technologies I have worked with so far:</h2>
           </div>
