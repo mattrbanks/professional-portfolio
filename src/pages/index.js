@@ -18,6 +18,7 @@ import { FaLinkedin, FaGithubSquare, FaFile } from "react-icons/fa"
 import Typed from "react-typed"
 import VisibilitySensor from "react-visibility-sensor"
 import GitHubCalendar from "react-github-calendar"
+import ReactTooltip from "react-tooltip"
 
 const useStyles = makeStyles({
   welcomeSectionStyles: {
@@ -235,7 +236,9 @@ const Home = () => {
             </button>
           </a>
           <div>
-            <GitHubCalendar username="mattrbanks" />
+            <GitHubCalendar username="mattrbanks">
+              <ReactTooltip delayShow={50} html />
+            </GitHubCalendar>
           </div>
           <div>
             <h2>Technologies I have worked with so far:</h2>
