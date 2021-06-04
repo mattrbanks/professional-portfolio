@@ -875,7 +875,7 @@ const Home = () => {
                 <CardActionArea>
                   <CardMedia
                     className={
-                      projectFourHover
+                      projectSixHover
                         ? "project-media-transform-styles"
                         : "project-media-styles"
                     }
@@ -883,30 +883,30 @@ const Home = () => {
                       maxWidth: "100%",
                       margin: "0 0 0 0",
                     }}
-                    title="Face Conference"
+                    title="Kasey Banks Portfolio"
                     onMouseEnter={() => {
-                      setProjectFourHover(true)
+                      setProjectSixHover(true)
                     }}
                     onMouseLeave={() => {
-                      setProjectFourHover(false)
+                      setProjectSixHover(false)
                     }}
                   >
                     <a
-                      href="https://face-conference.herokuapp.com/"
+                      href="https://kaseybanksportfolio.com/"
                       target="_blank"
                       rel="noopener noreferrer"
                       style={{ color: "#fff" }}
                     >
                       <ImageReusable
                         style={{ position: "relative" }}
-                        alt="picture of video chat project"
-                        filename="faceConferenceImg.png"
+                        alt="picture of kasey banks portfolio site"
+                        filename="kaseybanksportfoliosite.png"
                       />
                     </a>
                   </CardMedia>
                   <CardContent>
                     <Typography gutterBottom variant="h5" component="h2">
-                      Face Conference
+                      Kasey Banks Portfolio
                     </Typography>
                     <Typography
                       variant="caption"
@@ -914,9 +914,8 @@ const Home = () => {
                       component="p"
                     >
                       <span style={{ fontWeight: "bold" }}>Features: </span>{" "}
-                      Intuitive dashboard with options to create a new room or
-                      join a demo lobby &#8226; Disable the video, audio, or
-                      hang up the call and go back to the dashboard
+                      Real Educational Data &#8226; Custom Design &#8226; Video
+                      Gallery &#8226; Contact Form &#8226; Resume Page
                     </Typography>
                     <Typography
                       variant="caption"
@@ -924,13 +923,16 @@ const Home = () => {
                       component="p"
                     >
                       <span style={{ fontWeight: "bold" }}>About: </span>This is
-                      my latest project. It is a video chat website that
-                      utilizes WebRTC technology. The world is changing fast and
-                      video meetings are becoming more common. Face Conference
-                      is a place where you and your friends can talk, face to
-                      face, and catch up online. I wanted to experiment with
-                      WebRTC and this is a little project for me to familiarize
-                      myself with the technology.
+                      a professional portfolio that highlights the work of an
+                      educator over the span of her career. She is transitioning
+                      from an instructional coach to an administrator. D3 was
+                      used to visually represent the data provided. There is a
+                      contact form that utilizes reCAPTCHA and is connected to
+                      email via Netlify Forms. There is a video gallery that
+                      spans the course of her career, including coaching
+                      teachers; teaching students remotely; facilitating data
+                      team meetings with teachers, and setting routines with
+                      elementary students.
                     </Typography>
                     <div
                       style={{
@@ -943,74 +945,68 @@ const Home = () => {
                         <React.Fragment>
                           <div
                             style={{
-                              display: "block",
-                              listStyle: "none",
-                              margin: "0.5rem 1.5rem 0 1.5rem",
+                              display: "flex",
+                              justifyContent: "center",
+                              fontSize: "0.6rem",
+                              margin: "0 1.5rem 0 1.5rem",
                             }}
                           >
                             <div
                               style={{
-                                display: "flex",
-                                justifyContent: "center",
-                                fontSize: "0.6rem",
-                                margin: "0 1.5rem 0 1.5rem",
+                                marginLeft: "1rem",
+                                marginRight: "0.5rem",
                               }}
                             >
-                              <div
-                                style={{
-                                  marginLeft: "1rem",
-                                  marginRight: "0.5rem",
-                                }}
-                              >
-                                JavaScript
-                              </div>
-                              <div style={{ marginRight: "0.5rem" }}>
-                                PeerJS
-                              </div>
-                              <div style={{ marginRight: "0.5rem" }}>Ejs</div>
-                              <div style={{ marginRight: "0.5rem" }}>Node</div>
-                              <div style={{ marginRight: "1rem" }}>MongoDB</div>
+                              React
                             </div>
+                            <div style={{ marginRight: "0.5rem" }}>
+                              JavaScript
+                            </div>
+                            <div style={{ marginRight: "0.5rem" }}>Gatsby</div>
+                            <div style={{ marginRight: "1rem" }}>reCAPTCHA</div>
+                          </div>
+                          <div
+                            style={{
+                              display: "flex",
+                              justifyContent: "center",
+                              fontSize: "0.6rem",
+                              margin: "0 1rem 1rem 1rem",
+                            }}
+                          >
                             <div
                               style={{
-                                display: "flex",
-                                justifyContent: "center",
-                                fontSize: "0.6rem",
-                                margin: "0 1rem 0 1rem",
+                                marginLeft: "0.5rem",
+                                marginRight: "0.5rem",
                               }}
                             >
-                              <div
-                                style={{
-                                  marginLeft: "0.5rem",
-                                  marginRight: "0.5rem",
-                                }}
-                              >
-                                WebRTC
-                              </div>
-                              <div style={{ marginRight: "0.5rem" }}>
-                                Express
-                              </div>
-                              <div style={{ marginRight: "0.5rem" }}>
-                                Socket.io
-                              </div>
+                              Tailwind CSS
                             </div>
+                            <div style={{ marginRight: "0.5rem" }}>
+                              Netlify Forms
+                            </div>
+                            <div style={{ marginRight: "0.5rem" }}>Figma</div>
+                            <div style={{ marginRight: "0.5rem" }}>D3</div>
                           </div>
                         </React.Fragment>
                       ) : (
                         <React.Fragment>
                           <div style={{ display: "flex", fontSize: "0.7rem" }}>
+                            <div style={{ marginRight: "1rem" }}>React</div>
                             <div style={{ marginRight: "1rem" }}>
                               JavaScript
                             </div>
-                            <div style={{ marginRight: "1rem" }}>PeerJS</div>
-                            <div style={{ marginRight: "1rem" }}>Ejs</div>
-                            <div style={{ marginRight: "1rem" }}>WebRTC</div>
-                            <div style={{ marginRight: "1rem" }}>Express</div>
-                            <div style={{ marginRight: "1rem" }}>Node</div>
-                            <div>Socket.io</div>
+                            <div style={{ marginRight: "1rem" }}>
+                              Tailwind CSS
+                            </div>
+                            <div style={{ marginRight: "1rem" }}>
+                              Netlify Forms
+                            </div>
+                            <div>reCAPTCHA</div>
                           </div>
                           <div style={{ display: "flex", fontSize: "0.7rem" }}>
-                            <div style={{ marginRight: "1rem" }}>MongoDB</div>
+                            <div style={{ marginRight: "1rem" }}>Figma</div>
+                            <div style={{ marginRight: "1rem" }}>Gatsby</div>
+                            <div style={{ marginRight: "1rem" }}>D3</div>
                           </div>
                         </React.Fragment>
                       )}
@@ -1021,7 +1017,7 @@ const Home = () => {
                   <div style={{ display: "flex", justifyContent: "center" }}>
                     <CardActions>
                       <a
-                        href="https://github.com/mattrbanks/face-conference"
+                        href="https://github.com/mattrbanks/kasey-banks-professional-portfolio"
                         target="_blank"
                         rel="noopener noreferrer"
                         style={{ color: "#fff" }}
@@ -1038,11 +1034,11 @@ const Home = () => {
                           size="large"
                           color="inherit"
                         >
-                          See My Code
+                          See my code
                         </Button>
                       </a>
                       <a
-                        href="https://face-conference.herokuapp.com/"
+                        href="https://kaseybanksportfolio.com/"
                         target="_blank"
                         rel="noopener noreferrer"
                         style={{ color: "#fff" }}
@@ -1059,7 +1055,7 @@ const Home = () => {
                           size="large"
                           color="inherit"
                         >
-                          Try The Site
+                          Try the site
                         </Button>
                       </a>
                     </CardActions>
@@ -1264,35 +1260,38 @@ const Home = () => {
                 <CardActionArea>
                   <CardMedia
                     className={
-                      projectOneHover
+                      projectFourHover
                         ? "project-media-transform-styles"
                         : "project-media-styles"
                     }
-                    style={{ maxWidth: "100%", margin: "0 0 0 0" }}
-                    title="Eagle Elementary School"
+                    style={{
+                      maxWidth: "100%",
+                      margin: "0 0 0 0",
+                    }}
+                    title="Face Conference"
                     onMouseEnter={() => {
-                      setProjectOneHover(true)
+                      setProjectFourHover(true)
                     }}
                     onMouseLeave={() => {
-                      setProjectOneHover(false)
+                      setProjectFourHover(false)
                     }}
                   >
                     <a
-                      href="https://eagle-elementary-school.netlify.app/"
+                      href="https://face-conference.herokuapp.com/"
                       target="_blank"
                       rel="noopener noreferrer"
                       style={{ color: "#fff" }}
                     >
                       <ImageReusable
                         style={{ position: "relative" }}
-                        alt="picture of school site project"
-                        filename="EagleElementarySchool.PNG"
+                        alt="picture of video chat project"
+                        filename="faceConferenceImg.png"
                       />
                     </a>
                   </CardMedia>
                   <CardContent>
                     <Typography gutterBottom variant="h5" component="h2">
-                      Eagle Elementary School
+                      Face Conference
                     </Typography>
                     <Typography
                       variant="caption"
@@ -1300,9 +1299,9 @@ const Home = () => {
                       component="p"
                     >
                       <span style={{ fontWeight: "bold" }}>Features: </span>{" "}
-                      Parent/Teacher Chat &#8226; Blog connected to CMS &#8226;
-                      Survey connected to database &#8226; Based on real school
-                      curriculum
+                      Intuitive dashboard with options to create a new room or
+                      join a demo lobby &#8226; Disable the video, audio, or
+                      hang up the call and go back to the dashboard
                     </Typography>
                     <Typography
                       variant="caption"
@@ -1310,20 +1309,17 @@ const Home = () => {
                       component="p"
                     >
                       <span style={{ fontWeight: "bold" }}>About: </span>This is
-                      a modern elementary school site I created which targets
-                      progressive school environments becoming more socially
-                      distanced. It has a real-time chat for parents and
-                      teachers with private messaging and push notifications.
-                      The events page is connected to a content management
-                      system for school faculty to easily use without the help
-                      of a programmer. The survey is connected to a mongodb
-                      atlas database that collects responses from parents. The
-                      curriculum section is based on real curriculum standards.
+                      my latest project. It is a video chat website that
+                      utilizes WebRTC technology. The world is changing fast and
+                      video meetings are becoming more common. Face Conference
+                      is a place where you and your friends can talk, face to
+                      face, and catch up online. I wanted to experiment with
+                      WebRTC and this is a little project for me to familiarize
+                      myself with the technology.
                     </Typography>
                     <div
                       style={{
                         display: "block",
-
                         listStyle: "none",
                         margin: "0.5rem 1.5rem 0 1.5rem",
                       }}
@@ -1332,84 +1328,74 @@ const Home = () => {
                         <React.Fragment>
                           <div
                             style={{
-                              display: "flex",
-                              justifyContent: "center",
-                              fontSize: "0.6rem",
-                              margin: "0 1.5rem 0 1.5rem",
+                              display: "block",
+                              listStyle: "none",
+                              margin: "0.5rem 1.5rem 0 1.5rem",
                             }}
                           >
                             <div
                               style={{
-                                marginLeft: "0.5rem",
-                                marginRight: "0.5rem",
+                                display: "flex",
+                                justifyContent: "center",
+                                fontSize: "0.6rem",
+                                margin: "0 1.5rem 0 1.5rem",
                               }}
                             >
-                              React
+                              <div
+                                style={{
+                                  marginLeft: "1rem",
+                                  marginRight: "0.5rem",
+                                }}
+                              >
+                                JavaScript
+                              </div>
+                              <div style={{ marginRight: "0.5rem" }}>
+                                PeerJS
+                              </div>
+                              <div style={{ marginRight: "0.5rem" }}>Ejs</div>
+                              <div style={{ marginRight: "0.5rem" }}>Node</div>
+                              <div style={{ marginRight: "1rem" }}>MongoDB</div>
                             </div>
-                            <div style={{ marginRight: "0.5rem" }}>
-                              JavaScript
+                            <div
+                              style={{
+                                display: "flex",
+                                justifyContent: "center",
+                                fontSize: "0.6rem",
+                                margin: "0 1rem 0 1rem",
+                              }}
+                            >
+                              <div
+                                style={{
+                                  marginLeft: "0.5rem",
+                                  marginRight: "0.5rem",
+                                }}
+                              >
+                                WebRTC
+                              </div>
+                              <div style={{ marginRight: "0.5rem" }}>
+                                Express
+                              </div>
+                              <div style={{ marginRight: "0.5rem" }}>
+                                Socket.io
+                              </div>
                             </div>
-                            <div style={{ marginRight: "0.5rem" }}>MongoDB</div>
-                            <div style={{ marginRight: "0.5rem" }}>
-                              Contentful
-                            </div>
-                          </div>
-                          <div
-                            style={{
-                              display: "flex",
-                              justifyContent: "center",
-                              fontSize: "0.6rem",
-                              margin: "0 1rem 0 1rem",
-                            }}
-                          >
-                            <div style={{ marginRight: "0.5rem" }}>
-                              Material ui
-                            </div>
-                            <div style={{ marginRight: "0.5rem" }}>
-                              Styled components
-                            </div>
-                            <div style={{ marginRight: "0.5rem" }}>
-                              Socket.io
-                            </div>
-                          </div>
-                          <div
-                            style={{
-                              display: "flex",
-                              justifyContent: "center",
-                              fontSize: "0.6rem",
-                              margin: "0 1rem 0 1rem",
-                            }}
-                          >
-                            <div style={{ marginRight: "0.5rem" }}>GraphQL</div>
-                            <div style={{ marginRight: "0.5rem" }}>Express</div>
-                            <div style={{ marginRight: "0.5rem" }}>Node</div>
-                            <div style={{ marginRight: "0.5rem" }}>Gatsby</div>
                           </div>
                         </React.Fragment>
                       ) : (
                         <React.Fragment>
                           <div style={{ display: "flex", fontSize: "0.7rem" }}>
-                            <div style={{ marginRight: "1rem" }}>React</div>
                             <div style={{ marginRight: "1rem" }}>
                               JavaScript
                             </div>
-                            <div style={{ marginRight: "1rem" }}>MongoDB</div>
-                            <div style={{ marginRight: "1rem" }}>
-                              Contentful
-                            </div>
-                            <div>Material ui</div>
-                          </div>
-                          <div style={{ display: "flex", fontSize: "0.7rem" }}>
-                            <div style={{ marginRight: "1rem" }}>
-                              Styled components
-                            </div>
-                            <div style={{ marginRight: "1rem" }}>Socket.io</div>
-                            <div style={{ marginRight: "1rem" }}>GraphQL</div>
+                            <div style={{ marginRight: "1rem" }}>PeerJS</div>
+                            <div style={{ marginRight: "1rem" }}>Ejs</div>
+                            <div style={{ marginRight: "1rem" }}>WebRTC</div>
                             <div style={{ marginRight: "1rem" }}>Express</div>
-                            <div>Node</div>
+                            <div style={{ marginRight: "1rem" }}>Node</div>
+                            <div>Socket.io</div>
                           </div>
                           <div style={{ display: "flex", fontSize: "0.7rem" }}>
-                            <div style={{ marginRight: "1rem" }}>Gatsby</div>
+                            <div style={{ marginRight: "1rem" }}>MongoDB</div>
                           </div>
                         </React.Fragment>
                       )}
@@ -1420,7 +1406,7 @@ const Home = () => {
                   <div style={{ display: "flex", justifyContent: "center" }}>
                     <CardActions>
                       <a
-                        href="https://github.com/mattrbanks/school-site-chat-survey-portfolio-project"
+                        href="https://github.com/mattrbanks/face-conference"
                         target="_blank"
                         rel="noopener noreferrer"
                         style={{ color: "#fff" }}
@@ -1437,11 +1423,11 @@ const Home = () => {
                           size="large"
                           color="inherit"
                         >
-                          See my code
+                          See My Code
                         </Button>
                       </a>
                       <a
-                        href="https://eagle-elementary-school.netlify.app/"
+                        href="https://face-conference.herokuapp.com/"
                         target="_blank"
                         rel="noopener noreferrer"
                         style={{ color: "#fff" }}
@@ -1458,7 +1444,7 @@ const Home = () => {
                           size="large"
                           color="inherit"
                         >
-                          Try the site
+                          Try The Site
                         </Button>
                       </a>
                     </CardActions>
@@ -1857,38 +1843,35 @@ const Home = () => {
                 <CardActionArea>
                   <CardMedia
                     className={
-                      projectSixHover
+                      projectOneHover
                         ? "project-media-transform-styles"
                         : "project-media-styles"
                     }
-                    style={{
-                      maxWidth: "100%",
-                      margin: "0 0 0 0",
-                    }}
-                    title="Kasey Banks Portfolio"
+                    style={{ maxWidth: "100%", margin: "0 0 0 0" }}
+                    title="Eagle Elementary School"
                     onMouseEnter={() => {
-                      setProjectSixHover(true)
+                      setProjectOneHover(true)
                     }}
                     onMouseLeave={() => {
-                      setProjectSixHover(false)
+                      setProjectOneHover(false)
                     }}
                   >
                     <a
-                      href="https://kaseybanksportfolio.com/"
+                      href="https://eagle-elementary-school.netlify.app/"
                       target="_blank"
                       rel="noopener noreferrer"
                       style={{ color: "#fff" }}
                     >
                       <ImageReusable
                         style={{ position: "relative" }}
-                        alt="picture of kasey banks portfolio site"
-                        filename="kaseybanksportfoliosite.png"
+                        alt="picture of school site project"
+                        filename="EagleElementarySchool.PNG"
                       />
                     </a>
                   </CardMedia>
                   <CardContent>
                     <Typography gutterBottom variant="h5" component="h2">
-                      Kasey Banks Portfolio
+                      Eagle Elementary School
                     </Typography>
                     <Typography
                       variant="caption"
@@ -1896,8 +1879,9 @@ const Home = () => {
                       component="p"
                     >
                       <span style={{ fontWeight: "bold" }}>Features: </span>{" "}
-                      Real Educational Data &#8226; Custom Design &#8226; Video
-                      Gallery &#8226; Contact Form &#8226; Resume Page
+                      Parent/Teacher Chat &#8226; Blog connected to CMS &#8226;
+                      Survey connected to database &#8226; Based on real school
+                      curriculum
                     </Typography>
                     <Typography
                       variant="caption"
@@ -1905,20 +1889,20 @@ const Home = () => {
                       component="p"
                     >
                       <span style={{ fontWeight: "bold" }}>About: </span>This is
-                      a professional portfolio that highlights the work of an
-                      educator over the span of her career. She is transitioning
-                      from an instructional coach to an administrator. D3 was
-                      used to visually represent the data provided. There is a
-                      contact form that utilizes reCAPTCHA and is connected to
-                      email via Netlify Forms. There is a video gallery that
-                      spans the course of her career, including coaching
-                      teachers; teaching students remotely; facilitating data
-                      team meetings with teachers, and setting routines with
-                      elementary students.
+                      a modern elementary school site I created which targets
+                      progressive school environments becoming more socially
+                      distanced. It has a real-time chat for parents and
+                      teachers with private messaging and push notifications.
+                      The events page is connected to a content management
+                      system for school faculty to easily use without the help
+                      of a programmer. The survey is connected to a mongodb
+                      atlas database that collects responses from parents. The
+                      curriculum section is based on real curriculum standards.
                     </Typography>
                     <div
                       style={{
                         display: "block",
+
                         listStyle: "none",
                         margin: "0.5rem 1.5rem 0 1.5rem",
                       }}
@@ -1935,7 +1919,7 @@ const Home = () => {
                           >
                             <div
                               style={{
-                                marginLeft: "1rem",
+                                marginLeft: "0.5rem",
                                 marginRight: "0.5rem",
                               }}
                             >
@@ -1944,30 +1928,41 @@ const Home = () => {
                             <div style={{ marginRight: "0.5rem" }}>
                               JavaScript
                             </div>
-                            <div style={{ marginRight: "0.5rem" }}>Gatsby</div>
-                            <div style={{ marginRight: "1rem" }}>reCAPTCHA</div>
+                            <div style={{ marginRight: "0.5rem" }}>MongoDB</div>
+                            <div style={{ marginRight: "0.5rem" }}>
+                              Contentful
+                            </div>
                           </div>
                           <div
                             style={{
                               display: "flex",
                               justifyContent: "center",
                               fontSize: "0.6rem",
-                              margin: "0 1rem 1rem 1rem",
+                              margin: "0 1rem 0 1rem",
                             }}
                           >
-                            <div
-                              style={{
-                                marginLeft: "0.5rem",
-                                marginRight: "0.5rem",
-                              }}
-                            >
-                              Tailwind CSS
+                            <div style={{ marginRight: "0.5rem" }}>
+                              Material ui
                             </div>
                             <div style={{ marginRight: "0.5rem" }}>
-                              Netlify Forms
+                              Styled components
                             </div>
-                            <div style={{ marginRight: "0.5rem" }}>Figma</div>
-                            <div style={{ marginRight: "0.5rem" }}>D3</div>
+                            <div style={{ marginRight: "0.5rem" }}>
+                              Socket.io
+                            </div>
+                          </div>
+                          <div
+                            style={{
+                              display: "flex",
+                              justifyContent: "center",
+                              fontSize: "0.6rem",
+                              margin: "0 1rem 0 1rem",
+                            }}
+                          >
+                            <div style={{ marginRight: "0.5rem" }}>GraphQL</div>
+                            <div style={{ marginRight: "0.5rem" }}>Express</div>
+                            <div style={{ marginRight: "0.5rem" }}>Node</div>
+                            <div style={{ marginRight: "0.5rem" }}>Gatsby</div>
                           </div>
                         </React.Fragment>
                       ) : (
@@ -1977,18 +1972,23 @@ const Home = () => {
                             <div style={{ marginRight: "1rem" }}>
                               JavaScript
                             </div>
+                            <div style={{ marginRight: "1rem" }}>MongoDB</div>
                             <div style={{ marginRight: "1rem" }}>
-                              Tailwind CSS
+                              Contentful
                             </div>
-                            <div style={{ marginRight: "1rem" }}>
-                              Netlify Forms
-                            </div>
-                            <div>reCAPTCHA</div>
+                            <div>Material ui</div>
                           </div>
                           <div style={{ display: "flex", fontSize: "0.7rem" }}>
-                            <div style={{ marginRight: "1rem" }}>Figma</div>
+                            <div style={{ marginRight: "1rem" }}>
+                              Styled components
+                            </div>
+                            <div style={{ marginRight: "1rem" }}>Socket.io</div>
+                            <div style={{ marginRight: "1rem" }}>GraphQL</div>
+                            <div style={{ marginRight: "1rem" }}>Express</div>
+                            <div>Node</div>
+                          </div>
+                          <div style={{ display: "flex", fontSize: "0.7rem" }}>
                             <div style={{ marginRight: "1rem" }}>Gatsby</div>
-                            <div style={{ marginRight: "1rem" }}>D3</div>
                           </div>
                         </React.Fragment>
                       )}
@@ -1999,7 +1999,7 @@ const Home = () => {
                   <div style={{ display: "flex", justifyContent: "center" }}>
                     <CardActions>
                       <a
-                        href="https://github.com/mattrbanks/kasey-banks-professional-portfolio"
+                        href="https://github.com/mattrbanks/school-site-chat-survey-portfolio-project"
                         target="_blank"
                         rel="noopener noreferrer"
                         style={{ color: "#fff" }}
@@ -2020,7 +2020,7 @@ const Home = () => {
                         </Button>
                       </a>
                       <a
-                        href="https://kaseybanksportfolio.com/"
+                        href="https://eagle-elementary-school.netlify.app/"
                         target="_blank"
                         rel="noopener noreferrer"
                         style={{ color: "#fff" }}
